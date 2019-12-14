@@ -7,7 +7,7 @@ site_url: 'https://mrabdullahsahin.github.io/pratik-yapay-zeka/'
 # Configuration
 theme:
   name: 'material'
-  language: 'en'
+  language: 'tr'
   palette:
     primary: 'indigo'
     accent: 'indigo'

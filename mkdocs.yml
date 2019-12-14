@@ -8,6 +8,9 @@ site_url: 'https://mrabdullahsahin.github.io/pratik-yapay-zeka/'
 repo_name: mrabdullahsahin/pratik-yapay-zeka
 repo_url: 'https://github.com/mrabdullahsahin/pratik-yapay-zeka'
 
+# Copyright
+copyright: 'Copyright &copy; 2019 Pratik Yapay Zeka'
+
 # Configuration
 theme:
   name: 'material'

@@ -2,6 +2,12 @@
 
 Bu projede yapılan tüm değişiklikler bu dosyada belgelenmektedir.
 
+## 0.1.6 - 2019-12-14
+
+### Eklendi
+
+- Menu ibaresi mkdocs.yml dosyasına eklendi.
+
 ## 0.1.5 - 2019-12-14
 
 ### Eklendi

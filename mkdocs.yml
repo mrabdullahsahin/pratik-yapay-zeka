@@ -24,6 +24,11 @@ theme:
     text: 'Roboto'
     code: 'Roboto Mono'
 
+# Page tree
+nav:
+  - Giriş: index.md
+  - Değişiklik Kaydı: changelog.md
+
 # Customization
 extra:
   manifest: 'manifest.webmanifest'

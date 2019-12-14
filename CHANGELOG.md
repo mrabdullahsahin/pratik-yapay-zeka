@@ -2,11 +2,23 @@
 
 Bu projede yapılan tüm değişiklikler bu dosyada belgelenmektedir.
 
+## 0.1.7 - 2019-12-14
+
+### Eklendi
+
+- Jupyter Notebooks ve Python klasörü oluşturuldu.
+- Değişkenler çalışması eklendi.
+- degiskenler.md dosyası eklendi.
+
+### Değişti
+
+- mkdocs.yml dosyasında menü kısmı güncellendi.
+
 ## 0.1.6 - 2019-12-14
 
 ### Eklendi
 
-- Menu ibaresi mkdocs.yml dosyasına eklendi.
+- Menü ibaresi mkdocs.yml dosyasına eklendi.
 
 ## 0.1.5 - 2019-12-14
 

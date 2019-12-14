@@ -1,4 +1,8 @@
-site_name: My Docs
+# Project information
+site_name: Pratik Yapay Zeka
+site_description: Yapay Zeka'ya pratik bir yaklaşım.
+site_author: Abdullah Sahin
+site_url: 'https://mrabdullahsahin.github.io/pratik-yapay-zeka/'
 
 # Configuration
 theme:

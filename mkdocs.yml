@@ -21,3 +21,14 @@ theme:
   font:
     text: 'Roboto'
     code: 'Roboto Mono'
+
+# Customization
+extra:
+  manifest: 'manifest.webmanifest'
+  social:
+    - type: 'github'
+      link: 'https://github.com/mrabdullahsahin'
+    - type: 'twitter'
+      link: 'https://twitter.com/mrabdullahsahin'
+    - type: 'linkedin'
+      link: 'https://linkedin.com/in/mrabdullahsahin'

@@ -1,6 +1,6 @@
 # <p align="middle" > <img src="https://raw.githubusercontent.com/mrabdullahsahin/pratik-yapay-zeka/master/sources/assets/images/logo.png" height=150 alt="Pratik Yapay Zeka"/> </p>
 
-Bu proje yapay zeka alanında ilerlemek isteyen, kendini geliştirmek isteyen ve bu alanda elde ettiği bilgi ve tecrübesini başkalarıyla paylaşmak isteyenler için oluşturulmuş bir projedir.
+**Pratik Yapay Zeka Projesi**, yapay zeka teknolojilerinde kendini geliştirmek isteyen, elde ettiği bilgi ve tecrübesini başkalarıyla paylaşmak isteyen, değer katmaktan, üretmek ve paylaşmaktan zevk alan herkes için oluşturulmuş projedir.
 
 ## Konu Başlıkları
 

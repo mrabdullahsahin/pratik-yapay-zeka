@@ -4,6 +4,10 @@ site_description: Yapay Zeka'ya pratik bir yaklaşım.
 site_author: Abdullah Sahin
 site_url: 'https://mrabdullahsahin.github.io/pratik-yapay-zeka/'
 
+# Repository
+repo_name: mrabdullahsahin/pratik-yapay-zeka
+repo_url: 'https://github.com/mrabdullahsahin/pratik-yapay-zeka'
+
 # Configuration
 theme:
   name: 'material'

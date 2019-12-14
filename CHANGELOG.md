@@ -2,6 +2,12 @@
 
 Bu projede önemli tüm değişiklikler bu dosyada belgelenmektedir.
 
+## [0.1.3] - 2019-12-14
+
+### Değişti
+
+- Readme.md dosyası güncellendi.
+
 ## [0.1.2] - 2019-12-14
 
 ### Değişti

@@ -2,6 +2,16 @@
 
 Bu projede yapılan tüm değişiklikler bu dosyada belgelenmektedir.
 
+## 0.1.8 - 2019-12-14
+
+### Eklendi
+
+- referanslar.md eklendi.
+
+### Değişti
+
+- mkdocs.yml dosyasında menü kısmı güncellendi.
+
 ## 0.1.7 - 2019-12-14
 
 ### Eklendi

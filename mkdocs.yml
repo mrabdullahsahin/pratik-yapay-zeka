@@ -27,6 +27,8 @@ theme:
 # Page tree
 nav:
   - Giriş: index.md
+  - Python:
+    - Değişkenler: python/degiskenler.md
   - Değişiklik Kaydı: changelog.md
 
 # Customization

@@ -4,5 +4,5 @@ Bu projede bulunan içerikler aşağıda bulunan kaynaklar kullanılarak hazırl
 
 > Son Güncelleme: 14 Aralık 2019
 
-- [Python Dokümantasyonu](https://www.python.org/doc/)
-- [Python 3 için Türkçe Kılavuz](https://belgeler.yazbel.com/python-istihza/)
+- <a href="https://www.python.org/doc/" target="_blank">Python Dokümantasyonu</a>
+- <a href="https://belgeler.yazbel.com/python-istihza/" target="_blank">Python 3 için Türkçe Kılavuz</a>

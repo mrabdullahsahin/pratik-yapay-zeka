@@ -33,6 +33,7 @@ nav:
     - Kaçış Dizileri: python/kacis_dizileri.md
     - Yorum İşareti: python/yorum_isareti.md
     - Kullanıcıdan Bilgi Almak: python/kullanicidan_bilgi_almak.md
+    - Koşullu Durumlar: python/kosullu_durumlar
   - Referanslar: referanslar.md
   - Değişiklik Kaydı: changelog.md
 

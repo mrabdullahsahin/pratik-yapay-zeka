@@ -2,6 +2,27 @@
 
 Bu projede yapılan tüm değişiklikler bu dosyada belgelenmektedir.
 
+## 0.1.9 - 2019-12-16
+
+### Eklendi
+
+- Jupyter Notebooks içerisine print fonksiyonu eklendi.
+- print.md eklendi.
+- Jupyer Notebooks içerisine kaçış dizileri eklendi.
+- kacis_dizileri.md eklendi.
+- Jupyter Notebooks içerisine kullanıcıdan bilgi almak eklendi.
+- kullanicidan_bilgi_almak.md eklendi.
+- Jupyter Notebooks içerisine koşullu durumlar eklendi.
+- kosullu_durumlar.md eklendi.
+- Jupyter Notebooks içerisine işlemler eklendi.
+- islecler.md eklendi.
+- Jupyter Notebooks içerisine döngüler eklendi.
+- python_donguler.md eklendi.
+
+### Değişti
+
+- mkdocs.yml dosyasında menü kısmı güncellendi.
+
 ## 0.1.8 - 2019-12-14
 
 ### Eklendi

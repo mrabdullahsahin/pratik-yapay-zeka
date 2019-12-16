@@ -30,6 +30,7 @@ nav:
   - Python:
     - Değişkenler: python/degiskenler.md
     - print Fonksiyonu: python/print.md
+    - Kaçış Dizileri: python/kacis_dizileri.md
   - Referanslar: referanslar.md
   - Değişiklik Kaydı: changelog.md
 

@@ -13,7 +13,7 @@
         <meta name="description" content="Yapay Zeka'ya pratik bir yaklaşım.">
       
       
-        <link rel="canonical" href="https://mrabdullahsahin.github.io/pratik-yapay-zeka/python/yorum_isareti/">
+        <link rel="canonical" href="https://mrabdullahsahin.github.io/pratik-yapay-zeka/python/kosullu_durumlar/">
       
       
         <meta name="author" content="Abdullah Sahin">
@@ -42,7 +42,7 @@
     
     
       
-        <title>Yorum İşareti - Pratik Yapay Zeka</title>
+        <title>Koşullu Durumlar - Pratik Yapay Zeka</title>
       
     
     
@@ -93,7 +93,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="#yorum-isareti" tabindex="1" class="md-skip">
+      <a href="#kosullu-durumlar" tabindex="1" class="md-skip">
         Skip to content
       </a>
     
@@ -119,7 +119,7 @@
             </span>
             <span class="md-header-nav__topic">
               
-                Yorum İşareti
+                Koşullu Durumlar
               
             </span>
           
@@ -297,20 +297,11 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-      
-    
-    
-    <a href="./" title="Yorum İşareti" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../yorum_isareti/" title="Yorum İşareti" class="md-nav__link">
       Yorum İşareti
     </a>
-    
   </li>
 
         
@@ -330,11 +321,76 @@
           
           
 
+  
 
-  <li class="md-nav__item">
-    <a href="../kosullu_durumlar/" title="Koşullu Durumlar" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Koşullu Durumlar
+      </label>
+    
+    <a href="./" title="Koşullu Durumlar" class="md-nav__link md-nav__link--active">
       Koşullu Durumlar
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">İçindekiler</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#kosul-deyimleri" class="md-nav__link">
+    Koşul Deyimleri
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#if" class="md-nav__link">
+    İf
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#elif" class="md-nav__link">
+    elif
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#else" class="md-nav__link">
+    else
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
         
@@ -384,6 +440,49 @@
     
   
   
+    <label class="md-nav__title" for="__toc">İçindekiler</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#kosul-deyimleri" class="md-nav__link">
+    Koşul Deyimleri
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#if" class="md-nav__link">
+    İf
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#elif" class="md-nav__link">
+    elif
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#else" class="md-nav__link">
+    else
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -394,26 +493,125 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/mrabdullahsahin/pratik-yapay-zeka/edit/master/docs/python/yorum_isareti.md" title="Düzenle" class="md-icon md-content__icon">&#xE3C9;</a>
+                  <a href="https://github.com/mrabdullahsahin/pratik-yapay-zeka/edit/master/docs/python/kosullu_durumlar.md" title="Düzenle" class="md-icon md-content__icon">&#xE3C9;</a>
                 
                 
-                <h1 id="yorum-isareti">Yorum İşareti</h1>
-<p>Yazılım dünyasında yazdığımız kodların başkaları tarafından da anlaşılabilir olması için yorum ve açıklama cümleleri büyük bir önem arz etmektedir.</p>
-<p>Burada yorum ve açıklama cümlelerini bir değişkeni veya bir fonksiyonun ne işe yaradığını açıklamak için kullanabilirisiniz.</p>
-<pre><code class="python">tel_no = 11111 #bu değişken kullanıcı tarafından girilen telefon numarasını tutmak için kullanılmaktadır.
+                <h1 id="kosullu-durumlar">Koşullu Durumlar</h1>
+<p>Koşullu Duumlar, geliştirdiğimiz yazılımda bazı filtrelemeler yapmamızı veya belirli bir koşul belirleyip ona göre davranmasını sağlayabiliriz. Bunun için python'da bulunan koşulları inceleyelim.</p>
+<h2 id="kosul-deyimleri">Koşul Deyimleri</h2>
+<h3 id="if">İf</h3>
+<p>Python programlama dilinde koşullu durumları belirtmek için üç adet deyimden faydalanırız:</p>
+<ul>
+<li>if</li>
+<li>elif</li>
+<li>else</li>
+</ul>
+<p>if deyimi ile başlayalım.</p>
+<pre><code class="python">a = 10
+if a &gt; 5:
+    print(&quot;Sayı 10'dan büyüktür.&quot;)
 </code></pre>
 
-<p>Yorum işaretleri farklı amaçlar içinde kullanılabilr. Yazmış olduğumuz kodu etkisizleştirmek için kullanabiliriz.</p>
-<pre><code class="python"># ülke = &quot;Türkiye&quot;
+<pre><code>Sayı 10'dan büyüktür.
+</code></pre>
+<p>if deyimi &gt;(büyüktür) işaretinin haricinde farklı işaretlerde almaktadır.</p>
+<table>
+<thead>
+<tr>
+<th align="center">İşleç</th>
+<th align="center">Anlamı</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">&gt;</td>
+<td align="center">büyüktür</td>
+</tr>
+<tr>
+<td align="center">&lt;</td>
+<td align="center">küçüktür</td>
+</tr>
+<tr>
+<td align="center">&gt;=</td>
+<td align="center">büyük eşittir</td>
+</tr>
+<tr>
+<td align="center">&lt;=</td>
+<td align="center">küçük eşittir</td>
+</tr>
+<tr>
+<td align="center">==</td>
+<td align="center">eşittir</td>
+</tr>
+<tr>
+<td align="center">!=</td>
+<td align="center">eşit değildir</td>
+</tr>
+</tbody>
+</table>
+<p>Kullanıcıdan bilgi alarak if deyimini kullanalım.</p>
+<pre><code class="python">sayi = int(input(&quot;Bir sayı giriniz: &quot;))
+if sayi &lt; 5:
+    print(&quot;sayı 5'ten küçüktür.&quot;)
+if sayi &gt; 5:
+    print(&quot;sayı 5'ten büyüktür.&quot;)
+if sayi == 5:
+    print(&quot;sayı 5'e eşittir.&quot;)
 </code></pre>
 
-<p>Yorum işaretlerini süsleme amaçlıda kullanabiliriz.</p>
-<pre><code class="python">####################################################### #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
-#                                 Yazan
-#                                 Lisans
-# #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~# #######################################################
+<pre><code>Bir sayı giriniz: 5
+sayı 5'e eşittir.
+</code></pre>
+<h3 id="elif">elif</h3>
+<p>elif, bir başka koşul deyimidir. Nasıl çalıştığını aşağıda bulunan örneği incleyerek anlayalım.</p>
+<pre><code class="python">sayi = int(input(&quot;Bir sayı giriniz: &quot;))
+
+if sayi == 5:
+    print(&quot;sayı 5'e eşittir.&quot;)
+elif sayi &lt; 5:
+    print(&quot;sayı 5'ten küçüktür.&quot;)
+elif sayi &lt; 10:
+    print(&quot;sayı 10'dan küçüktür.&quot;)
+elif sayi &gt; 5:
+    print(&quot;sayı 5'ten büyüktür.&quot;)
 </code></pre>
 
+<pre><code>Bir sayı giriniz: 1
+sayı 5'ten küçüktür.
+</code></pre>
+<p>Yukarıda yazdığımız örneği hepsi if olacak şekilde yazalım ve iki sonucuda karşılaştıralım.</p>
+<pre><code class="python">sayi = int(input(&quot;Bir sayı giriniz: &quot;))
+
+if sayi == 5:
+    print(&quot;sayı 5'e eşittir.&quot;)
+if sayi &lt; 5:
+    print(&quot;sayı 5'ten küçüktür.&quot;)
+if sayi &lt; 10:
+    print(&quot;sayı 10'dan küçüktür.&quot;)
+if sayi &gt; 5:
+    print(&quot;sayı 5'ten büyüktür.&quot;)
+</code></pre>
+
+<pre><code>Bir sayı giriniz: 1
+sayı 5'ten küçüktür.
+sayı 10'dan küçüktür.
+</code></pre>
+<p>Gördüğünüz gibi elif koşulunu kullanarak yazdığımız zaman girmiş olduğumuz değer hem 5 hem de 10 değerinden küçük olduğu halde sadece 5'ten küçüktür dedi. Yani elif değeri kendisinden sonraki başka koşul çalışacak dahi olsa o koşula hiç uğramıyor.</p>
+<p>Aynı programı if değerini kullandığımız zaman hem 5'ten küçüktür hem de 10'dan küçüktür yazdı. Bu da bizlere if ve elif koşullarının nasıl çalıştığı hakkında bilgi veriyor.</p>
+<h3 id="else">else</h3>
+<p>else koşullu deyimi yukarıda bahsettiğimiz koşullu deyimlerden biraz farklı çalışmaktadır. Nasıl çalıştığını bir örnek üzerinde inceleyelim.</p>
+<pre><code class="python">sayi = int(input(&quot;Bir sayı giriniz: &quot;))
+
+if sayi == 1:
+    print(&quot;Bildiniz.&quot;)
+else: 
+    print(&quot;Tekrar deneyiniz.&quot;)
+</code></pre>
+
+<pre><code>Bir sayı giriniz: 0
+Tekrar deneyiniz.
+</code></pre>
+<p>Görmüş olduğunuz gibi eğer yazmış olduğumuz koşul sağlanmadığı zaman else durumu çalışmaktadır.</p>
 <blockquote>
 <p>Son Güncelleme: 16 Aralık 2019 - Pazartesi</p>
 </blockquote>
@@ -438,7 +636,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../kacis_dizileri/" title="Kaçış Dizileri" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../kullanicidan_bilgi_almak/" title="Kullanıcıdan Bilgi Almak" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -447,19 +645,19 @@
                 <span class="md-footer-nav__direction">
                   Önceki
                 </span>
-                Kaçış Dizileri
+                Kullanıcıdan Bilgi Almak
               </span>
             </div>
           </a>
         
         
-          <a href="../kullanicidan_bilgi_almak/" title="Kullanıcıdan Bilgi Almak" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../../referanslar/" title="Referanslar" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Sonraki
                 </span>
-                Kullanıcıdan Bilgi Almak
+                Referanslar
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">

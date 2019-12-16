@@ -32,6 +32,7 @@ nav:
     - print Fonksiyonu: python/print.md
     - Kaçış Dizileri: python/kacis_dizileri.md
     - Yorum İşareti: python/yorum_isareti.md
+    - Kullanıcıdan Bilgi Almak: python/kullanicidan_bilgi_almak.md
   - Referanslar: referanslar.md
   - Değişiklik Kaydı: changelog.md
 

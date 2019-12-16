@@ -2,22 +2,27 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
      <loc>https://mrabdullahsahin.github.io/pratik-yapay-zeka/</loc>
-     <lastmod>2019-12-14</lastmod>
+     <lastmod>2019-12-16</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://mrabdullahsahin.github.io/pratik-yapay-zeka/python/degiskenler/</loc>
-     <lastmod>2019-12-14</lastmod>
+     <lastmod>2019-12-16</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://mrabdullahsahin.github.io/pratik-yapay-zeka/python/print/</loc>
+     <lastmod>2019-12-16</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://mrabdullahsahin.github.io/pratik-yapay-zeka/referanslar/</loc>
-     <lastmod>2019-12-14</lastmod>
+     <lastmod>2019-12-16</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://mrabdullahsahin.github.io/pratik-yapay-zeka/changelog/</loc>
-     <lastmod>2019-12-14</lastmod>
+     <lastmod>2019-12-16</lastmod>
      <changefreq>daily</changefreq>
     </url>
 </urlset>

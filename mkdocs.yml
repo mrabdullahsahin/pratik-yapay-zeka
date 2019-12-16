@@ -29,6 +29,7 @@ nav:
   - Giriş: index.md
   - Python:
     - Değişkenler: python/degiskenler.md
+    - print Fonksiyonu: python/print.md
   - Referanslar: referanslar.md
   - Değişiklik Kaydı: changelog.md
 

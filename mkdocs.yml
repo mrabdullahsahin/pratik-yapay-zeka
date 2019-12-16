@@ -35,6 +35,7 @@ nav:
     - Kullanıcıdan Bilgi Almak: python/kullanicidan_bilgi_almak.md
     - Koşullu Durumlar: python/kosullu_durumlar.md
     - İşleçler: python/islecler.md
+    - Döngüler: python/python_donguler.md
   - Referanslar: referanslar.md
   - Değişiklik Kaydı: changelog.md
 

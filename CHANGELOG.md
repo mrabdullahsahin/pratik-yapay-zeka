@@ -2,6 +2,17 @@
 
 Bu projede yapılan tüm değişiklikler bu dosyada belgelenmektedir.
 
+## 0.2.0 - 2019-12-17
+
+### Eklendi
+
+- Jupyter Notebooks içerisine hata yakalam eklendi.
+- python_hata_yakalama.md eklendi.
+
+### Değişti
+
+- mkdocs.yml dosyasında menü kısmı güncellendi.
+
 ## 0.1.9 - 2019-12-16
 
 ### Eklendi

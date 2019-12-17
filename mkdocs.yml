@@ -36,6 +36,7 @@ nav:
     - Koşullu Durumlar: python/kosullu_durumlar.md
     - İşleçler: python/islecler.md
     - Döngüler: python/python_donguler.md
+    - Hata Yakalama: python/python_hata_yakalama.md
   - Referanslar: referanslar.md
   - Değişiklik Kaydı: changelog.md
 

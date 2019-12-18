@@ -37,6 +37,7 @@ nav:
     - İşleçler: python/islecler.md
     - Döngüler: python/python_donguler.md
     - Hata Yakalama: python/python_hata_yakalama.md
+    - Karakter Dizileri(str): python/python_karakter_dizileri.md
   - Referanslar: referanslar.md
   - Değişiklik Kaydı: changelog.md
 

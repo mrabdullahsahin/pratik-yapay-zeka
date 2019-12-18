@@ -2,11 +2,24 @@
 
 Bu projede yapılan tüm değişiklikler bu dosyada belgelenmektedir.
 
+## 0.2.1 - 2019-12-18
+
+### Eklendi
+
+- Jupyter Notebooks içerisine python_karakter_dizileri.ipynb eklendi.
+- python_karakter_dizileri.md eklendi.
+- Jupyter Notebooks içerisine python_karakter_dizilerinin_metotlari.ipynb eklendi.
+- python_karakter_dizilerinin_metotlari.md eklendi.
+
+### Değişti
+
+- mkdocs.yml dosyasında menü kısmı güncellendi.
+
 ## 0.2.0 - 2019-12-17
 
 ### Eklendi
 
-- Jupyter Notebooks içerisine hata yakalam eklendi.
+- Jupyter Notebooks içerisine hata yakalama eklendi.
 - python_hata_yakalama.md eklendi.
 
 ### Değişti

@@ -1,0 +1,1188 @@
+
+
+
+
+<!doctype html>
+<html lang="tr" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+        <meta name="description" content="Yapay Zeka'ya pratik bir yaklaşım.">
+      
+      
+        <link rel="canonical" href="https://mrabdullahsahin.github.io/pratik-yapay-zeka/python/python_karakter_dizileri/">
+      
+      
+        <meta name="author" content="Abdullah Sahin">
+      
+      
+        <meta name="lang:clipboard.copy" content="Kopyala">
+      
+        <meta name="lang:clipboard.copied" content="Kopyalandı">
+      
+        <meta name="lang:search.language" content="tr">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="Eşleşen doküman bulunamadı">
+      
+        <meta name="lang:search.result.one" content="1 doküman bulundu">
+      
+        <meta name="lang:search.result.other" content="# doküman bulundu">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../../img/logo.png">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.6.0">
+    
+    
+      
+        <title>Karakter Dizileri(str) - Pratik Yapay Zeka</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/application.1b62728e.css">
+      
+        <link rel="stylesheet" href="../../assets/stylesheets/application-palette.a8b3c06d.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#3f51b5">
+      
+    
+    
+      <script src="../../assets/javascripts/modernizr.268332fc.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../../assets/fonts/material-icons.css">
+    
+      <link rel="manifest" href="../../manifest.webmanifest">
+    
+    
+    
+      
+    
+    
+  </head>
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448" viewBox="0 0 416 448" id="__github"><path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19T128 352t-18.125-8.5-10.75-19T96 304t3.125-20.5 10.75-19T128 256t18.125 8.5 10.75 19T160 304zm160 0q0 10-3.125 20.5t-10.75 19T288 352t-18.125-8.5-10.75-19T256 304t3.125-20.5 10.75-19T288 256t18.125 8.5 10.75 19T320 304zm40 0q0-30-17.25-51T296 232q-10.25 0-48.75 5.25Q229.5 240 208 240t-39.25-2.75Q130.75 232 120 232q-29.5 0-46.75 21T56 304q0 22 8 38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0 37.25-1.75t35-7.375 30.5-15 20.25-25.75T360 304zm56-44q0 51.75-15.25 82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5T212 416q-19.5 0-35.5-.75t-36.875-3.125-38.125-7.5-34.25-12.875T37 371.5t-21.5-28.75Q0 312 0 260q0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25 30.875Q171.5 96 212 96q37 0 70 8 26.25-20.5 46.75-30.25T376 64q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34 99.5z"/></svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#karakter-dizileri" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="https://mrabdullahsahin.github.io/pratik-yapay-zeka/" title="Pratik Yapay Zeka" class="md-header-nav__button md-logo">
+          
+            <img src="../../img/logo.png" width="24" height="24">
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            <span class="md-header-nav__topic">
+              Pratik Yapay Zeka
+            </span>
+            <span class="md-header-nav__topic">
+              
+                Karakter Dizileri(str)
+              
+            </span>
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Ara" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Aramaya başlamak için yazın
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+
+
+  
+
+<a href="https://github.com/mrabdullahsahin/pratik-yapay-zeka/" title="Depoya git" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    mrabdullahsahin/pratik-yapay-zeka
+  </div>
+</a>
+          </div>
+        </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+      <main class="md-main" role="main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="https://mrabdullahsahin.github.io/pratik-yapay-zeka/" title="Pratik Yapay Zeka" class="md-nav__button md-logo">
+      
+        <img src="../../img/logo.png" width="48" height="48">
+      
+    </a>
+    Pratik Yapay Zeka
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+<a href="https://github.com/mrabdullahsahin/pratik-yapay-zeka/" title="Depoya git" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    mrabdullahsahin/pratik-yapay-zeka
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../.." title="Giriş" class="md-nav__link">
+      Giriş
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" checked>
+    
+    <label class="md-nav__link" for="nav-2">
+      Python
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        Python
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../degiskenler/" title="Değişkenler" class="md-nav__link">
+      Değişkenler
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../print/" title="print Fonksiyonu" class="md-nav__link">
+      print Fonksiyonu
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../kacis_dizileri/" title="Kaçış Dizileri" class="md-nav__link">
+      Kaçış Dizileri
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../yorum_isareti/" title="Yorum İşareti" class="md-nav__link">
+      Yorum İşareti
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../kullanicidan_bilgi_almak/" title="Kullanıcıdan Bilgi Almak" class="md-nav__link">
+      Kullanıcıdan Bilgi Almak
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../kosullu_durumlar/" title="Koşullu Durumlar" class="md-nav__link">
+      Koşullu Durumlar
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../islecler/" title="İşleçler" class="md-nav__link">
+      İşleçler
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../python_donguler/" title="Döngüler" class="md-nav__link">
+      Döngüler
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../python_hata_yakalama/" title="Hata Yakalama" class="md-nav__link">
+      Hata Yakalama
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Karakter Dizileri(str)
+      </label>
+    
+    <a href="./" title="Karakter Dizileri(str)" class="md-nav__link md-nav__link--active">
+      Karakter Dizileri(str)
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">İçindekiler</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#karakter-dizilerinin-ogelerine-erismek" class="md-nav__link">
+    Karakter Dizilerinin Öğelerine Erişmek
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#karakter-dizilerini-dilimlemek" class="md-nav__link">
+    Karakter Dizilerini Dilimlemek
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#karakter-dizilerini-ters-cevirmek" class="md-nav__link">
+    Karakter Dizilerini Ters Çevirmek
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#karakter-dizilerini-alfabe-srasna-dizmek" class="md-nav__link">
+    Karakter Dizilerini Alfabe Sırasına Dizmek
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#karakter-dizileri-uzerinde-degisiklik-yapmak" class="md-nav__link">
+    Karakter Dizileri Üzerinde Değişiklik Yapmak
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#uc-onemli-fonksiyon" class="md-nav__link">
+    Üç Önemli Fonksiyon
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dir" class="md-nav__link">
+    dir()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#enumerate" class="md-nav__link">
+    enumerate()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#help" class="md-nav__link">
+    help()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../referanslar/" title="Referanslar" class="md-nav__link">
+      Referanslar
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../changelog/" title="Değişiklik Kaydı" class="md-nav__link">
+      Değişiklik Kaydı
+    </a>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">İçindekiler</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#karakter-dizilerinin-ogelerine-erismek" class="md-nav__link">
+    Karakter Dizilerinin Öğelerine Erişmek
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#karakter-dizilerini-dilimlemek" class="md-nav__link">
+    Karakter Dizilerini Dilimlemek
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#karakter-dizilerini-ters-cevirmek" class="md-nav__link">
+    Karakter Dizilerini Ters Çevirmek
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#karakter-dizilerini-alfabe-srasna-dizmek" class="md-nav__link">
+    Karakter Dizilerini Alfabe Sırasına Dizmek
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#karakter-dizileri-uzerinde-degisiklik-yapmak" class="md-nav__link">
+    Karakter Dizileri Üzerinde Değişiklik Yapmak
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#uc-onemli-fonksiyon" class="md-nav__link">
+    Üç Önemli Fonksiyon
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dir" class="md-nav__link">
+    dir()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#enumerate" class="md-nav__link">
+    enumerate()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#help" class="md-nav__link">
+    help()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/mrabdullahsahin/pratik-yapay-zeka/edit/master/docs/python/python_karakter_dizileri.md" title="Düzenle" class="md-icon md-content__icon">&#xE3C9;</a>
+                
+                
+                <h1 id="karakter-dizileri">Karakter Dizileri</h1>
+<h2 id="karakter-dizilerinin-ogelerine-erismek">Karakter Dizilerinin Öğelerine Erişmek</h2>
+<p>Karakter dizileri çok sık kullanacağımız yapılardır. Önceki bölümlerde karakter dizileri üzerinde işlemler yapmıştık. Bu bölümde daha ayrıntılı olarak inceleyeceğiz.</p>
+<p>Karakter dizilerine birkaç farklı yol ile erişebiliriz. Örneğin:</p>
+<pre><code class="python">karakter = &quot;karakter&quot;
+
+print(karakter)
+</code></pre>
+
+<pre><code>karakter
+</code></pre>
+<p>Yukarıda görüldüğü gibi karakter isimli değişkene print fonksiyonu ile erişmiş olduk ve içerisinde bulunan değerin tamamını ekrana yazdırdık.</p>
+<p>Bir başka yol olarakta kullanıcıdan alabiliriz değeri.</p>
+<pre><code class="python">karakter = input(&quot;Bir kelime giriniz: &quot;)
+
+print(karakter)
+</code></pre>
+
+<pre><code>Bir kelime giriniz: kelime
+kelime
+</code></pre>
+<p>Aynı zamanda for döngüsü ile karakter dizisinin bütün değerlerine tek tek erişebiliriz. Örneğin:</p>
+<pre><code class="python">for deger in karakter:
+    print(deger)
+</code></pre>
+
+<pre><code>k
+e
+l
+i
+m
+e
+</code></pre>
+<p>Yukarıdaki işlemi print fonsiyonu ile de yapabiliriz.</p>
+<pre><code class="python">print(*karakter, sep=&quot;\n&quot;)
+</code></pre>
+
+<pre><code>k
+e
+l
+i
+m
+e
+</code></pre>
+<p>Aynı zamanda karakter dizine şu şekildede erişebiliriz. nesne[öge_sırası], örnek ile inceleyelim bu durumu:</p>
+<pre><code class="python">karakter[0]
+</code></pre>
+
+<pre><code>'k'
+</code></pre>
+<p>Gördüğünüz gibi karakter nesnesinin ilk elemanına erişmek için sıfır yazdım yani burada başlangıç her daim sıfır olmaktadır. Eğer bir yazmış olsaydım ikinci karaktere ulaşmış olurdum.</p>
+<pre><code class="python">karakter[1]
+</code></pre>
+
+<pre><code>'e'
+</code></pre>
+<p>Peki büyük bir rakam yazarsam ne ile karşılaşırım, hemen bakalım:</p>
+<pre><code class="python">karakter[10]
+</code></pre>
+
+<pre><code>---------------------------------------------------------------------------
+
+IndexError                                Traceback (most recent call last)
+
+&lt;ipython-input-7-ad38375bdd41&gt; in &lt;module&gt;
+----&gt; 1 karakter[10]
+
+
+IndexError: string index out of range
+</code></pre>
+<p>Görmüş olduğunuz gibi karakter değişkeninin uzunluğunun dışına çıkmış oldum. Yukarıda verilen hata <strong>string index out of range</strong> bir nesnenin var olan uzunluğunun dışına çıkıldığı zaman oluşmaktadır. Peki karakter değişkenimizin uzunluğunu nasıl öğrenebiliriz. Bunun daha önce öğrendiğimiz len() fonksiyonu ile yapabiliriz.</p>
+<pre><code class="python">len(karakter)
+</code></pre>
+
+<pre><code>6
+</code></pre>
+<p>karakter değişkenimizin içinde <strong>kelime</strong> yazmaktadır. Bu değerin uzunluğu altıdır. Fakat biz altıncı karaktere erişmeye çalıştığımız zaman hata ile karşılacağız:</p>
+<pre><code class="python">karakter[6]
+</code></pre>
+
+<pre><code>---------------------------------------------------------------------------
+
+IndexError                                Traceback (most recent call last)
+
+&lt;ipython-input-9-3c6610cc998a&gt; in &lt;module&gt;
+----&gt; 1 karakter[6]
+
+
+IndexError: string index out of range
+</code></pre>
+<p>Görmüş olduğunuz gibi altıncı karaktere erişmek istediğimiz zaman hata verdi çünkü karakter dizilerine erişirken sıfır ile başlarız. Normalde saymaya birden başlarız ama burada saymaya sıfırdan başlıyoruz. Bu farkı her daim hatırlayalım.</p>
+<pre><code class="python">karakter[5]
+</code></pre>
+
+<pre><code>'e'
+</code></pre>
+<p>karakter isimli değişkenimizin elemanlarına tek tek erişelim.</p>
+<pre><code class="python">karakter[0]
+</code></pre>
+
+<pre><code>'k'
+</code></pre>
+<pre><code class="python">karakter[1]
+</code></pre>
+
+<pre><code>'e'
+</code></pre>
+<pre><code class="python">karakter[2]
+</code></pre>
+
+<pre><code>'l'
+</code></pre>
+<pre><code class="python">karakter[3]
+</code></pre>
+
+<pre><code>'i'
+</code></pre>
+<pre><code class="python">karakter[4]
+</code></pre>
+
+<pre><code>'m'
+</code></pre>
+<pre><code class="python">karakter[5]
+</code></pre>
+
+<pre><code>'e'
+</code></pre>
+<p>Yukarıda belirttiğimiz <strong>öğe_sırası</strong> yazan yere eksi değerli bir değerde girebiliriz. Eğer -1 değerini girersek bize değişkenimizin en sonda bulunan değerini getirecektir. Eğer -2 değerini girersek sondan bir önceki değeri getirecektir.</p>
+<pre><code class="python">karakter[-1]
+</code></pre>
+
+<pre><code>'e'
+</code></pre>
+<pre><code class="python">karakter[-2]
+</code></pre>
+
+<pre><code>'m'
+</code></pre>
+<pre><code class="python">karakter[-3]
+</code></pre>
+
+<pre><code>'i'
+</code></pre>
+<p>Bu şekilde eksi değerlerde girebiliriz.</p>
+<p>Peki for döngüsünü ve bu yapıyı kullanarak erişebilir miyiz? Tabiki de, hemen bir örnek ile bakalım:</p>
+<pre><code class="python">for deger in range(len(karakter)):
+    print(karakter[deger])
+</code></pre>
+
+<pre><code>k
+e
+l
+i
+m
+e
+</code></pre>
+<p>Farklı bir şekilde ekranda gösterelim:</p>
+<pre><code class="python">for i in range(len(karakter)):
+    print(&quot;Değişkenimizin {}. harfi: {}&quot;.format(i, karakter[i]))
+</code></pre>
+
+<pre><code>Değişkenimizin 0. harfi: k
+Değişkenimizin 1. harfi: e
+Değişkenimizin 2. harfi: l
+Değişkenimizin 3. harfi: i
+Değişkenimizin 4. harfi: m
+Değişkenimizin 5. harfi: e
+</code></pre>
+<h2 id="karakter-dizilerini-dilimlemek">Karakter Dizilerini Dilimlemek</h2>
+<p>Karakter dizilerine parça parçada erişebiliriz yani onları meyve dilimler gibi dilimleyebiliriz. Hemen bir örnek üzerinden inceleyelim:</p>
+<pre><code class="python">karakter_dizisi = &quot;Bu bir karakter dizisidir.&quot;
+
+karakter_dizisi[0:2]
+</code></pre>
+
+<pre><code>'Bu'
+</code></pre>
+<p>Yukarıdaki örnekte karakter_dizisi değişkenimizin sadece ilk iki değerini getirdik.</p>
+<pre><code class="python">karakter_dizisi[2:7]
+</code></pre>
+
+<pre><code>' bir '
+</code></pre>
+<p>Peki burada da eksi değerli değerler kullanabilir miyiz? Tabiki de, hemen bir örnek ile inceleyelim:</p>
+<pre><code class="python">karakter_dizisi[-4:]
+</code></pre>
+
+<pre><code>'dir.'
+</code></pre>
+<p>Burada nasıl bir yöntem izleyiyoruz. Nesnelere bu şekilde erişebiliyoruz: <strong>karakter_dizisi[alınacak_ilk_öğenin_sırası:alınacak_son_öğenin_sırasının_bir_fazlası]</strong>. Eğer istersek ilk nesneyi yazmadığımız zaman baştan başlayıp bizim belirlediğimiz değere kadar erişir.</p>
+<pre><code class="python">karakter_dizisi[:4]
+</code></pre>
+
+<pre><code>'Bu b'
+</code></pre>
+<p>Yukarıda yazdığımız kod ile aynı işe yapan kod ise:</p>
+<pre><code class="python">karakter_dizisi[0:4]
+</code></pre>
+
+<pre><code>'Bu b'
+</code></pre>
+<h2 id="karakter-dizilerini-ters-cevirmek">Karakter Dizilerini Ters Çevirmek</h2>
+<p>Bir değişkenin barındırdığı karakter dizisini ters çevirmek istediğimiz zaman şunu yapmamız gerekmektedir:</p>
+<pre><code class="python">karakter_dizisi[::-1]
+</code></pre>
+
+<pre><code>'.ridisizid retkarak rib uB'
+</code></pre>
+<p>Peki sadece belirli aralıklarla ilerlemek istediğimiz zaman ne yapmalıyız?</p>
+<pre><code class="python">karakter_dizisi[0:7:2]
+</code></pre>
+
+<pre><code>'B i '
+</code></pre>
+<p>karakter_dizisi[ilk_karakter:son_karakter:atlama_sayısı]. Burada atlama sayısı yazan yere kaç adet karakter atlaya atlaya ilerlemek istiyorsanız onu yazmalısınız.</p>
+<p>Karakter dizisini ters çevirmek için kullanabileceğimiz daha pratik bir fonksiyon mevcut o da, reversed(). Hemen bir örnek ile inceyelim:</p>
+<pre><code class="python">reversed(karakter_dizisi)
+</code></pre>
+
+<pre><code>&lt;reversed at 0x11200d290&gt;
+</code></pre>
+<p>reversed fonksiyonunu tek başına kullandığımız zaman bizlere bu şekilde bir değer döndürüyor. Bu fonksiyonu for döngüsü veya print fonksiyonu ile kullanmamız gerekmektedir.</p>
+<pre><code class="python">for i in reversed(karakter_dizisi): 
+    print(i, end=&quot;&quot;)
+</code></pre>
+
+<pre><code>.ridisizid retkarak rib uB
+</code></pre>
+<pre><code class="python">print(*reversed(karakter_dizisi), sep=&quot;&quot;)
+</code></pre>
+
+<pre><code>.ridisizid retkarak rib uB
+</code></pre>
+<h2 id="karakter-dizilerini-alfabe-srasna-dizmek">Karakter Dizilerini Alfabe Sırasına Dizmek</h2>
+<p>Python'da sorted() fonksiyonu ile karakter dizisini alfabetik sıraya göre dizmek mümkün.</p>
+<pre><code class="python">karakter_dizisi = &quot;zebra&quot;
+sorted(karakter_dizisi)
+</code></pre>
+
+<pre><code>['a', 'b', 'e', 'r', 'z']
+</code></pre>
+<p>Yukarıda aldığımız çıktıyı iki farklı yollada alabiliriz.</p>
+<ol>
+<li>Yol</li>
+</ol>
+<pre><code class="python">print(*sorted(karakter_dizisi), sep=&quot;&quot;)
+</code></pre>
+
+<pre><code>aberz
+</code></pre>
+<ol>
+<li>Yol</li>
+</ol>
+<pre><code class="python">for i in sorted(karakter_dizisi): 
+    print(i, end=&quot;&quot;)
+</code></pre>
+
+<pre><code>aberz
+</code></pre>
+<p>Sorted() fonksiyonu Türkçe karakterlerde doğru bir şekilde çalışmamaktadır. Bu durumu çözmek mümkün lakin "i" harfi için elimizle düzeltmemiz gerekmektedir çünkü ı ve i harflerini birbirinden ayıramamaktadır. Bu duruma dikkat etmekte fayda var.</p>
+<h2 id="karakter-dizileri-uzerinde-degisiklik-yapmak">Karakter Dizileri Üzerinde Değişiklik Yapmak</h2>
+<p>Bu kısımda karakter dizilerinde istediğimiz adet karakteri değiştirmekten tutunda, baş harfi büyütmeye kadar farklı konuları inceleyeceğiz.</p>
+<pre><code class="python">karakter_dizisi = &quot;elma&quot;
+</code></pre>
+
+<p>Elimizde bulunan karakter_dizisi değişkenin baş harfini büyütmek istiyoruz diyelim:</p>
+<pre><code class="python">karakter_dizisi = &quot;E&quot; + karakter_dizisi[1:]
+</code></pre>
+
+<pre><code class="python">print(karakter_dizisi)
+</code></pre>
+
+<pre><code>Elma
+</code></pre>
+<p>Peki karakter_dizisi içerisinden istediğimiz kısmı çıkarıp yerine başka bir kelime ekleyelim.</p>
+<pre><code class="python">karakter_dizisi = karakter_dizisi[0:2] + &quot;kart&quot;
+print(karakter_dizisi)
+</code></pre>
+
+<pre><code>Elkart
+</code></pre>
+<h2 id="uc-onemli-fonksiyon">Üç Önemli Fonksiyon</h2>
+<p>Python'da işlerimizi kolaylaştıran veya unuttuğumuz bilgileri hatırlamamızı sağlayan bazı fonksiyonlar şimdi bunları öğrenelim.</p>
+<h3 id="dir">dir()</h3>
+<p>Bu fonksiyon bizlere Python'da bulunan nesneler hakkında bilgi vermektedir. Bu fonksiyon aracılığı ile karakter dizileri(str) hakkında bilgi alalım.</p>
+<pre><code class="python">dir(str)
+</code></pre>
+
+<pre><code>['__add__',
+ '__class__',
+ '__contains__',
+ '__delattr__',
+ '__dir__',
+ '__doc__',
+ '__eq__',
+ '__format__',
+ '__ge__',
+ '__getattribute__',
+ '__getitem__',
+ '__getnewargs__',
+ '__gt__',
+ '__hash__',
+ '__init__',
+ '__init_subclass__',
+ '__iter__',
+ '__le__',
+ '__len__',
+ '__lt__',
+ '__mod__',
+ '__mul__',
+ '__ne__',
+ '__new__',
+ '__reduce__',
+ '__reduce_ex__',
+ '__repr__',
+ '__rmod__',
+ '__rmul__',
+ '__setattr__',
+ '__sizeof__',
+ '__str__',
+ '__subclasshook__',
+ 'capitalize',
+ 'casefold',
+ 'center',
+ 'count',
+ 'encode',
+ 'endswith',
+ 'expandtabs',
+ 'find',
+ 'format',
+ 'format_map',
+ 'index',
+ 'isalnum',
+ 'isalpha',
+ 'isascii',
+ 'isdecimal',
+ 'isdigit',
+ 'isidentifier',
+ 'islower',
+ 'isnumeric',
+ 'isprintable',
+ 'isspace',
+ 'istitle',
+ 'isupper',
+ 'join',
+ 'ljust',
+ 'lower',
+ 'lstrip',
+ 'maketrans',
+ 'partition',
+ 'replace',
+ 'rfind',
+ 'rindex',
+ 'rjust',
+ 'rpartition',
+ 'rsplit',
+ 'rstrip',
+ 'split',
+ 'splitlines',
+ 'startswith',
+ 'strip',
+ 'swapcase',
+ 'title',
+ 'translate',
+ 'upper',
+ 'zfill']
+</code></pre>
+<p>dir() fonksiyonu karakter dizileri ile beraber kullanabileceğimiz fonksiyonları bizlere göstermektedir. Aynı şekilde int türündekiler içinde bakabiliriz. </p>
+<pre><code class="python">dir(int)
+</code></pre>
+
+<pre><code>['__abs__',
+ '__add__',
+ '__and__',
+ '__bool__',
+ '__ceil__',
+ '__class__',
+ '__delattr__',
+ '__dir__',
+ '__divmod__',
+ '__doc__',
+ '__eq__',
+ '__float__',
+ '__floor__',
+ '__floordiv__',
+ '__format__',
+ '__ge__',
+ '__getattribute__',
+ '__getnewargs__',
+ '__gt__',
+ '__hash__',
+ '__index__',
+ '__init__',
+ '__init_subclass__',
+ '__int__',
+ '__invert__',
+ '__le__',
+ '__lshift__',
+ '__lt__',
+ '__mod__',
+ '__mul__',
+ '__ne__',
+ '__neg__',
+ '__new__',
+ '__or__',
+ '__pos__',
+ '__pow__',
+ '__radd__',
+ '__rand__',
+ '__rdivmod__',
+ '__reduce__',
+ '__reduce_ex__',
+ '__repr__',
+ '__rfloordiv__',
+ '__rlshift__',
+ '__rmod__',
+ '__rmul__',
+ '__ror__',
+ '__round__',
+ '__rpow__',
+ '__rrshift__',
+ '__rshift__',
+ '__rsub__',
+ '__rtruediv__',
+ '__rxor__',
+ '__setattr__',
+ '__sizeof__',
+ '__str__',
+ '__sub__',
+ '__subclasshook__',
+ '__truediv__',
+ '__trunc__',
+ '__xor__',
+ 'bit_length',
+ 'conjugate',
+ 'denominator',
+ 'from_bytes',
+ 'imag',
+ 'numerator',
+ 'real',
+ 'to_bytes']
+</code></pre>
+<p>dir() ile kullanacağınız bir yapının ne tür yapılarla beraber kullanılabildiğini öğrenebilirsiniz.</p>
+<h3 id="enumerate">enumerate()</h3>
+<p>Enumerate ingilizcede "numaralamak, numaralandırmak" olarak geçmektedir. Yani bir karakter dizisinin değerlerini numaralandırmamıza yaramaktadır.</p>
+<pre><code class="python">print(*enumerate(karakter_dizisi))
+</code></pre>
+
+<pre><code>(0, 'E') (1, 'l') (2, 'k') (3, 'a') (4, 'r') (5, 't')
+</code></pre>
+<p>Bir değişkenin içerisinde barındırdığı değerleri tek tek numaralandırabilmemizi sağlıyor. Eğer böyle bir ihtiyacınız olursa bu fonksiyon işinizi hızlı bir şekilde yapabilmenizi sağlar. </p>
+<h3 id="help">help()</h3>
+<p>Herhangi bir fonksiyon, metot veya nesne hakkında interneti kullanmadan hızlı bir şekilde ingilizce olarak bilgi almak isterseniz bu fonksiyon işinizi görecektir. Örneğin:</p>
+<pre><code class="python">help(len)
+</code></pre>
+
+<pre><code>Help on built-in function len in module builtins:
+
+len(obj, /)
+    Return the number of items in a container.
+</code></pre>
+<p>Görmüş olduğunuz gibi help fonksiyonu bizlere len fonksiyonunun ne olduğunu ve nasıl kullanılabildiğini göstermektedir.</p>
+<blockquote>
+<p>Son Güncelleme: 18 Aralık 2019 - Çarşamba</p>
+</blockquote>
+                
+                  
+                
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../python_hata_yakalama/" title="Hata Yakalama" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Önceki
+                </span>
+                Hata Yakalama
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../../referanslar/" title="Referanslar" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Sonraki
+                </span>
+                Referanslar
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright &copy; 2019 Pratik Yapay Zeka
+          </div>
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+  <div class="md-footer-social">
+    <link rel="stylesheet" href="../../assets/fonts/font-awesome.css">
+    
+      <a href="https://github.com/mrabdullahsahin" class="md-footer-social__link fa fa-github"></a>
+    
+      <a href="https://twitter.com/mrabdullahsahin" class="md-footer-social__link fa fa-twitter"></a>
+    
+      <a href="https://linkedin.com/in/mrabdullahsahin" class="md-footer-social__link fa fa-linkedin"></a>
+    
+  </div>
+
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/application.808e90bb.js"></script>
+      
+        
+        
+          
+          <script src="../../assets/javascripts/lunr/lunr.stemmer.support.js"></script>
+          
+            
+              
+              
+                <script src="../../assets/javascripts/lunr/lunr.tr.js"></script>
+              
+            
+          
+          
+        
+      
+      <script>app.initialize({version:"1.0.4",url:{base:"../.."}})</script>
+      
+    
+  </body>
+</html>

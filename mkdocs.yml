@@ -39,6 +39,7 @@ nav:
     - Hata Yakalama: python/python_hata_yakalama.md
     - Karakter Dizileri(str): python/python_karakter_dizileri.md
     - Karakter Dizilerinin Metotları: python/python_karakter_dizilerinin_metotlari.md
+    - Format Metodu: python/python_format_metodu.md
   - Referanslar: referanslar.md
   - Değişiklik Kaydı: changelog.md
 

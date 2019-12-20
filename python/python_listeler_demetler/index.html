@@ -1,0 +1,1174 @@
+
+
+
+
+<!doctype html>
+<html lang="tr" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+        <meta name="description" content="Yapay Zeka'ya pratik bir yaklaşım.">
+      
+      
+        <link rel="canonical" href="https://mrabdullahsahin.github.io/pratik-yapay-zeka/python/python_listeler_demetler/">
+      
+      
+        <meta name="author" content="Abdullah Sahin">
+      
+      
+        <meta name="lang:clipboard.copy" content="Kopyala">
+      
+        <meta name="lang:clipboard.copied" content="Kopyalandı">
+      
+        <meta name="lang:search.language" content="tr">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="Eşleşen doküman bulunamadı">
+      
+        <meta name="lang:search.result.one" content="1 doküman bulundu">
+      
+        <meta name="lang:search.result.other" content="# doküman bulundu">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../../img/logo.png">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.6.0">
+    
+    
+      
+        <title>Listeler ve Demetler - Pratik Yapay Zeka</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/application.1b62728e.css">
+      
+        <link rel="stylesheet" href="../../assets/stylesheets/application-palette.a8b3c06d.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#3f51b5">
+      
+    
+    
+      <script src="../../assets/javascripts/modernizr.268332fc.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../../assets/fonts/material-icons.css">
+    
+      <link rel="manifest" href="../../manifest.webmanifest">
+    
+    
+    
+      
+    
+    
+  </head>
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448" viewBox="0 0 416 448" id="__github"><path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19T128 352t-18.125-8.5-10.75-19T96 304t3.125-20.5 10.75-19T128 256t18.125 8.5 10.75 19T160 304zm160 0q0 10-3.125 20.5t-10.75 19T288 352t-18.125-8.5-10.75-19T256 304t3.125-20.5 10.75-19T288 256t18.125 8.5 10.75 19T320 304zm40 0q0-30-17.25-51T296 232q-10.25 0-48.75 5.25Q229.5 240 208 240t-39.25-2.75Q130.75 232 120 232q-29.5 0-46.75 21T56 304q0 22 8 38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0 37.25-1.75t35-7.375 30.5-15 20.25-25.75T360 304zm56-44q0 51.75-15.25 82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5T212 416q-19.5 0-35.5-.75t-36.875-3.125-38.125-7.5-34.25-12.875T37 371.5t-21.5-28.75Q0 312 0 260q0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25 30.875Q171.5 96 212 96q37 0 70 8 26.25-20.5 46.75-30.25T376 64q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34 99.5z"/></svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#listelerlist-ve-demetlertuple" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="https://mrabdullahsahin.github.io/pratik-yapay-zeka/" title="Pratik Yapay Zeka" class="md-header-nav__button md-logo">
+          
+            <img src="../../img/logo.png" width="24" height="24">
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            <span class="md-header-nav__topic">
+              Pratik Yapay Zeka
+            </span>
+            <span class="md-header-nav__topic">
+              
+                Listeler ve Demetler
+              
+            </span>
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Ara" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Aramaya başlamak için yazın
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+
+
+  
+
+<a href="https://github.com/mrabdullahsahin/pratik-yapay-zeka/" title="Depoya git" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    mrabdullahsahin/pratik-yapay-zeka
+  </div>
+</a>
+          </div>
+        </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+      <main class="md-main" role="main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="https://mrabdullahsahin.github.io/pratik-yapay-zeka/" title="Pratik Yapay Zeka" class="md-nav__button md-logo">
+      
+        <img src="../../img/logo.png" width="48" height="48">
+      
+    </a>
+    Pratik Yapay Zeka
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+<a href="https://github.com/mrabdullahsahin/pratik-yapay-zeka/" title="Depoya git" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    mrabdullahsahin/pratik-yapay-zeka
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../.." title="Giriş" class="md-nav__link">
+      Giriş
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" checked>
+    
+    <label class="md-nav__link" for="nav-2">
+      Python
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        Python
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../degiskenler/" title="Değişkenler" class="md-nav__link">
+      Değişkenler
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../print/" title="print Fonksiyonu" class="md-nav__link">
+      print Fonksiyonu
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../kacis_dizileri/" title="Kaçış Dizileri" class="md-nav__link">
+      Kaçış Dizileri
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../yorum_isareti/" title="Yorum İşareti" class="md-nav__link">
+      Yorum İşareti
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../kullanicidan_bilgi_almak/" title="Kullanıcıdan Bilgi Almak" class="md-nav__link">
+      Kullanıcıdan Bilgi Almak
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../kosullu_durumlar/" title="Koşullu Durumlar" class="md-nav__link">
+      Koşullu Durumlar
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../islecler/" title="İşleçler" class="md-nav__link">
+      İşleçler
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../python_donguler/" title="Döngüler" class="md-nav__link">
+      Döngüler
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../python_hata_yakalama/" title="Hata Yakalama" class="md-nav__link">
+      Hata Yakalama
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../python_karakter_dizileri/" title="Karakter Dizileri(str)" class="md-nav__link">
+      Karakter Dizileri(str)
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../python_karakter_dizilerinin_metotlari/" title="Karakter Dizilerinin Metotları" class="md-nav__link">
+      Karakter Dizilerinin Metotları
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../python_format_metodu/" title="Format Metodu" class="md-nav__link">
+      Format Metodu
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Listeler ve Demetler
+      </label>
+    
+    <a href="./" title="Listeler ve Demetler" class="md-nav__link md-nav__link--active">
+      Listeler ve Demetler
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">İçindekiler</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#liste-tanmlamak" class="md-nav__link">
+    Liste Tanımlamak
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#list-fonksiyonu" class="md-nav__link">
+    list() Fonksiyonu
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#listelerin-oglerine-erismek" class="md-nav__link">
+    Listelerin Öğlerine Erişmek
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#listelerin-ogelerini-degistirmek" class="md-nav__link">
+    Listelerin Öğelerini Değiştirmek
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#listeye-oge-eklemek" class="md-nav__link">
+    Listeye Öğe Eklemek
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#listeleri-birlestirmek" class="md-nav__link">
+    Listeleri Birleştirmek
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#listeden-oge-ckarmak" class="md-nav__link">
+    Listeden Öğe Çıkarmak
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#listeleri-silmek" class="md-nav__link">
+    Listeleri Silmek
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#listeleri-kopyalamak" class="md-nav__link">
+    Listeleri Kopyalamak
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#liste-uretecleri-list-comprehensions" class="md-nav__link">
+    Liste Üreteçleri (List Comprehensions)
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../referanslar/" title="Referanslar" class="md-nav__link">
+      Referanslar
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../changelog/" title="Değişiklik Kaydı" class="md-nav__link">
+      Değişiklik Kaydı
+    </a>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">İçindekiler</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#liste-tanmlamak" class="md-nav__link">
+    Liste Tanımlamak
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#list-fonksiyonu" class="md-nav__link">
+    list() Fonksiyonu
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#listelerin-oglerine-erismek" class="md-nav__link">
+    Listelerin Öğlerine Erişmek
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#listelerin-ogelerini-degistirmek" class="md-nav__link">
+    Listelerin Öğelerini Değiştirmek
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#listeye-oge-eklemek" class="md-nav__link">
+    Listeye Öğe Eklemek
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#listeleri-birlestirmek" class="md-nav__link">
+    Listeleri Birleştirmek
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#listeden-oge-ckarmak" class="md-nav__link">
+    Listeden Öğe Çıkarmak
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#listeleri-silmek" class="md-nav__link">
+    Listeleri Silmek
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#listeleri-kopyalamak" class="md-nav__link">
+    Listeleri Kopyalamak
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#liste-uretecleri-list-comprehensions" class="md-nav__link">
+    Liste Üreteçleri (List Comprehensions)
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/mrabdullahsahin/pratik-yapay-zeka/edit/master/docs/python/python_listeler_demetler.md" title="Düzenle" class="md-icon md-content__icon">&#xE3C9;</a>
+                
+                
+                <h1 id="listelerlist-ve-demetlertuple">Listeler(list) ve Demetler(Tuple)</h1>
+<p>Listeler Python'daki veri tiplerinden biridir. </p>
+<h2 id="liste-tanmlamak">Liste Tanımlamak</h2>
+<p>Bir liste elde etmek için, öğeleri birbirinden virgülle ayırıp, bunların hepsini köşeli parantezler içine alıyoruz.</p>
+<pre><code class="python">liste = [&quot;deger1&quot;,&quot;deger2&quot;,&quot;deger3&quot;]
+</code></pre>
+
+<p>Tanımladığımız liste'nin bir liste olup olmadığını anlamak için type fonksiyonu kullanarak kontrol edelim.</p>
+<pre><code class="python">type(liste)
+</code></pre>
+
+<pre><code>list
+</code></pre>
+<p>Görmüş olduğunuz gibi tanımlamış olduğumuz liste adındaki değişken bir list tipinde.</p>
+<p>Listeler çok farklı değerler barındırabilir. Yani sadece sayı değerleri değil aynı zamanda karakter dizisi değerleride içerebilir. Örneğin:</p>
+<pre><code class="python">liste = [&quot;deger1&quot;,&quot;deger2&quot;,1,2,3,4]
+</code></pre>
+
+<p>Eğer istersek listenin içinde başka listelerde tanımlayabiliriz.</p>
+<pre><code class="python">liste = [&quot;deger1&quot;,&quot;deger2&quot;,[&quot;degisken1&quot;,&quot;degisken2&quot;],1,2,3,4]
+</code></pre>
+
+<p>liste değişkenimizin içeriğine bakalım:</p>
+<pre><code class="python">liste
+</code></pre>
+
+<pre><code>['deger1', 'deger2', ['degisken1', 'degisken2'], 1, 2, 3, 4]
+</code></pre>
+<p>Peki listenin içerisinde bulunan değerlerin tiplerini kontrol edelim. Çünkü ikinci bir liste nasıl gözükmekte bakalım:</p>
+<pre><code class="python">for deger in liste:
+    print(&quot;{} adlı öğenin veri tipi: {}&quot;.format(deger, type(deger)))
+</code></pre>
+
+<pre><code>deger1 adlı öğenin veri tipi: &lt;class 'str'&gt;
+deger2 adlı öğenin veri tipi: &lt;class 'str'&gt;
+['degisken1', 'degisken2'] adlı öğenin veri tipi: &lt;class 'list'&gt;
+1 adlı öğenin veri tipi: &lt;class 'int'&gt;
+2 adlı öğenin veri tipi: &lt;class 'int'&gt;
+3 adlı öğenin veri tipi: &lt;class 'int'&gt;
+4 adlı öğenin veri tipi: &lt;class 'int'&gt;
+</code></pre>
+<p>Görmüş olduğunuz gibi listenin içerisinde bulunan diğer bir listede list tipindedir.</p>
+<h2 id="list-fonksiyonu">list() Fonksiyonu</h2>
+<p>Bu fonksiyonu elimizde bulunan bir karakter dizisini listeye çevirmemize yarar.</p>
+<pre><code class="python">karakter_dizisi = &quot;abcdefgh&quot;
+</code></pre>
+
+<p>Bu karakter dizisini list fonksiyonu aracılığı ile bir list değişkenine çevirelim.</p>
+<pre><code class="python">liste = list(karakter_dizisi)
+</code></pre>
+
+<p>Liste değişkenin veri tipine bakalım:</p>
+<pre><code class="python">type(liste)
+</code></pre>
+
+<pre><code>list
+</code></pre>
+<p>liste değişkenin veri tipi list'tir. Şimdide içeriğine bakalım:</p>
+<pre><code class="python">liste
+</code></pre>
+
+<pre><code>['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h']
+</code></pre>
+<p>Eğer istersek range fonksiyonu ile de sayılardan oluşan bir listeyi hızlıca tanımlayabiliriz.</p>
+<pre><code class="python">sayilar = list(range(10))
+</code></pre>
+
+<p>Oluşturduğumuz sayilar listesinin veri tipine bakalım:</p>
+<pre><code class="python">type(sayilar)
+</code></pre>
+
+<pre><code>list
+</code></pre>
+<p>Şimdide sayilarin içeriğine bakalım:</p>
+<pre><code class="python">sayilar
+</code></pre>
+
+<pre><code>[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+</code></pre>
+<h2 id="listelerin-oglerine-erismek">Listelerin Öğlerine Erişmek</h2>
+<p>Listelerin öğelerine erişebilmemiz için köşeli parantez içerisinde erişmek istediğimiz değerin sıra numarasını yazmamız gerekmektedir. Burada dikkat edilmesi gereken durum listelerdeki değerleri saymaya sıfırdan başlıyoruz.</p>
+<pre><code class="python">liste = [&quot;deger1&quot;,&quot;deger2&quot;,&quot;deger3&quot;]
+</code></pre>
+
+<p>liste değişkenin en son değerine erişelim. Bunun için iki yol mevcut.</p>
+<ol>
+<li>Yol</li>
+</ol>
+<pre><code class="python">liste[2]
+</code></pre>
+
+<pre><code>'deger3'
+</code></pre>
+<ol>
+<li>Yol</li>
+</ol>
+<pre><code class="python">liste[-1]
+</code></pre>
+
+<pre><code>'deger3'
+</code></pre>
+<p>Karakter dizilerini dilimlemede olduğu gibi burada da listeyi dilimleyebiliriz.</p>
+<pre><code class="python">liste[0:2]
+</code></pre>
+
+<pre><code>['deger1', 'deger2']
+</code></pre>
+<h2 id="listelerin-ogelerini-degistirmek">Listelerin Öğelerini Değiştirmek</h2>
+<p>Listelerin öğelerini değiştirmek mümkün, bu durumu inceleyelim.</p>
+<pre><code class="python">renkler = [&quot;kırmızı&quot;,&quot;beyaz&quot;,&quot;sarı&quot;,&quot;mor&quot;,&quot;kahverengi&quot;]
+</code></pre>
+
+<p>renkler listemizin içeriğine bakalım:</p>
+<pre><code class="python">renkler
+</code></pre>
+
+<pre><code>['kırmızı', 'beyaz', 'sarı', 'mor', 'kahverengi']
+</code></pre>
+<p>renkler değişkenimizin içerisinde bulunan sıfırıncı değeri yani kırmızı değerini gri ile değiştirelim:</p>
+<pre><code class="python">renkler[0] = &quot;gri&quot;
+</code></pre>
+
+<p>renkler listemizi tekrardan listeleyelim.</p>
+<pre><code class="python">renkler
+</code></pre>
+
+<pre><code>['gri', 'beyaz', 'sarı', 'mor', 'kahverengi']
+</code></pre>
+<h2 id="listeye-oge-eklemek">Listeye Öğe Eklemek</h2>
+<p>Listelerin içerisine yeni öğeler eklemek mümkün. Bu durumu inceleyelim:</p>
+<pre><code class="python">renkler + [&quot;lacivert&quot;]
+</code></pre>
+
+<pre><code>['gri', 'beyaz', 'sarı', 'mor', 'kahverengi', 'lacivert']
+</code></pre>
+<h2 id="listeleri-birlestirmek">Listeleri Birleştirmek</h2>
+<pre><code class="python">diller1 = [&quot;Python&quot;,&quot;Java&quot;,&quot;C#&quot;]
+diller2 = [&quot;Go&quot;,&quot;C++&quot;,&quot;Fortran&quot;]
+</code></pre>
+
+<p>Elimizde iki adet liste mevcut. Bu listeler yazılım dillerini barındırmaktadır. Bu listeleri birleştirelim.</p>
+<pre><code class="python">programlama = diller1 + diller2
+</code></pre>
+
+<p>Yeni oluşturduğumuz bu değişkenin veri tipine bakalım.</p>
+<pre><code class="python">type(programlama)
+</code></pre>
+
+<pre><code>list
+</code></pre>
+<p>Tanımladığımız değişkenin türü list, şimdide içeriğine bakalım:</p>
+<pre><code class="python">programlama
+</code></pre>
+
+<pre><code>['Python', 'Java', 'C#', 'Go', 'C++', 'Fortran']
+</code></pre>
+<h2 id="listeden-oge-ckarmak">Listeden Öğe Çıkarmak</h2>
+<p>Bir listeden öğe silmek için del adlı ifadeden yararlanabilirsiniz. Örneğin:</p>
+<pre><code class="python">del programlama[-1]
+</code></pre>
+
+<p>Listemizin içeriğine bakalım:</p>
+<pre><code class="python">programlama
+</code></pre>
+
+<pre><code>['Python', 'Java', 'C#', 'Go', 'C++']
+</code></pre>
+<h2 id="listeleri-silmek">Listeleri Silmek</h2>
+<p>Python’da listeleri tamamen silmek de mümkündür. Listeden öğe çıkarma işleminde olduğu gibi del fonksiyonu silmede kullanılmaktadır. Örneğin:</p>
+<pre><code class="python">del programlama
+</code></pre>
+
+<h2 id="listeleri-kopyalamak">Listeleri Kopyalamak</h2>
+<p>Listeleri kopyalarken dikkat edilmesi gereken çok önemli bir husus mevcut. İlk önce bu hususa değinelim daha sonra doğru yönteme bakalım.</p>
+<pre><code class="python">liste_1 = [&quot;a&quot;,&quot;b&quot;,&quot;c&quot;]
+</code></pre>
+
+<p>Bir başka değişkene liste_1 değişkenimizi kopyalayalım.</p>
+<pre><code class="python">liste_2 = liste_1
+</code></pre>
+
+<p>liste_2 değişkenimizin içeriğini kontrol edelim.</p>
+<pre><code class="python">liste_2
+</code></pre>
+
+<pre><code>['a', 'b', 'c']
+</code></pre>
+<p>liste_2 içerisinde bir değişiklik yapalım.</p>
+<pre><code class="python">liste_2[0] = &quot;e&quot;
+</code></pre>
+
+<p>liste_2 değişkenimizin içeriğini kontrol edelim.</p>
+<pre><code class="python">liste_2
+</code></pre>
+
+<pre><code>['e', 'b', 'c']
+</code></pre>
+<p>Görmüş olduğunuz gibi liste_2 değişkenimizin içeriği değişti. Peki liste_1 değişkenimizin içeriğinde durum nasıl:</p>
+<pre><code class="python">liste_1
+</code></pre>
+
+<pre><code>['e', 'b', 'c']
+</code></pre>
+<p>liste_1 değişkenin içeriğinin değişmiş olması pek beklediğimiz bir durum değil. Bu durumun sebebi: Yazılım dillerinde oluşturduğumuz her değişkende RAM üzerinde bir alanda saklanmaktadır. Bu alan her değişken için farklıdır. Fakat bizim daha yeni yaptığımız kopyalama yönteminde RAM üzerinde bulunan alanı kopyalamış olduk. Peki bu iki değişkenin RAM üzerinde gösterdiği adreslere bakalım.</p>
+<pre><code class="python">id(liste_1)
+</code></pre>
+
+<pre><code>4559703968
+</code></pre>
+<pre><code class="python">id(liste_2)
+</code></pre>
+
+<pre><code>4559703968
+</code></pre>
+<p>Görmüş olduğunuz gibi iki değişkende RAM üzerinde aynı noktayı göstermektedir. Peki liste kopyalamanın en doğru şekli nasıl, hadi inceleyelim:</p>
+<pre><code class="python">liste1 = [&quot;a&quot;,&quot;b&quot;,&quot;c&quot;]
+</code></pre>
+
+<p>liste1 değişkenimizi bir başka değişkene aktaralım.</p>
+<pre><code class="python">liste2 = liste1[:]
+</code></pre>
+
+<p>liste2 değişkenimizin içeriğini kontrol edelim.</p>
+<pre><code class="python">liste2
+</code></pre>
+
+<pre><code>['a', 'b', 'c']
+</code></pre>
+<p>Şimdi liste2 üzerinde bir değişiklik yapalım.</p>
+<pre><code class="python">liste2[0] = &quot;d&quot;
+</code></pre>
+
+<p>liste2 değişkenin içeriğini kontrol edelim.</p>
+<pre><code class="python">liste2
+</code></pre>
+
+<pre><code>['d', 'b', 'c']
+</code></pre>
+<p>liste1 değişkeninin içeriğini kontrol edelim:</p>
+<pre><code class="python">liste1
+</code></pre>
+
+<pre><code>['a', 'b', 'c']
+</code></pre>
+<p>liste2 üzerinde yapmış olduğumuz değişken liste1 değişkenini etkilememiştir.</p>
+<h2 id="liste-uretecleri-list-comprehensions">Liste Üreteçleri (List Comprehensions)</h2>
+<p>Liste üreteçleri, adında anlaşıldığı üzere liste üretmeye yarayan yapıdır. Örnek üzerinden inceleyelim:</p>
+<pre><code class="python">liste = [i for i in range(10)]
+</code></pre>
+
+<p>Yukarıda bulunan kod satırları ile 0'dan 10'a kadar sayıların bulunduğu bir liste oluşturmaktadır. Yazmış olduğumuz bu kodun uzun versiyonunu yazalım:</p>
+<pre><code class="python">liste = []
+
+for i in range(10): 
+    liste += [i]
+</code></pre>
+
+<p>Yazmış olduğumuz uzun kod ile kısa kod aynı işi yapmaktadır. Biri kolaylık sunmaktadır.</p>
+<p>Bir başka örnek üzerinden inceleyelim. 0'dan 10'a kadar olan sayılar içerisinde 2'ye tam bölülenleri listeleyelim.</p>
+<pre><code class="python">liste = [i for i in range(10) if i % 2 == 0]
+</code></pre>
+
+<p>Yazmış olduğumuz bu kodun normal versiyonunu yazalım:</p>
+<pre><code class="python">liste = []
+
+for i in range(10):
+    if i % 2 == 0: 
+        liste += [i]
+</code></pre>
+
+<h1 id="demetler">Demetler</h1>
+<p>Demetler, özellikle görünüş olarak listelere çok benzeyen bir veri tipidir. Bu veri tipi de, tıpkı listeler gibi, farklı veri tiplerini içinde barındıran kapsayıcı bir veri tipidir.</p>
+<h2 id="demet-tanmlamak">Demet Tanımlamak</h2>
+<p>Demet tanımlamanın birkaç yolu bulunmaktadır.</p>
+<ol>
+<li>Yol</li>
+</ol>
+<pre><code class="python">demet = (&quot;a&quot;,&quot;b&quot;,1,2)
+</code></pre>
+
+<p>Oluşturduğumuz bu değişkenin demet olup olmadığını anlamak için type fonksiyonu ile bakalım:</p>
+<pre><code class="python">type(demet)
+</code></pre>
+
+<pre><code>tuple
+</code></pre>
+<ol>
+<li>Yol</li>
+</ol>
+<pre><code class="python">demet = &quot;a&quot;,&quot;b&quot;,&quot;c&quot;,1,2
+</code></pre>
+
+<p>Oluşturduğumuz bu değişkenin veri tipine bakalım:</p>
+<pre><code class="python">type(demet)
+</code></pre>
+
+<pre><code>tuple
+</code></pre>
+<p>İçeriğine bakalım:</p>
+<pre><code class="python">demet
+</code></pre>
+
+<pre><code>('a', 'b', 'c', 1, 2)
+</code></pre>
+<ol>
+<li>Yol</li>
+</ol>
+<pre><code class="python">demet = tuple(&quot;abcd12345&quot;)
+</code></pre>
+
+<p>veri tipine bakalım:</p>
+<pre><code class="python">type(demet)
+</code></pre>
+
+<pre><code>tuple
+</code></pre>
+<p>İçeriğine bakalım:</p>
+<pre><code class="python">demet
+</code></pre>
+
+<pre><code>('a', 'b', 'c', 'd', '1', '2', '3', '4', '5')
+</code></pre>
+<h2 id="tek-ogeli-bir-demet-tanmlamak">Tek Öğeli Bir Demet Tanımlamak</h2>
+<p>Tek öğeli bir demet tanımlayalım:</p>
+<pre><code class="python">demet = (&quot;a&quot;)
+</code></pre>
+
+<p>Tanımladığımız değişkenin demet olup olmadığına bakalım:</p>
+<pre><code class="python">type(demet)
+</code></pre>
+
+<pre><code>str
+</code></pre>
+<p>Tanımladığımız değişken bir karakter dizisi(str). Peki tek öğeli bir demet nasıl tanımlayabiliriz:</p>
+<ol>
+<li>Yol</li>
+</ol>
+<pre><code class="python">demet = (&quot;a&quot;),
+</code></pre>
+
+<ol>
+<li>Yol</li>
+</ol>
+<pre><code class="python">demet = &quot;a&quot;,
+</code></pre>
+
+<p>veri tipini kontrol edelim:</p>
+<pre><code class="python">type(demet)
+</code></pre>
+
+<pre><code>tuple
+</code></pre>
+<p>Yukarıda bulunan iki yöntem ile de demet tanımlayabilirsiniz.</p>
+<h2 id="demetlerin-ogelerine-erismek">Demetlerin Öğelerine Erişmek</h2>
+<p>Demetlerin öğelerine erişebilmek listelerde olduğu gibi köşeli parantez içerisinde erişmek istediğimiz değerin sıra numarasını yazmamız yeterli:</p>
+<pre><code class="python">demet = (&quot;deger1&quot;,&quot;deger2&quot;,&quot;deger3&quot;)
+</code></pre>
+
+<pre><code class="python">demet[0]
+</code></pre>
+
+<pre><code>'deger1'
+</code></pre>
+<pre><code class="python">demet[-1]
+</code></pre>
+
+<pre><code>'deger3'
+</code></pre>
+<h2 id="demetlerle-listelerin-birbirinde-fark">Demetlerle Listelerin Birbirinde Farkı</h2>
+<p>Demetlerle Listeler birbirine çok benzerler. Fakat çok belirgin farkları bulunmaktadır.</p>
+<p>Demetler değiştirilemez(immutable) iken listeler değiştirilebilir(mutable) veri türüdür.</p>
+<pre><code class="python">demet = (&quot;a&quot;,&quot;b&quot;,&quot;c&quot;,&quot;d&quot;)
+</code></pre>
+
+<p>demet değişkenimizin ilk değerini değiştirmeye çalışalım:</p>
+<pre><code class="python">demet[0] = &quot;f&quot;
+</code></pre>
+
+<pre><code>---------------------------------------------------------------------------
+
+TypeError                                 Traceback (most recent call last)
+
+&lt;ipython-input-73-0a94098063ff&gt; in &lt;module&gt;
+----&gt; 1 demet[0] = "f"
+
+
+TypeError: 'tuple' object does not support item assignment
+</code></pre>
+<p>Görmüş olduğunuz gibi demet değişkenin ilk değerini değiştirmeye çalıştığımız zaman değiştiremeyeceğimizi belirtti.</p>
+<p>Eğer programın akışı esnasında üzerinde değişiklik yapmayacağınız veya değişiklik yapılmasını istemediğiniz birtakım veriler varsa ve eğer siz bu verileri liste benzeri bir taşıyıcı içine yerleştirmek istiyorsanız, listeler yerine demetleri kullanabilirsiniz. Ayrıca demetler üzerinde işlem yapmak listelere kıyasla daha hızlıdır. Dolayısıyla, performans avantajı nedeniyle de listeler yerine demetleri kullanmak isteyebilirsiniz.</p>
+<p>Bir demetin üzerinde değişiklik yapmak istiyorsak, onu yeniden tanımlamalıyız.</p>
+<pre><code class="python">demet = ('a', 'b')
+demet = demet + ('c',)
+</code></pre>
+
+<pre><code class="python">demet
+</code></pre>
+
+<pre><code>('a', 'b', 'c')
+</code></pre>
+<h2 id="demetlerin-kullanm-alanlar">Demetlerin Kullanım Alanları</h2>
+<p>Bu veri tipi özellikle programların ayar (conf) dosyalarında bu veri tipi sıklıkla kullanılır. Örneğin Python tabanlı bir web çatısı (framework ) olan Django’nun settings.py adlı ayar dosyasında pek çok değer bir demet olarak saklanır. Mesela bir Django projesinde web sayfalarının şablonlarını (template) hangi dizin altında saklayacağınızı belirlediğiniz ayar şöyle görünür:</p>
+<pre><code class="python">TEMPLATE_DIRS = ('/home/projects/djprojects/blog/templates',)
+</code></pre>
+
+<p>Burada, şablon dosyalarının hangi dizinde yer alacağını bir demet içinde gösteriyoruz. Bu demet içine birden fazla dizin adı yazabilirdik. Ama biz bütün şablon dosyalarını tek bir dizin altında tutmayı tercih ettiğimiz için tek öğeli bir demet tanımlamışız. Bu arada, daha önce de söylediğimiz gibi, demetlerle ilgili en sık yapacağınız hata, tek öğeli demet tanımlamaya çalışırken aslında yanlışlıkla bir karakter dizisi tanımlamak olacaktır. Örneğin yukarıdaki TEMPLATE_DIRS değişkenini şöyle yazsaydık:</p>
+<pre><code class="python">TEMPLATE_DIRS = ('/home/projects/djprojects/blog/templates')
+</code></pre>
+
+<p>Aslında bir demet değil, alelade bir karakter dizisi tanımlamış olurduk...</p>
+<blockquote>
+<p>Son Güncelleme: 20 Aralaık 2019 - Cuma</p>
+</blockquote>
+                
+                  
+                
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../python_format_metodu/" title="Format Metodu" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Önceki
+                </span>
+                Format Metodu
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../../referanslar/" title="Referanslar" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Sonraki
+                </span>
+                Referanslar
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright &copy; 2019 Pratik Yapay Zeka
+          </div>
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+  <div class="md-footer-social">
+    <link rel="stylesheet" href="../../assets/fonts/font-awesome.css">
+    
+      <a href="https://github.com/mrabdullahsahin" class="md-footer-social__link fa fa-github"></a>
+    
+      <a href="https://twitter.com/mrabdullahsahin" class="md-footer-social__link fa fa-twitter"></a>
+    
+      <a href="https://linkedin.com/in/mrabdullahsahin" class="md-footer-social__link fa fa-linkedin"></a>
+    
+  </div>
+
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/application.808e90bb.js"></script>
+      
+        
+        
+          
+          <script src="../../assets/javascripts/lunr/lunr.stemmer.support.js"></script>
+          
+            
+              
+              
+                <script src="../../assets/javascripts/lunr/lunr.tr.js"></script>
+              
+            
+          
+          
+        
+      
+      <script>app.initialize({version:"1.0.4",url:{base:"../.."}})</script>
+      
+    
+  </body>
+</html>

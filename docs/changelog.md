@@ -2,6 +2,18 @@
 
 Bu projede yapılan tüm değişiklikler bu dosyada belgelenmektedir.
 
+## 0.2.4 - 2019-12-23
+
+### Eklendi
+
+- Jupyter Notebooks içerisine python_listeler_demetler_metodlari.ipynb eklendi.
+- python_listeler_demetler_metodlari.md eklendi.
+
+### Değişti
+
+- mkdocs.yml dosyasında menü kısmı güncellendi.
+- index.md dosyasında son güncelleme kısmı güncellendi.
+
 ## 0.2.3 - 2019-12-20
 
 ### Eklendi

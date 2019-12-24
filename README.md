@@ -28,8 +28,8 @@ Projeye katkıda bulunabilmeniz için izlemeniz gereken adımlar şunlardır;
 
 Bu projenin lisansı <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode" target="_blank">Attribution-NonCommercial-ShareAlike 4.0 International</a>
 
-<p align="left" > <img src="https://creativecommons.org/images/deed/svg/cc_white.svg" height=25 alt="Pratik Yapay Zeka"/> 
-<img src="https://creativecommons.org/images/deed/svg/attribution_icon_white.svg" height=25 alt="Pratik Yapay Zeka"/>
-<img src="https://creativecommons.org/images/deed/svg/nc_white.svg" height=25 alt="Pratik Yapay Zeka"/>
-<img src="https://creativecommons.org/images/deed/svg/sa_white.svg" height=25 alt="Pratik Yapay Zeka"/>
+<p align="left"> <img src="https://mirrors.creativecommons.org/presskit/icons/cc.png" height=35 alt="Pratik Yapay Zeka" style="color:black;"/> 
+<img src="https://mirrors.creativecommons.org/presskit/icons/by.png" height=35 alt="Pratik Yapay Zeka"/>
+<img src="https://mirrors.creativecommons.org/presskit/icons/nc.png" height=35 alt="Pratik Yapay Zeka"/>
+<img src="https://mirrors.creativecommons.org/presskit/icons/sa.png" height=35 alt="Pratik Yapay Zeka"/>
 </p> 

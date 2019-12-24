@@ -45,6 +45,7 @@ nav:
     - Sayılar: python/python_sayilar.md
     - Sözlükler: python/python_sozlukler.md
     - Sözlüklerin Metotları: python/python_sozluklerin_metotlari.md
+    - Kümeler ve Dondurulmuş Kümeler: python/python_kumeler_dondurulmus_kumeler.md
   - Referanslar: referanslar.md
   - Değişiklik Kaydı: changelog.md
 

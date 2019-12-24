@@ -1,0 +1,1583 @@
+
+
+
+
+<!doctype html>
+<html lang="tr" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+        <meta name="description" content="Yapay Zeka'ya pratik bir yaklaşım.">
+      
+      
+        <link rel="canonical" href="https://mrabdullahsahin.github.io/pratik-yapay-zeka/python/python_kumeler_dondurulmus_kumeler/">
+      
+      
+        <meta name="author" content="Abdullah Sahin">
+      
+      
+        <meta name="lang:clipboard.copy" content="Kopyala">
+      
+        <meta name="lang:clipboard.copied" content="Kopyalandı">
+      
+        <meta name="lang:search.language" content="tr">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="Eşleşen doküman bulunamadı">
+      
+        <meta name="lang:search.result.one" content="1 doküman bulundu">
+      
+        <meta name="lang:search.result.other" content="# doküman bulundu">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../../img/logo.png">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.6.0">
+    
+    
+      
+        <title>Kümeler ve Dondurulmuş Kümeler - Pratik Yapay Zeka</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/application.1b62728e.css">
+      
+        <link rel="stylesheet" href="../../assets/stylesheets/application-palette.a8b3c06d.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#3f51b5">
+      
+    
+    
+      <script src="../../assets/javascripts/modernizr.268332fc.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../../assets/fonts/material-icons.css">
+    
+      <link rel="manifest" href="../../manifest.webmanifest">
+    
+    
+    
+      
+    
+    
+  </head>
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448" viewBox="0 0 416 448" id="__github"><path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19T128 352t-18.125-8.5-10.75-19T96 304t3.125-20.5 10.75-19T128 256t18.125 8.5 10.75 19T160 304zm160 0q0 10-3.125 20.5t-10.75 19T288 352t-18.125-8.5-10.75-19T256 304t3.125-20.5 10.75-19T288 256t18.125 8.5 10.75 19T320 304zm40 0q0-30-17.25-51T296 232q-10.25 0-48.75 5.25Q229.5 240 208 240t-39.25-2.75Q130.75 232 120 232q-29.5 0-46.75 21T56 304q0 22 8 38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0 37.25-1.75t35-7.375 30.5-15 20.25-25.75T360 304zm56-44q0 51.75-15.25 82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5T212 416q-19.5 0-35.5-.75t-36.875-3.125-38.125-7.5-34.25-12.875T37 371.5t-21.5-28.75Q0 312 0 260q0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25 30.875Q171.5 96 212 96q37 0 70 8 26.25-20.5 46.75-30.25T376 64q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34 99.5z"/></svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#kumeler-ve-dondurulmus-kumeler" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="https://mrabdullahsahin.github.io/pratik-yapay-zeka/" title="Pratik Yapay Zeka" class="md-header-nav__button md-logo">
+          
+            <img src="../../img/logo.png" width="24" height="24">
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            <span class="md-header-nav__topic">
+              Pratik Yapay Zeka
+            </span>
+            <span class="md-header-nav__topic">
+              
+                Kümeler ve Dondurulmuş Kümeler
+              
+            </span>
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Ara" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Aramaya başlamak için yazın
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+
+
+  
+
+<a href="https://github.com/mrabdullahsahin/pratik-yapay-zeka/" title="Depoya git" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    mrabdullahsahin/pratik-yapay-zeka
+  </div>
+</a>
+          </div>
+        </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+      <main class="md-main" role="main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="https://mrabdullahsahin.github.io/pratik-yapay-zeka/" title="Pratik Yapay Zeka" class="md-nav__button md-logo">
+      
+        <img src="../../img/logo.png" width="48" height="48">
+      
+    </a>
+    Pratik Yapay Zeka
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+<a href="https://github.com/mrabdullahsahin/pratik-yapay-zeka/" title="Depoya git" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    mrabdullahsahin/pratik-yapay-zeka
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../.." title="Giriş" class="md-nav__link">
+      Giriş
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" checked>
+    
+    <label class="md-nav__link" for="nav-2">
+      Python
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        Python
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../degiskenler/" title="Değişkenler" class="md-nav__link">
+      Değişkenler
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../print/" title="print Fonksiyonu" class="md-nav__link">
+      print Fonksiyonu
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../kacis_dizileri/" title="Kaçış Dizileri" class="md-nav__link">
+      Kaçış Dizileri
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../yorum_isareti/" title="Yorum İşareti" class="md-nav__link">
+      Yorum İşareti
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../kullanicidan_bilgi_almak/" title="Kullanıcıdan Bilgi Almak" class="md-nav__link">
+      Kullanıcıdan Bilgi Almak
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../kosullu_durumlar/" title="Koşullu Durumlar" class="md-nav__link">
+      Koşullu Durumlar
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../islecler/" title="İşleçler" class="md-nav__link">
+      İşleçler
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../python_donguler/" title="Döngüler" class="md-nav__link">
+      Döngüler
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../python_hata_yakalama/" title="Hata Yakalama" class="md-nav__link">
+      Hata Yakalama
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../python_karakter_dizileri/" title="Karakter Dizileri(str)" class="md-nav__link">
+      Karakter Dizileri(str)
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../python_karakter_dizilerinin_metotlari/" title="Karakter Dizilerinin Metotları" class="md-nav__link">
+      Karakter Dizilerinin Metotları
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../python_format_metodu/" title="Format Metodu" class="md-nav__link">
+      Format Metodu
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../python_listeler_demetler/" title="Listeler ve Demetler" class="md-nav__link">
+      Listeler ve Demetler
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../python_listeler_demetler_metodlari/" title="Listeler ve Demetlerin Metodları" class="md-nav__link">
+      Listeler ve Demetlerin Metodları
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../python_sayilar/" title="Sayılar" class="md-nav__link">
+      Sayılar
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../python_sozlukler/" title="Sözlükler" class="md-nav__link">
+      Sözlükler
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../python_sozluklerin_metotlari/" title="Sözlüklerin Metotları" class="md-nav__link">
+      Sözlüklerin Metotları
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Kümeler ve Dondurulmuş Kümeler
+      </label>
+    
+    <a href="./" title="Kümeler ve Dondurulmuş Kümeler" class="md-nav__link md-nav__link--active">
+      Kümeler ve Dondurulmuş Kümeler
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">İçindekiler</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#kumeler" class="md-nav__link">
+    Kümeler
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#kume-olusturmak" class="md-nav__link">
+    Küme Oluşturmak
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#kumelerin-yaps" class="md-nav__link">
+    Kümelerin Yapısı
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#kume-uretecleri-setcomprehensions" class="md-nav__link">
+    Küme Üreteçleri (SetComprehensions)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#kumelerin-metotlar" class="md-nav__link">
+    Kümelerin Metotları
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#clear" class="md-nav__link">
+    clear()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#copy" class="md-nav__link">
+    copy()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#add" class="md-nav__link">
+    add()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#difference" class="md-nav__link">
+    difference()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#difference_update" class="md-nav__link">
+    difference_update()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#discard" class="md-nav__link">
+    discard()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#remove" class="md-nav__link">
+    remove()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#intersection" class="md-nav__link">
+    intersection()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#intersection_update" class="md-nav__link">
+    intersection_update()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#isdisjoint" class="md-nav__link">
+    isdisjoint()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#issubset" class="md-nav__link">
+    issubset()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#issuperset" class="md-nav__link">
+    issuperset()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#union" class="md-nav__link">
+    union()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#update" class="md-nav__link">
+    update()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#symmetric_difference" class="md-nav__link">
+    symmetric_difference()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#symmetric_difference_update" class="md-nav__link">
+    symmetric_difference_update()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pop" class="md-nav__link">
+    pop()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dondurulmus-kumeler-frozenset" class="md-nav__link">
+    Dondurulmuş Kümeler (Frozenset)
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../referanslar/" title="Referanslar" class="md-nav__link">
+      Referanslar
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../changelog/" title="Değişiklik Kaydı" class="md-nav__link">
+      Değişiklik Kaydı
+    </a>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">İçindekiler</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#kumeler" class="md-nav__link">
+    Kümeler
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#kume-olusturmak" class="md-nav__link">
+    Küme Oluşturmak
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#kumelerin-yaps" class="md-nav__link">
+    Kümelerin Yapısı
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#kume-uretecleri-setcomprehensions" class="md-nav__link">
+    Küme Üreteçleri (SetComprehensions)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#kumelerin-metotlar" class="md-nav__link">
+    Kümelerin Metotları
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#clear" class="md-nav__link">
+    clear()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#copy" class="md-nav__link">
+    copy()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#add" class="md-nav__link">
+    add()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#difference" class="md-nav__link">
+    difference()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#difference_update" class="md-nav__link">
+    difference_update()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#discard" class="md-nav__link">
+    discard()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#remove" class="md-nav__link">
+    remove()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#intersection" class="md-nav__link">
+    intersection()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#intersection_update" class="md-nav__link">
+    intersection_update()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#isdisjoint" class="md-nav__link">
+    isdisjoint()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#issubset" class="md-nav__link">
+    issubset()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#issuperset" class="md-nav__link">
+    issuperset()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#union" class="md-nav__link">
+    union()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#update" class="md-nav__link">
+    update()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#symmetric_difference" class="md-nav__link">
+    symmetric_difference()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#symmetric_difference_update" class="md-nav__link">
+    symmetric_difference_update()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pop" class="md-nav__link">
+    pop()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dondurulmus-kumeler-frozenset" class="md-nav__link">
+    Dondurulmuş Kümeler (Frozenset)
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/mrabdullahsahin/pratik-yapay-zeka/edit/master/docs/python/python_kumeler_dondurulmus_kumeler.md" title="Düzenle" class="md-icon md-content__icon">&#xE3C9;</a>
+                
+                
+                <h1 id="kumeler-ve-dondurulmus-kumeler">Kümeler ve Dondurulmuş Kümeler</h1>
+<p>Bu bölümde kümeler dışında, bir de dondurulmuş kümelerden söz edeceğiz. Bu iki veri tipi birbiriyle ilişkilidir.</p>
+<h2 id="kumeler">Kümeler</h2>
+<p>Adından da az çok tahmin edebileceğiniz gibi kümeler, matematikten bildiğimiz “küme” kavramıyla sıkı sıkıya bağlantılıdır. Bu veri tipi, matematikteki kümelerin sahip olduğu bütün özellikleri taşır. Yani matematikteki kümelerden bildiğimiz kesişim, birleşim ve fark gibi özellikler Python’daki kümeler için de geçerlidir.</p>
+<h3 id="kume-olusturmak">Küme Oluşturmak</h3>
+<p>Küme oluşturmak çok kolay bir işlemdir. Örneğin boş bir kümeyi şöyle oluşturuyoruz:</p>
+<pre><code class="python">bos_kume = set()
+</code></pre>
+
+<p>Listeler, demetler ve sözlüklerin aksine kümelerin ayırt edici bir işareti yoktur. Küme oluşturmak için set() adlı özel bir fonksiyondan yararlanıyoruz.</p>
+<pre><code class="python">type(bos_kume)
+</code></pre>
+
+<pre><code>set
+</code></pre>
+<p>Gördüğünüz gibi, Python programlama dilinde kümeler set ifadesiyle gösteriliyor.</p>
+<p>İçinde öğe de barındıran kümeleri ise şu şekilde oluşturuyoruz:</p>
+<pre><code class="python">kume = set([&quot;elma&quot;, &quot;armut&quot;, &quot;kebap&quot;])
+</code></pre>
+
+<p>Gördüğünüz gibi set() fonksiyonu içindeki öğeler bir liste içinde yer alıyor. Dolayısıyla yukarıdaki tanımlamayı şöyle de yapabiliriz:</p>
+<pre><code class="python">liste = [&quot;elma&quot;, &quot;armut&quot;, &quot;kebap&quot;]
+
+kume = set(liste)
+</code></pre>
+
+<p>Elbette küme tanımlamak için mutlaka liste kullanmak zorunda değiliz. İstersek demetleri de küme haline getirebiliriz:</p>
+<pre><code class="python">demet = (&quot;elma&quot;, &quot;armut&quot;, &quot;kebap&quot;)
+
+kume = set(demet)
+</code></pre>
+
+<p>Hatta ve hatta karakter dizilerinden dahi küme yapabiliriz:</p>
+<pre><code class="python">kardiz = &quot;Python Programlama Dili için Türkçe Kaynak&quot; 
+
+kume = set(kardiz)
+</code></pre>
+
+<p>Kullandığımız karakter dizisinin böyle uzun olmasına da gerek yok. Tek karakterlik dizilerden bile küme oluşturabiliriz:</p>
+<pre><code class="python">kardiz = &quot;a&quot;
+
+kume = set(kardiz)
+</code></pre>
+
+<p>Ama sayılardan küme oluşturamayız:</p>
+<pre><code class="python">n = 10
+
+kume = set(n)
+</code></pre>
+
+<pre><code>---------------------------------------------------------------------------
+
+TypeError                                 Traceback (most recent call last)
+
+&lt;ipython-input-8-ffda9229f4d1&gt; in &lt;module&gt;
+      1 n = 10
+      2 
+----&gt; 3 kume = set(n)
+
+
+TypeError: 'int' object is not iterable
+</code></pre>
+<p>Peki sözlükleri kullanarak küme oluşturabilir miyiz? Elbette, neden olmasın?</p>
+<pre><code class="python">bilgi = {&quot;işletim sistemi&quot;: &quot;GNU&quot;, 
+         &quot;sistem çekirdeği&quot;: &quot;Linux&quot;,
+         &quot;dağıtım&quot;: &quot;Ubuntu GNU/Linux&quot;}
+
+kume = set(bilgi)
+</code></pre>
+
+<p>Küme oluşturmanın son bir yönteminden daha söz edelim. En başta söylediğimiz gibi, listeler, demetler, sözlükler ve karakter dizilerinin aksine kümelerin [ ], ( ), { }, ‘ ‘ gibi ayırt edici bir işareti yoktur. Ama eğer istersek sözlükleri oluşturmak için kullandığımız özel işaretleri küme oluşturmak için de kullanabiliriz. </p>
+<pre><code class="python">kume = {'Python', 'C++', 'Ruby', 'PHP'}
+
+type(kume)
+</code></pre>
+
+<pre><code>set
+</code></pre>
+<p>Ancak bu yapıyı kullanarak boş bir küme oluşturamazsınız:</p>
+<pre><code class="python">kume = {}
+
+type(kume)
+</code></pre>
+
+<pre><code>dict
+</code></pre>
+<p>Boş bir küme oluşturmak için set() fonksiyonunu kullanmanız gerekmektedir:</p>
+<pre><code class="python">kume = set(kume)
+
+type(kume)
+</code></pre>
+
+<pre><code>set
+</code></pre>
+<p>Eğer oluşturduğunuz kümeyi ekrana yazdırmak isterseniz:</p>
+<pre><code class="python">kume
+</code></pre>
+
+<pre><code>{'C++', 'PHP', 'Python', 'Ruby'}
+</code></pre>
+<p>Bu arada, bir sözlüğü kümeye çevirdiğinizde, elbette sözlüğün yalnızca anahtarları kümeye eklenecektir. Sözlüğün değerleri ise böyle bir işlemin sonucunda ortadan kaybolur.</p>
+<p>Eğer bir sözlüğü kümeye çevirirken hem anahtarları hem de değerleri korumak gibi bir niyetiniz varsa şöyle bir şey yazabilirsiniz:</p>
+<pre><code class="python">bilgi = {&quot;işletim sistemi&quot;: &quot;GNU&quot;, 
+         &quot;sistem çekirdeği&quot;: &quot;Linux&quot;, 
+         &quot;dağıtım&quot;: &quot;Ubuntu GNU/Linux&quot;}
+</code></pre>
+
+<p>Bu sözlükteki anahtar-değer çiftlerini bir küme içine, çift öğeli demetler olarak yerleştirebiliriz:</p>
+<pre><code class="python">liste = [(anahtar, değer) for anahtar, değer in bilgi.items()] 
+
+kume = set(liste)
+
+kume
+</code></pre>
+
+<pre><code>{('dağıtım', 'Ubuntu GNU/Linux'),
+ ('işletim sistemi', 'GNU'),
+ ('sistem çekirdeği', 'Linux')}
+</code></pre>
+<h3 id="kumelerin-yaps">Kümelerin Yapısı</h3>
+<p>Örneğin şöyle bir küme tanımlayalım:</p>
+<pre><code class="python">kardiz = &quot;Python Programlama Dili&quot;
+
+kume = set(kardiz)
+
+print(kume)
+</code></pre>
+
+<pre><code>{'t', 'a', 'o', 'm', 'h', 'D', 'r', ' ', 'g', 'n', 'l', 'y', 'i', 'P'}
+</code></pre>
+<p>Burada bir şey dikkatinizi çekmiş olmalı. Bir öğeyi küme olarak tanımlayıp ekrana yazdırdığımızda elde ettiğimiz çıktı, o öğe içindeki her bir alt öğeyi tek bir kez içeriyor. Yani mesela “Python Programlama Dili” içinde iki adet “P” karakteri var, ama çıktıda bu iki “P” karakterinin yalnızca biri görünüyor. Buradan anlıyoruz ki, kümeler aynı öğeyi birden fazla tekrar etmez. Bu çok önemli bir özelliktir ve pek çok yerde işimize yarar. Aynı durum karakter dizisi dışında kalan öteki veri tipleri için de geçerlidir. Yani mesela eğer bir listeyi küme haline getiriyorsak, o listedeki öğeler küme içinde yalnızca bir kez geçecektir. Listede aynı öğeden iki-üç tane bulunsa bile, kümemiz bu öğeleri teke indirecektir.</p>
+<h3 id="kume-uretecleri-setcomprehensions">Küme Üreteçleri (SetComprehensions)</h3>
+<p>Liste üreteçlerini ve sözlük üreteçlerini kullanarak nasıl tek satırda ve hızlı bir şekilde listeler ve sözlükler üretebiliyorsak, aynı şekilde küme üreteçlerini kullanarak tek satırda ve hızlı bir şekilde kümeler de üretebiliriz.</p>
+<pre><code class="python">import random
+
+liste = [random.randint(0, 10000) for i in range(1000)]
+</code></pre>
+
+<pre><code class="python">kume = {i for i in liste if i &lt; 100} 
+
+print(kume)
+</code></pre>
+
+<pre><code>{64, 97, 3, 36, 42, 43, 44, 16, 61}
+</code></pre>
+<p>Gördüğünüz gibi, küme üreteçlerinin sözdizimi, liste ve sözlük üreteçlerinin sözdizimine çok benziyor.</p>
+<h3 id="kumelerin-metotlar">Kümelerin Metotları</h3>
+<p>Kümeler ile kullanılabilen metotlara bakalım:</p>
+<pre><code class="python">dir(set)
+</code></pre>
+
+<pre><code>['__and__',
+ '__class__',
+ '__contains__',
+ '__delattr__',
+ '__dir__',
+ '__doc__',
+ '__eq__',
+ '__format__',
+ '__ge__',
+ '__getattribute__',
+ '__gt__',
+ '__hash__',
+ '__iand__',
+ '__init__',
+ '__init_subclass__',
+ '__ior__',
+ '__isub__',
+ '__iter__',
+ '__ixor__',
+ '__le__',
+ '__len__',
+ '__lt__',
+ '__ne__',
+ '__new__',
+ '__or__',
+ '__rand__',
+ '__reduce__',
+ '__reduce_ex__',
+ '__repr__',
+ '__ror__',
+ '__rsub__',
+ '__rxor__',
+ '__setattr__',
+ '__sizeof__',
+ '__str__',
+ '__sub__',
+ '__subclasshook__',
+ '__xor__',
+ 'add',
+ 'clear',
+ 'copy',
+ 'difference',
+ 'difference_update',
+ 'discard',
+ 'intersection',
+ 'intersection_update',
+ 'isdisjoint',
+ 'issubset',
+ 'issuperset',
+ 'pop',
+ 'remove',
+ 'symmetric_difference',
+ 'symmetric_difference_update',
+ 'union',
+ 'update']
+</code></pre>
+<p>Hemen işimize yarayacak metotları alalım:</p>
+<pre><code class="python">for i in dir(set):
+    if &quot;__&quot; not in i: 
+        print(i)
+</code></pre>
+
+<pre><code>add
+clear
+copy
+difference
+difference_update
+discard
+intersection
+intersection_update
+isdisjoint
+issubset
+issuperset
+pop
+remove
+symmetric_difference
+symmetric_difference_update
+union
+update
+</code></pre>
+<h4 id="clear">clear()</h4>
+<p>Kümelerle ilgili olarak inceleyeceğimiz ilk metot clear(). Bu metodu daha önce sözlükleri çalışırken de görmüştük. Sözlüklerde bu metodun görevi sözlüğün içini boşaltmak idi. Burada da aynı vazifeyi görür:</p>
+<pre><code class="python">km = set(&quot;ankara&quot;)
+
+for i in km:
+    print(i)
+</code></pre>
+
+<pre><code>k
+a
+r
+n
+</code></pre>
+<pre><code class="python">km.clear()
+
+km
+</code></pre>
+
+<pre><code>set()
+</code></pre>
+<p>Burada önce “km” adlı bir küme oluşturduk. Daha sonra da clear() metodunu kullanarak bu kümenin bütün öğelerini sildik. Artık elimizde boş bir küme var.</p>
+<h4 id="copy">copy()</h4>
+<p>Listeler ve sözlükleri incelerken copy() adlı bir metot öğrenmiştik. Bu metot aynı zamanda kümelerle birlikte de kullanılabilir. Üstelik işlevi de aynıdır:</p>
+<pre><code class="python">km = set(&quot;kahramanmaraş&quot;)
+
+yedek = km.copy()
+
+yedek
+</code></pre>
+
+<pre><code>{'a', 'h', 'k', 'm', 'n', 'r', 'ş'}
+</code></pre>
+<h4 id="add">add()</h4>
+<p>Add kelimesi Türkçe’de “eklemek” anlamına gelir. Adından da anlaşılacağı gibi, bu metot yardımıyla kümelerimize yeni öğeler ilave edebileceğiz. Hemen bunun nasıl kullanıldığına bakalım:</p>
+<pre><code class="python">kume = set([&quot;elma&quot;, &quot;armut&quot;, &quot;kebap&quot;]) 
+
+kume.add(&quot;çilek&quot;)
+
+print(kume)
+</code></pre>
+
+<pre><code>{'elma', 'çilek', 'armut', 'kebap'}
+</code></pre>
+<p>Gördüğünüz gibi, add() metodunu kullanarak, kümemize çilek adlı yeni bir öğe ekledik. Eğer kümede zaten varolan bir öğe eklemeye çalışırsak kümede herhangi bir değişiklik olmayacaktır. Çünkü, daha önce de söylediğimiz gibi, kümeler her bir öğeyi tek bir sayıda barındırır.</p>
+<p>Bu arada, yeri gelmişken kümelerin önemli bir özelliğinden daha söz edelim. Bir kümeye herhangi bir öğe ekleyebilmemiz için, o öğenin değiştirilemeyen (immutable) bir veri tipi olması gerekiyor. </p>
+<p>Bildiğiniz gibi Python’daki şu veri tipleri değiştirilemeyen veri tipleridir:</p>
+<ol>
+<li>Demetler</li>
+<li>Sayılar</li>
+<li>Karakter Dizileri</li>
+</ol>
+<p>Şu veri tipleri ise değiştirilebilen veri tipleridir: </p>
+<ol>
+<li>Listeler</li>
+<li>Sözlükler</li>
+<li>Kümeler</li>
+</ol>
+<p>Dolayısıyla bir kümeye ancak şu veri tiplerini ekleyebiliriz:</p>
+<ol>
+<li>Demetler</li>
+<li>Sayılar</li>
+<li>Karakter Dizileri</li>
+</ol>
+<h4 id="difference">difference()</h4>
+<p>Bu metot iki kümenin farkını almamızı sağlar. Örneğin:</p>
+<pre><code class="python">k1 = set([1, 2, 3, 5])
+k2 = set([3, 4, 2, 10])
+
+k1.difference(k2)
+</code></pre>
+
+<pre><code>{1, 5}
+</code></pre>
+<p>Demek ki k1’in k2’den farkı buymuş. Peki k2’nin k1’den farkını bulmak istersek ne yapacağız?</p>
+<pre><code class="python">k2.difference(k1)
+</code></pre>
+
+<pre><code>{4, 10}
+</code></pre>
+<p>İsterseniz uzun uzun difference() metodunu kullanmak yerine sadece eksi (-) işaretini kullanarak da aynı sonucu elde edebilirsiniz:</p>
+<pre><code class="python">k1 - k2
+</code></pre>
+
+<pre><code>{1, 5}
+</code></pre>
+<p>...veya...</p>
+<pre><code class="python">k2 - k1
+</code></pre>
+
+<pre><code>{4, 10}
+</code></pre>
+<p>Hayır, “madem eksi işaretini kullanabiliyoruz, o halde artı işaretini de kullanabiliriz! ” gibi bir
+fikir doğru değildir.</p>
+<h4 id="difference_update">difference_update()</h4>
+<p>Bu metot, difference() metodundan elde edilen sonuca göre bir kümenin güncellenmesini sağlar. Yani? Hemen bir örnek verelim:</p>
+<pre><code class="python">k1 = set([1, 2, 3])
+k2 = set([1, 3, 5])
+k1.difference_update(k2)
+
+print(k1)
+</code></pre>
+
+<pre><code>{2}
+</code></pre>
+<p>Gördüğünüz gibi, bu metot k1’in k2’den farkını aldı ve bu farkı kullanarak k1’i yeniden oluşturdu. k1 ile k2 arasındaki tek fark 2 adlı öğe idi. Dolayısıyla difference_update() metodunu uyguladığımızda k1’in öğelerinin silinip yerlerine 2 adlı öğenin geldiğini görüyoruz.</p>
+<h4 id="discard">discard()</h4>
+<p>Bu metot kümeden öğe silmemizi sağlayacak:</p>
+<pre><code class="python">hayvanlar = set([&quot;kedi&quot;, &quot;köpek&quot;, &quot;at&quot;, &quot;kuş&quot;, &quot;inek&quot;, &quot;deve&quot;])
+hayvanlar.discard(&quot;kedi&quot;)
+
+print(hayvanlar)
+</code></pre>
+
+<pre><code>{'inek', 'deve', 'kuş', 'at', 'köpek'}
+</code></pre>
+<p>Eğer küme içinde bulunmayan bir öğe silmeye çalışırsak hiç bir şey olmaz. Yani hata mesajı almayız:</p>
+<pre><code class="python">hayvanlar.discard(&quot;yılan&quot;)
+</code></pre>
+
+<p>Burada etkileşimli kabuk sessizce bir alt satıra geçecektir. Bu metodun en önemli özelliği
+budur. Yani olmayan bir öğeyi silmeye çalıştığımızda hata vermemesi.</p>
+<h4 id="remove">remove()</h4>
+<p>Eğer bir kümeden öğe silmek istersek remove() metodunu da kullanabiliriz:</p>
+<pre><code class="python">hayvanlar.remove(&quot;köpek&quot;)
+</code></pre>
+
+<p>Peki discard() varken remove() metoduna ne gerek var? Ya da tersi.</p>
+<p>Bu iki metot aynı işlevi yerine getirse de aralarında önemli bir fark vardır. Hatırlarsanız discard() metoduyla, kümede olmayan bir öğeyi silmeye çalışırsak herhangi bir hata mesajı almayacağımızı söylemiştik. Eğer remove() metodunu kullanarak, kümede olmayan bir öğeyi silmeye çalışırsak, discard() metodunun aksine, hata mesajı alırız:</p>
+<pre><code class="python">hayvanlar.remove(&quot;fare&quot;)
+</code></pre>
+
+<pre><code>---------------------------------------------------------------------------
+
+KeyError                                  Traceback (most recent call last)
+
+&lt;ipython-input-45-65ebbfa6250f&gt; in &lt;module&gt;
+----&gt; 1 hayvanlar.remove("fare")
+
+
+KeyError: 'fare'
+</code></pre>
+<h4 id="intersection">intersection()</h4>
+<p>intersection kelimesi Türkçe’de “kesişim” anlamına gelir. Adından da anladığımız gibi, intersection() metodu bize iki kümenin kesişim kümesini verecektir:</p>
+<pre><code class="python">k1 = set([1, 2, 3, 4])
+k2 = set([1, 3, 5, 7])
+
+k1.intersection(k2)
+</code></pre>
+
+<pre><code>{1, 3}
+</code></pre>
+<p>İki kümenin kesişimini bulmak için “&amp;” işaretinden yararlanabiliriz:</p>
+<pre><code class="python">k1 &amp; k2
+</code></pre>
+
+<pre><code>{1, 3}
+</code></pre>
+<h4 id="intersection_update">intersection_update()</h4>
+<p>Bu metodun görevi, intersection() metodundan elde edilen sonuca göre bir kümenin güncellenmesini sağlamaktır:</p>
+<pre><code class="python">k1 = set([1, 2, 3])
+k2 = set([1, 3, 5])
+k1.intersection_update(k2)
+
+print(k1)
+</code></pre>
+
+<pre><code>{1, 3}
+</code></pre>
+<pre><code class="python">print(k2)
+</code></pre>
+
+<pre><code>{1, 3, 5}
+</code></pre>
+<p>Gördüğünüz gibi, intersection_update() metodu k1’in bütün öğelerini sildi ve yerlerine k1 ve k2’nin kesişim kümesinin elemanlarını koydu.</p>
+<h4 id="isdisjoint">isdisjoint()</h4>
+<p>Bu metodun çok basit bir görevi vardır. isdisjoint() metodunu kullanarak iki kümenin kesişim kümesinin boş olup olmadığı sorgulayabilirsiniz. </p>
+<pre><code class="python">a = set([1, 2, 3])
+b = set([2, 4, 6])
+
+a.isdisjoint(b)
+</code></pre>
+
+<pre><code>False
+</code></pre>
+<h4 id="issubset">issubset()</h4>
+<p>Bu metot yardımıyla, bir kümenin bütün elemanlarının başka bir küme içinde yer alıp yer almadığını sorgulayabiliriz. Yani bir kümenin, başka bir kümenin alt kümesi olup olmadığını bu metot yardımıyla öğrenebiliriz. Eğer bir küme başka bir kümenin alt kümesi ise bu metot bize True değerini verecek; eğer değilse False çıktısını verecektir:</p>
+<pre><code class="python">a = set([1, 2, 3])
+b = set([0, 1, 2, 3, 4, 5])
+
+a.issubset(b)
+</code></pre>
+
+<pre><code>True
+</code></pre>
+<p>Bu örnekte True çıktısını aldık, çünkü a kümesinin bütün öğeleri b kümesi içinde yer alıyor. Yani a, b‘nin alt kümesidir.</p>
+<h4 id="issuperset">issuperset()</h4>
+<p>Matematik derslerinde gördüğümüz “kümeler” konusunda hatırladığınız “b kümesi a kümesini kapsar” ifadesini bu metotla gösteriyoruz.</p>
+<pre><code class="python">a = set([1, 2, 3])
+b = set([0, 1, 2, 3, 4, 5])
+
+b.issuperset(a)
+</code></pre>
+
+<pre><code>True
+</code></pre>
+<p>Burada, “b kümesi a kümesini kapsar,” sonucunu elde ediyoruz. Yani b kümesi a kümesinin bütün elemanlarını içinde barındırıyor.</p>
+<h4 id="union">union()</h4>
+<p>union() metodu iki kümenin birleşimini almamızı sağlar. Hemen bir örnek verelim:</p>
+<pre><code class="python">a = set([2, 4, 6, 8])
+b = set([1, 3, 5, 7])
+
+a.union(b)
+</code></pre>
+
+<pre><code>{1, 2, 3, 4, 5, 6, 7, 8}
+</code></pre>
+<p>union() metodu yerine “|” işaretini de kullanabiliriz:</p>
+<pre><code class="python">a | b
+</code></pre>
+
+<pre><code>{1, 2, 3, 4, 5, 6, 7, 8}
+</code></pre>
+<h4 id="update">update()</h4>
+<p>Bu metot, bir kümeyi güncellememizi sağlar.</p>
+<pre><code class="python">kume = set([&quot;elma&quot;, &quot;armut&quot;, &quot;kebap&quot;])
+
+yeni = [1, 2, 3]
+
+kume.update(yeni)
+
+print(kume)
+</code></pre>
+
+<pre><code>{1, 2, 3, 'armut', 'kebap', 'elma'}
+</code></pre>
+<h4 id="symmetric_difference">symmetric_difference()</h4>
+<p>Kümelerin ikisinde de bulunmayan öğeleri aynı anda almamızı sağlar.</p>
+<pre><code class="python">a = set([1, 2, 5])
+b = set([1, 4, 5])
+
+a.symmetric_difference(b)
+</code></pre>
+
+<pre><code>{2, 4}
+</code></pre>
+<h4 id="symmetric_difference_update">symmetric_difference_update()</h4>
+<p>Daha önce difference_update ve intersection_update gibi metotları öğrenmiştik. symmetric_difference_update() metodu da bunlara benzer bir işlevi yerine getirir:</p>
+<pre><code class="python">a = set([1,2, 5])
+b = set([1,4, 5])
+
+a.symmetric_difference_update(b)
+
+print(a)
+</code></pre>
+
+<pre><code>{2, 4}
+</code></pre>
+<p>Gördüğünüz gibi, a kümesinin eski öğeleri gitti, yerlerine symmetric_difference() metoduyla elde edilen çıktı geldi. Yani a kümesi, symmetric_difference() metodunun sonucuna göre güncellenmiş oldu...</p>
+<h4 id="pop">pop()</h4>
+<p>Kümelerin öğelerini silip ekrana basıyor:</p>
+<pre><code class="python">a = set([&quot;elma&quot;, &quot;armut&quot;, &quot;kebap&quot;])
+
+a.pop()
+</code></pre>
+
+<pre><code>'elma'
+</code></pre>
+<p>Peki bu metot hangi ölçüte göre kümeden öğe siliyor? Herhangi bir ölçüt yok. Bu metot, küme öğelerini tamamen rastgele siliyor.</p>
+<h2 id="dondurulmus-kumeler-frozenset">Dondurulmuş Kümeler (Frozenset)</h2>
+<p>Öğeleri üzerinde değişiklik yapılamayan bir küme oluşturmak isterseniz set() yerine frozenset() fonksiyonunu kullanabilirsiniz. Dilerseniz hemen bununla ilgili bir örnek verelim:</p>
+<pre><code class="python">dondurulmus = frozenset([&quot;elma&quot;, &quot;armut&quot;, &quot;ayva&quot;])
+</code></pre>
+
+<p>Dondurulmuş kümeleri bu şekilde oluşturuyoruz. Şimdi bu dondurulmuş kümenin metotlarına bakalım:</p>
+<pre><code class="python">dir(dondurulmus)
+</code></pre>
+
+<pre><code>['__and__',
+ '__class__',
+ '__contains__',
+ '__delattr__',
+ '__dir__',
+ '__doc__',
+ '__eq__',
+ '__format__',
+ '__ge__',
+ '__getattribute__',
+ '__gt__',
+ '__hash__',
+ '__init__',
+ '__init_subclass__',
+ '__iter__',
+ '__le__',
+ '__len__',
+ '__lt__',
+ '__ne__',
+ '__new__',
+ '__or__',
+ '__rand__',
+ '__reduce__',
+ '__reduce_ex__',
+ '__repr__',
+ '__ror__',
+ '__rsub__',
+ '__rxor__',
+ '__setattr__',
+ '__sizeof__',
+ '__str__',
+ '__sub__',
+ '__subclasshook__',
+ '__xor__',
+ 'copy',
+ 'difference',
+ 'intersection',
+ 'isdisjoint',
+ 'issubset',
+ 'issuperset',
+ 'symmetric_difference',
+ 'union']
+</code></pre>
+<p>Gördüğünüz gibi, add(), remove(), update() gibi, değişiklik yapmaya yönelik metotlar listede yok.</p>
+<p>Dondurulmuş kümeler ile normal kümeler arasında işlev olarak hiçbir fark yoktur. Bu ikisi arasındaki fark, listeler ile demetler arasındaki fark gibidir.</p>
+<blockquote>
+<p>Son Güncelleme: 24 Aralık 2019 - Salı</p>
+</blockquote>
+                
+                  
+                
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../python_sozluklerin_metotlari/" title="Sözlüklerin Metotları" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Önceki
+                </span>
+                Sözlüklerin Metotları
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../../referanslar/" title="Referanslar" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Sonraki
+                </span>
+                Referanslar
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright &copy; 2019 Pratik Yapay Zeka
+          </div>
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+  <div class="md-footer-social">
+    <link rel="stylesheet" href="../../assets/fonts/font-awesome.css">
+    
+      <a href="https://github.com/mrabdullahsahin" class="md-footer-social__link fa fa-github"></a>
+    
+      <a href="https://twitter.com/mrabdullahsahin" class="md-footer-social__link fa fa-twitter"></a>
+    
+      <a href="https://linkedin.com/in/mrabdullahsahin" class="md-footer-social__link fa fa-linkedin"></a>
+    
+  </div>
+
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/application.808e90bb.js"></script>
+      
+        
+        
+          
+          <script src="../../assets/javascripts/lunr/lunr.stemmer.support.js"></script>
+          
+            
+              
+              
+                <script src="../../assets/javascripts/lunr/lunr.tr.js"></script>
+              
+            
+          
+          
+        
+      
+      <script>app.initialize({version:"1.0.4",url:{base:"../.."}})</script>
+      
+    
+  </body>
+</html>

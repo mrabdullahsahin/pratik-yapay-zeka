@@ -2,6 +2,24 @@
 
 Bu projede yapılan tüm değişiklikler bu dosyada belgelenmektedir.
 
+## 0.2.5 - 2019-12-24
+
+### Eklendi
+
+- Jupyter Notebooks içerisine python_sayilar.ipynb eklendi.
+- python_sayilar.md eklendi.
+- Jupyet Notebooks içerisine python_sozlukler.ipynb eklendi.
+- python_sozluklar.md eklendi.
+- Jupyter Notebooks içerisine python_sozluklerin_metotlari.ipynb eklendi.
+- python_sozluklerin_metotlari.md eklendi.
+- Jupyter Notebooks içerisine python_kumeler_dondurulmus_kumeler.ipynb eklendi.
+- python_kumeler_dondurulmus_kumeler.md eklendi.
+
+### Değişti
+
+- mkdocs.yml dosyasında menü kısmı güncellendi.
+- index.md dosyasında son güncelleme kısmı güncellendi.
+
 ## 0.2.4 - 2019-12-23
 
 ### Eklendi

@@ -26,4 +26,10 @@ Projeye katkıda bulunabilmeniz için izlemeniz gereken adımlar şunlardır;
 
 ## Lisans
 
-Bu projenin lisansı [Creative Commons Attribution 4.0 International](https://github.com/mrabdullahsahin/pratik-yapay-zeka/blob/master/LICENSE.MD).
+Bu projenin lisansı <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode" target="_blank">Attribution-NonCommercial-ShareAlike 4.0 International</a>
+
+<p align="left" > <img src="https://creativecommons.org/images/deed/svg/cc_white.svg" height=25 alt="Pratik Yapay Zeka"/> 
+<img src="https://creativecommons.org/images/deed/svg/attribution_icon_white.svg" height=25 alt="Pratik Yapay Zeka"/>
+<img src="https://creativecommons.org/images/deed/svg/nc_white.svg" height=25 alt="Pratik Yapay Zeka"/>
+<img src="https://creativecommons.org/images/deed/svg/sa_white.svg" height=25 alt="Pratik Yapay Zeka"/>
+</p> 

@@ -2,6 +2,17 @@
 
 Bu projede yapılan tüm değişiklikler bu dosyada belgelenmektedir.
 
+## 0.2.6 - 2019-12-25
+
+### Eklendi
+
+- Jupyter Notebooks içerisine python_fonksiyonlar.ipynb eklendi.
+- python_fonksiyonlar.md eklendi.
+
+### Değişti
+
+- mkdocs.yml dosyasında menü kısmı güncellendi.
+
 ## 0.2.5 - 2019-12-24
 
 ### Eklendi

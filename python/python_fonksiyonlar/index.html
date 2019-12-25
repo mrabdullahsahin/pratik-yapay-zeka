@@ -1,0 +1,1349 @@
+
+
+
+
+<!doctype html>
+<html lang="tr" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+        <meta name="description" content="Yapay Zeka'ya pratik bir yaklaşım.">
+      
+      
+        <link rel="canonical" href="https://mrabdullahsahin.github.io/pratik-yapay-zeka/python/python_fonksiyonlar/">
+      
+      
+        <meta name="author" content="Abdullah Sahin">
+      
+      
+        <meta name="lang:clipboard.copy" content="Kopyala">
+      
+        <meta name="lang:clipboard.copied" content="Kopyalandı">
+      
+        <meta name="lang:search.language" content="tr">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="Eşleşen doküman bulunamadı">
+      
+        <meta name="lang:search.result.one" content="1 doküman bulundu">
+      
+        <meta name="lang:search.result.other" content="# doküman bulundu">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../../img/logo.png">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.6.0">
+    
+    
+      
+        <title>Fonksiyonlar - Pratik Yapay Zeka</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/application.1b62728e.css">
+      
+        <link rel="stylesheet" href="../../assets/stylesheets/application-palette.a8b3c06d.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#3f51b5">
+      
+    
+    
+      <script src="../../assets/javascripts/modernizr.268332fc.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../../assets/fonts/material-icons.css">
+    
+      <link rel="manifest" href="../../manifest.webmanifest">
+    
+    
+    
+      
+    
+    
+  </head>
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448" viewBox="0 0 416 448" id="__github"><path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19T128 352t-18.125-8.5-10.75-19T96 304t3.125-20.5 10.75-19T128 256t18.125 8.5 10.75 19T160 304zm160 0q0 10-3.125 20.5t-10.75 19T288 352t-18.125-8.5-10.75-19T256 304t3.125-20.5 10.75-19T288 256t18.125 8.5 10.75 19T320 304zm40 0q0-30-17.25-51T296 232q-10.25 0-48.75 5.25Q229.5 240 208 240t-39.25-2.75Q130.75 232 120 232q-29.5 0-46.75 21T56 304q0 22 8 38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0 37.25-1.75t35-7.375 30.5-15 20.25-25.75T360 304zm56-44q0 51.75-15.25 82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5T212 416q-19.5 0-35.5-.75t-36.875-3.125-38.125-7.5-34.25-12.875T37 371.5t-21.5-28.75Q0 312 0 260q0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25 30.875Q171.5 96 212 96q37 0 70 8 26.25-20.5 46.75-30.25T376 64q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34 99.5z"/></svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#fonksiyonlar" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="https://mrabdullahsahin.github.io/pratik-yapay-zeka/" title="Pratik Yapay Zeka" class="md-header-nav__button md-logo">
+          
+            <img src="../../img/logo.png" width="24" height="24">
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            <span class="md-header-nav__topic">
+              Pratik Yapay Zeka
+            </span>
+            <span class="md-header-nav__topic">
+              
+                Fonksiyonlar
+              
+            </span>
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Ara" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Aramaya başlamak için yazın
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+
+
+  
+
+<a href="https://github.com/mrabdullahsahin/pratik-yapay-zeka/" title="Depoya git" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    mrabdullahsahin/pratik-yapay-zeka
+  </div>
+</a>
+          </div>
+        </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+      <main class="md-main" role="main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="https://mrabdullahsahin.github.io/pratik-yapay-zeka/" title="Pratik Yapay Zeka" class="md-nav__button md-logo">
+      
+        <img src="../../img/logo.png" width="48" height="48">
+      
+    </a>
+    Pratik Yapay Zeka
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+<a href="https://github.com/mrabdullahsahin/pratik-yapay-zeka/" title="Depoya git" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    mrabdullahsahin/pratik-yapay-zeka
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../.." title="Giriş" class="md-nav__link">
+      Giriş
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" checked>
+    
+    <label class="md-nav__link" for="nav-2">
+      Python
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        Python
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../degiskenler/" title="Değişkenler" class="md-nav__link">
+      Değişkenler
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../print/" title="print Fonksiyonu" class="md-nav__link">
+      print Fonksiyonu
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../kacis_dizileri/" title="Kaçış Dizileri" class="md-nav__link">
+      Kaçış Dizileri
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../yorum_isareti/" title="Yorum İşareti" class="md-nav__link">
+      Yorum İşareti
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../kullanicidan_bilgi_almak/" title="Kullanıcıdan Bilgi Almak" class="md-nav__link">
+      Kullanıcıdan Bilgi Almak
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../kosullu_durumlar/" title="Koşullu Durumlar" class="md-nav__link">
+      Koşullu Durumlar
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../islecler/" title="İşleçler" class="md-nav__link">
+      İşleçler
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../python_donguler/" title="Döngüler" class="md-nav__link">
+      Döngüler
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../python_hata_yakalama/" title="Hata Yakalama" class="md-nav__link">
+      Hata Yakalama
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../python_karakter_dizileri/" title="Karakter Dizileri(str)" class="md-nav__link">
+      Karakter Dizileri(str)
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../python_karakter_dizilerinin_metotlari/" title="Karakter Dizilerinin Metotları" class="md-nav__link">
+      Karakter Dizilerinin Metotları
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../python_format_metodu/" title="Format Metodu" class="md-nav__link">
+      Format Metodu
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../python_listeler_demetler/" title="Listeler ve Demetler" class="md-nav__link">
+      Listeler ve Demetler
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../python_listeler_demetler_metodlari/" title="Listeler ve Demetlerin Metodları" class="md-nav__link">
+      Listeler ve Demetlerin Metodları
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../python_sayilar/" title="Sayılar" class="md-nav__link">
+      Sayılar
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../python_sozlukler/" title="Sözlükler" class="md-nav__link">
+      Sözlükler
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../python_sozluklerin_metotlari/" title="Sözlüklerin Metotları" class="md-nav__link">
+      Sözlüklerin Metotları
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../python_kumeler_dondurulmus_kumeler/" title="Kümeler ve Dondurulmuş Kümeler" class="md-nav__link">
+      Kümeler ve Dondurulmuş Kümeler
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Fonksiyonlar
+      </label>
+    
+    <a href="./" title="Fonksiyonlar" class="md-nav__link md-nav__link--active">
+      Fonksiyonlar
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">İçindekiler</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#fonksiyon-nedir-ve-ne-ise-yarar" class="md-nav__link">
+    Fonksiyon Nedir ve Ne İşe Yarar?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fonksiyon-tanmlamak-ve-cagrmak" class="md-nav__link">
+    Fonksiyon Tanımlamak ve Çağırmak
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fonksiyonlarn-yaps" class="md-nav__link">
+    Fonksiyonların Yapısı
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fonksiyonlar-ne-ise-yarar" class="md-nav__link">
+    Fonksiyonlar Ne İşe Yarar?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#parametreler-ve-argumanlar" class="md-nav__link">
+    Parametreler ve Argümanlar
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sral-veya-isimsiz-parametreler" class="md-nav__link">
+    Sıralı (veya İsimsiz) Parametreler
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#isimli-parametreler" class="md-nav__link">
+    İsimli Parametreler
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#varsaylan-degerli-parametreler" class="md-nav__link">
+    Varsayılan Değerli Parametreler
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rastgele-sayda-isimsiz-parametre-belirleme" class="md-nav__link">
+    Rastgele Sayıda İsimsiz Parametre Belirleme
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rastgele-sayda-isimli-parametre-belirleme" class="md-nav__link">
+    Rastgele Sayıda İsimli Parametre Belirleme
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#return-deyimi" class="md-nav__link">
+    return Deyimi
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fonksiyonlarn-kapsam-ve-global-deyimi" class="md-nav__link">
+    Fonksiyonların Kapsamı ve global Deyimi
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../referanslar/" title="Referanslar" class="md-nav__link">
+      Referanslar
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../changelog/" title="Değişiklik Kaydı" class="md-nav__link">
+      Değişiklik Kaydı
+    </a>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">İçindekiler</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#fonksiyon-nedir-ve-ne-ise-yarar" class="md-nav__link">
+    Fonksiyon Nedir ve Ne İşe Yarar?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fonksiyon-tanmlamak-ve-cagrmak" class="md-nav__link">
+    Fonksiyon Tanımlamak ve Çağırmak
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fonksiyonlarn-yaps" class="md-nav__link">
+    Fonksiyonların Yapısı
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fonksiyonlar-ne-ise-yarar" class="md-nav__link">
+    Fonksiyonlar Ne İşe Yarar?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#parametreler-ve-argumanlar" class="md-nav__link">
+    Parametreler ve Argümanlar
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sral-veya-isimsiz-parametreler" class="md-nav__link">
+    Sıralı (veya İsimsiz) Parametreler
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#isimli-parametreler" class="md-nav__link">
+    İsimli Parametreler
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#varsaylan-degerli-parametreler" class="md-nav__link">
+    Varsayılan Değerli Parametreler
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rastgele-sayda-isimsiz-parametre-belirleme" class="md-nav__link">
+    Rastgele Sayıda İsimsiz Parametre Belirleme
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rastgele-sayda-isimli-parametre-belirleme" class="md-nav__link">
+    Rastgele Sayıda İsimli Parametre Belirleme
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#return-deyimi" class="md-nav__link">
+    return Deyimi
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fonksiyonlarn-kapsam-ve-global-deyimi" class="md-nav__link">
+    Fonksiyonların Kapsamı ve global Deyimi
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/mrabdullahsahin/pratik-yapay-zeka/edit/master/docs/python/python_fonksiyonlar.md" title="Düzenle" class="md-icon md-content__icon">&#xE3C9;</a>
+                
+                
+                <h1 id="fonksiyonlar">Fonksiyonlar</h1>
+<h2 id="fonksiyon-nedir-ve-ne-ise-yarar">Fonksiyon Nedir ve Ne İşe Yarar?</h2>
+<p>Fonksiyonların genel görünüşü ve yapısı:</p>
+<ol>
+<li>
+<p>Her fonksiyonun bir adı bulunur ve fonksiyonlar sahip oldukları bu adlarla anılır. (print fonksiyonu, open fonksiyonu, type fonksiyonu, input fonksiyonu, len fonksiyonu vb.)</p>
+</li>
+<li>
+<p>Şekil olarak, her fonksiyonun isminin yanında birer parantez işareti bulunur. (open(), print(), input(), len() vb.)</p>
+</li>
+<li>
+<p>Bu parantez işaretlerinin içine, fonksiyonlara işlevsellik kazandıran bazı parametreler yazılır. (open(dosya_adı), print("Merhaba Zalim Dünya!"), len("kahramanmaraş") vb.)</p>
+</li>
+<li>
+<p>Fonksiyonlar farklı sayıda parametre alabilir. Örneğin print() fonksiyonu toplam 256 adet parametre alabilirken, input() fonksiyonu yalnızca tek bir parametre alır.</p>
+</li>
+<li>
+<p>Fonksiyonların isimli ve isimsiz parametreleri vardır. print() fonksiyonundaki sep, end ve file parametreleri isimli parametrelere örnekken, mesela print("Merhaba Dünya!") kodunda Merhaba Dünya! parametresi isimsiz bir parametredir. Aynı şekilde input("Adınız: ") gibi bir kodda Adınız: parametresi isimsiz bir parametredir.</p>
+</li>
+<li>
+<p>Fonksiyonların, isimli ve isimsiz parametreleri dışında, bir de varsayılan değerli parametreleri vardır. Örneğin print() fonksiyonunun sep, end ve file parametreleri varsayılan değerli parametrelere birer örnektir. Eğer bir parametrenin varsayılan bir değeri varsa, o parametreye herhangi bir değer vermeden de fonksiyonu kullanabiliriz. Python bu parametrelere, belirli değerleri öntanımlı olarak kendisi atayacaktır. Tabii eğer istersek, varsayılan değerli parametrelere kendimiz de başka birtakım değerler verebiliriz.</p>
+</li>
+</ol>
+<p>Fonksiyonların görevi, karmaşık işlemleri bir araya toplayarak, bu işlemleri tek adımda yapmamızı sağlamaktır. Fonksiyonlar çoğu zaman, yapmak istediğimiz işlemler için bir şablon vazifesi görür. Fonksiyonları kullanarak, bir veya birkaç adımdan oluşan işlemleri tek bir isim altında toplayabiliriz. Python’daki ‘fonksiyon’ kavramı başka programlama dillerinde ‘rutin’ veya ‘prosedür’ olarak adlandırılır. Gerçekten de fonksiyonlar rutin olarak tekrar edilen görevleri veya prosedürleri tek bir ad/çatı altında toplayan araçlardır.</p>
+<p>Fonksiyonları daha iyi kavramak için print() fonksiyonunu ele alalım:</p>
+<ol>
+<li>
+<p>Kendisine verilen “Python” ve "2000" gibi değerleri ekrana basıyor,</p>
+</li>
+<li>
+<p>sep=” “ parametresinin etkisiyle, bu parametreler arasına birer boşluk ekliyor,</p>
+</li>
+<li>
+<p>end=”\n” parametresinin etkisiyle, sonuncu parametreyi de ekrana bastıktan sonra bir alt satıra geçiyor,</p>
+</li>
+<li>
+<p>file=sys.stdout parametresinin etkisiyle, çıktı konumu olarak komut ekranını kullanıyor. Yani çıktıları ekrana veriyor.</p>
+</li>
+<li>
+<p>flush=False parametresinin etkisiyle, çıktılar ekrana gönderilmeden önce tamponda bekletiliyor.</p>
+</li>
+</ol>
+<h2 id="fonksiyon-tanmlamak-ve-cagrmak">Fonksiyon Tanımlamak ve Çağırmak</h2>
+<p>Fonksiyon tanımalama ve çağırma işlemini bir örnek üzerinden anlamaya çalışalım. Elimizde bulunan kayıt oluştur isimli fonksiyon ile ekrana şu şekilde bir çıktı verelim:</p>
+<p>'-------------------------'</p>
+<p>isim : Mehmet </p>
+<p>soyisim : Öztaban </p>
+<p>işletim sistemi: Debian</p>
+<p>şehir : Ankara</p>
+<p>'-------------------------'</p>
+<p>İlk olarak kayıt_olustur() adlı fonksiyonu kullanabilmek için bu ada sahip fonksiyonu aşağıdaki şekilde tanımlamalıyız:</p>
+<pre><code class="python">def kayıt_olustur(isim, soyisim, isletim, sehir): 
+    print(&quot;-&quot;*30)
+
+    print(&quot;isim           : &quot;, isim)
+    print(&quot;soyisim        : &quot;, soyisim)
+    print(&quot;işletim sistemi: &quot;, isletim)
+    print(&quot;şehir          : &quot;, sehir)
+
+    print(&quot;-&quot;*30)
+</code></pre>
+
+<p>Fonksiyonumuzu test edelim:</p>
+<pre><code class="python">kayıt_olustur(&quot;Abdullah&quot;,&quot;Şahin&quot;,&quot;Windows&quot;,&quot;Konya&quot;)
+</code></pre>
+
+<pre><code>------------------------------
+isim           :  Abdullah
+soyisim        :  Şahin
+işletim sistemi:  Windows
+şehir          :  Konya
+------------------------------
+</code></pre>
+<p>Görmüş olduğunuz gibi yazmış olduğumuz fonksiyon çalıştı. Şimdi yazığımız yapıyı irdeleyelim:</p>
+<ol>
+<li>Kodlar def adlı bir ifade ile başlamış. Bu ifadenin ingilizce olarak açılımı definition.</li>
+<li>Bunun ardından ‘kayıt_olustur’ ifadesini görüyoruz.</li>
+<li>Bu ifadeyi, içinde birtakım kelimeler barındıran bir parantez çifti izliyor. </li>
+<li>Parantezin içinde, isim, soyisim, isletim ve sehir adlı değerler var.</li>
+<li>def ile başlayan bu satır iki nokta üst üste işareti ile son buluyor.</li>
+<li>İlk satırın ardından gelen kısım ilk satıra göre girintili bir şekilde yazılmış.</li>
+<li>kayıt_olustur("Abdullah","Şahin","Windows","Konya") satırı önceki satırlara göre girintisiz yazılmış.</li>
+</ol>
+<p>Eğer bu kodlara dikkatlice bakacak olursanız, aslında bu kodların topu topu iki parçadan oluştuğunu göreceksiniz. İsterseniz yukarıdaki yapıyı biraz sadeleştirelim:</p>
+<pre><code class="python">def kayıt_olustur(parametre1, parametre2, parametre3, parametre4): 
+
+    (...)
+
+
+kayıt_olustur(parametre1, parametre2, parametre3, parametre4)
+</code></pre>
+
+<p>Bu yapının ilk parçası şudur:</p>
+<p>```python
+ def kayıt_olustur(parametre1, parametre2, parametre3, parametre4): </p>
+<pre><code> (...)
+</code></pre>
+<p>```</p>
+<p>İkinci parçası ise şu:</p>
+<pre><code class="python">kayıt_olustur(parametre1, parametre2, parametre3, parametre4)
+</code></pre>
+
+<p>Teknik olarak söylemek gerekirse, ilk parçaya ‘fonksiyon tanımı’ (function definition), ikinci parçaya ise ‘fonksiyon çağrısı’ (function call ) adı verilir. Dolayısıyla bir fonksiyonun yaşam döngüsü iki aşamadan oluşur. Buna göre bir fonksiyon önce tanımlanır;</p>
+<pre><code class="python">def kayıt_oluştur(parametre1, parametre2, parametre3, parametre4): 
+    (...)
+</code></pre>
+
+<p>...sonra da çağrılır. Bir fonksiyon çağrılmadan <strong>asla</strong> çalışmaz.</p>
+<pre><code class="python">kayıt_olustur(parametre1, parametre2, parametre3, parametre4)
+</code></pre>
+
+<h2 id="fonksiyonlarn-yaps">Fonksiyonların Yapısı</h2>
+<p>Bir fonksiyonun ilk parçasına ‘fonksiyon tanımı’ (function definition) adı verilir. Bir fonksiyonu tanımlamak için def adlı bir parçacıktan yararlanıyoruz. Örneğin:</p>
+<pre><code class="python">def bir_fonksiyon(): 
+    (...)
+</code></pre>
+
+<p>Burada def parçacığı, tanımladığımız şeyin bir fonksiyon olduğunu gösteriyor. bir_fonksiyon ifadesi ise tanımladığımız bu fonksiyonun adıdır. Fonksiyonu tanımladıktan sonra, çağırırken bu adı kullanacağız.</p>
+<p>def bir_fonksiyon(): ifadesinin sonundaki iki nokta işaretinden de tahmin edebileceğiniz gibi, sonraki satıra yazacağımız kodlar girintili olacak. Fonksiyon gövdesine, def ifadesinden itibaren 4 (dört) boşlukluk bir girinti veriyoruz. def ifadesinden itibaren girintili olarak yazdığımız kısmın tamamı o fonksiyonun gövdesini oluşturur ve bütünüyle o fonksiyona aittir.</p>
+<p>Örneğin:</p>
+<pre><code class="python">def selamla():
+    print(&quot;Merhaba Dünya!&quot;)
+</code></pre>
+
+<p>Fonksiyonlarla ilgili söylediklerimizi toparlayacak olursak şöyle bir bilgi listesi ortaya çıkarabiliriz:</p>
+<ol>
+<li>
+<p>Python’da kabaca iki tip fonksiyon bulunur. Bunlardan biri gömülü fonksiyonlar (builtin functions ), öteki ise özel fonksiyonlardır (custom functions ). Burada ‘özel’ ifadesi, ‘kullanıcının ihtiyaçlarına göre kullanıcı tarafından özel olarak üretilmiş’ anlamına gelir.</p>
+</li>
+<li>
+<p>Gömülü fonksiyonlar; Python geliştiricileri tarafından tanımlanıp dilin içine gömülmüş olan print(), open(), type(), str(), int() vb. fonksiyonlardır. Bu fonksiyonlar halihazırda tanımlanıp hizmetimize sunulduğu için bunları biz herhangi bir tanımlama işlemi yapmadan doğrudan kullanabiliriz.</p>
+</li>
+<li>
+<p>Özel fonksiyonlar ise, gömülü fonksiyonların aksine, Python geliştiricileri tarafından değil, bizim tarafımızdan tanımlanmıştır. Bu fonksiyonlar dilin bir parçası olmadığından, bu fonksiyonları kullanabilmek için bunları öncelikle tanımlamamız gerekir.</p>
+</li>
+<li>
+<p>Python’da bir fonksiyonun yaşam döngüsü iki aşamadan oluşur: Tanımlanma ve çağrılma.</p>
+</li>
+<li>
+<p>Bir fonksiyonun çağrılabilmesi (yani kullanılabilmesi) için mutlaka birisi tarafından tanımlanmış olması gerekir.</p>
+</li>
+<li>
+<p>Fonksiyonu tanımlayan kişi Python geliştiricileri olabileceği gibi, siz de olabilirsiniz. Ama neticede ortada bir fonksiyon varsa, bir yerlerde o fonksiyonun tanımı da vardır.</p>
+</li>
+<li>
+<p>Fonksiyon tanımlamak için def adlı bir ifadeden yararlanıyoruz. Bu ifadeden sonra, tanımlayacağımız fonksiyonun adını belirleyip iki nokta üst üste işareti koyuyoruz. İki nokta üst üste işaretinden sonra gelen satırlar girintili olarak yazılıyor. Daha önce öğrendiğimiz bütün girintileme kuralları burada da geçerlidir.</p>
+</li>
+<li>
+<p>Fonksiyonun adını belirleyip iki nokta üst üste koyduktan sonra, alt satırda girintili olarak yazdığımız bütün kodlar fonksiyonun gövdesini oluşturur. Doğal olarak, bir fonksiyonun gövdesindeki bütün kodlar o fonksiyona aittir. Girintinin dışına çıkıldığı anda fonksiyon tanımı da sona erer.</p>
+</li>
+</ol>
+<h2 id="fonksiyonlar-ne-ise-yarar">Fonksiyonlar Ne İşe Yarar?</h2>
+<p>Fonksiyonlar bir program içerisinde sürekli olarak yapmamız gereken işlemleri tekrar etmemizi engelleyen yapılardır.</p>
+<p>Örnek vermek gerekirse, siz programınızda kare alma işlemini yapacaksınız ve bunu birçok kez kullanmanız gerekecekse bunu fonksiyon haline getirmek işlemlerinizi biraz daha kolaylaştıracaktır. Örneğimizi inceleyelim:</p>
+<pre><code class="python">sayı = 12
+çıktı = &quot;{} sayısının karesi {} sayısıdır&quot; 
+print(çıktı.format(sayı, sayı**2))
+</code></pre>
+
+<pre><code>12 sayısının karesi 144 sayısıdır
+</code></pre>
+<p>Bu kodu birçok yerde tekrar ettiğinizi varsayarsak, şu şekilde bir görüntü oluşacak:</p>
+<pre><code class="python">sayı = 12
+çıktı = &quot;{} sayısının karesi {} sayısıdır&quot; 
+print(çıktı.format(sayı, sayı**2))
+
+####programla ilgili başka kodlar###
+
+sayı = 14
+print(çıktı.format(sayı, sayı**2))
+
+###programla ilgili başka kodlar###
+
+sayı = 53
+print(çıktı.format(sayı, sayı**2))
+</code></pre>
+
+<pre><code>12 sayısının karesi 144 sayısıdır
+14 sayısının karesi 196 sayısıdır
+53 sayısının karesi 2809 sayısıdır
+</code></pre>
+<p>Görmüş olduğunuz gibi fazladan zaman harcadık ve gereksiz bir kod kalabalığı oluştu. Bu işlemi bir fonksiyon ile yapalım:</p>
+<pre><code class="python">def kare_bul(sayi): 
+    sonuc = &quot;{} sayısının karesi {} sayısıdır&quot; 
+    print(sonuc.format(sayi, sayi**2))
+</code></pre>
+
+<p>Şimdide tanımladığımız bu fonksiyonu çağıralım.</p>
+<pre><code class="python">kare_bul(12)
+</code></pre>
+
+<pre><code>12 sayısının karesi 144 sayısıdır
+</code></pre>
+<p>kare_bul fonksiyonu ile işlerimiz hem kolaylaştı hem de kod tekrarından kaçınmış olduk.</p>
+<h2 id="parametreler-ve-argumanlar">Parametreler ve Argümanlar</h2>
+<p>Parametreler fonksiyon tanımlarken parantez içinde belirttiğimiz, fonksiyon gövdesinde yapılan işin değişken öğelerini gösteren parçalardır. Bir fonksiyonu tanımlarken belirlediğimiz adlara <strong>parametre</strong>, aynı fonksiyonu çağırırken belirlediğimiz adlara ise <strong>argüman</strong> deniyor.</p>
+<p>Örneğin:</p>
+<pre><code class="python">def kopyala(kaynak_dosya, hedef_dizin): #bu kısımda bulunan değerler parametredir.
+    cikti = &quot;{} adlı dosya {} adlı dizin içine kopyalandı!&quot; 
+    print(cikti.format(kaynak_dosya, hedef_dizin))
+
+kopyala(&quot;deneme.txt&quot;, &quot;/home/abdullah/Desktop&quot;) #bu kısımda tırnak içinde tanımladıklarımız ise argümandır.
+</code></pre>
+
+<p>Burada <strong>kopyala()</strong> adlı bir fonksiyon tanımladık. Bu fonksiyon toplam iki adet parametre alıyor: <strong>kaynak_dosya</strong> ve <strong>hedef_dizin</strong>. Gördüğünüz gibi, bu iki parametre gerçekten de fonksiyon gövdesinde yapılan işin değişken öğelerini gösteriyor. Bu fonksiyonun üreteceği çıktı, fonksiyonu çağıran kişinin bu iki parametreye vereceği değerlere bağlı olarak şekillenecek.</p>
+<h3 id="sral-veya-isimsiz-parametreler">Sıralı (veya İsimsiz) Parametreler</h3>
+<p>Python’da şöyle bir fonksiyon tanımlayabileceğimizi biliyoruz:</p>
+<pre><code class="python">def kayit_olustur(isim, soyisim, isletim, sehir): 
+    print(&quot;-&quot;*30)
+
+    print(&quot;isim           : &quot;, isim)
+    print(&quot;soyisim        : &quot;, soyisim)
+    print(&quot;işletim sistemi: &quot;, isletim)
+    print(&quot;şehir          : &quot;, sehir)
+
+    print(&quot;-&quot;*30)
+
+</code></pre>
+
+<p>Yukarıda tanımladığımız bu fonksiyonu şu şekilde çağırabiliriz:</p>
+<pre><code class="python">kayit_olustur(&quot;Ahmet&quot;, &quot;Öz&quot;, &quot;Debian&quot;, &quot;Ankara&quot;)
+</code></pre>
+
+<p>Bu fonksiyonda, yazdığımız parametrelerin sırası büyük önem taşır. Mesela yukarıdaki
+fonksiyonu şöyle çağırdığımızı düşünün:</p>
+<pre><code class="python">kayit_olustur(&quot;Debian&quot;, &quot;Ankara&quot;, &quot;Öz&quot;, &quot;Ahmet&quot;)
+</code></pre>
+
+<p>Eğer fonksiyon parametrelerini bu sırayla kullanırsak aldığımız çıktı hatalı olacaktır:</p>
+<p>'------------------------------'</p>
+<p>isim : Debian </p>
+<p>soyisim : Ankara </p>
+<p>işletim sistemi: Öz</p>
+<p>şehir : Ahmet </p>
+<p>'------------------------------'</p>
+<p>Gördüğünüz gibi, isim, soyisim ve öteki bilgiler birbirine karışmış. İşte Python’da, veriliş sırası önem taşıyan bu tür parametrelere ‘sıralı parametreler’ (veya isimsiz parametreler) adı verilir.</p>
+<h3 id="isimli-parametreler">İsimli Parametreler</h3>
+<p>Bir önceki bölümde verdiğimiz şu örneği yeniden ele alalım:</p>
+<pre><code class="python">def kayıt_oluştur(isim, soyisim, isletim, sehir): 
+    print(&quot;-&quot;*30)
+    print(&quot;isim           : &quot;, isim)
+    print(&quot;soyisim        : &quot;, soyisim)
+    print(&quot;işletim sistemi: &quot;, isletim)
+    print(&quot;şehir          : &quot;, sehir)
+    print(&quot;-&quot;*30)
+</code></pre>
+
+<p>Bu fonksiyonu çağırırken parametrelerin sırasını doğru vermenin, alacağımız çıktının düzgün olması bakımından büyük önem taşıdığını biliyoruz. Ancak özellikle parametre sayısının çok olduğu fonksiyonlarda parametre sırasını akılda tutmak zor olabilir. Böyle durumlarda parametreleri isimleri ile birlikte kullanmayı tercih edebiliriz:</p>
+<pre><code class="python">kayit_olustur(soyisim=&quot;Öz&quot;, isim=&quot;Ahmet&quot;, isletim=&quot;Debian&quot;, sehir= &quot;Ankara&quot;)
+</code></pre>
+
+<p>Böylece fonksiyon parametrelerini istediğimiz sıra ile kullanabiliriz. Ancak burada dikkat etmemiz gereken bazı noktalar var. Python’da isimli bir parametrenin ardından sıralı bir parametre gelemez. Yani şu kullanım yanlıştır:</p>
+<pre><code class="python">kayit_olustur(soyisim=&quot;Öz&quot;, isim=&quot;Ahmet&quot;, &quot;Debian&quot;, &quot;Ankara&quot;)
+</code></pre>
+
+<p>Bu kodlar bize şu hatayı verir:</p>
+<pre><code class="python">   File &quot;&lt;stdin&gt;&quot;, line 1
+SyntaxError: non-keyword arg after keyword arg
+</code></pre>
+
+<p>Bu yüzden, eğer isimli parametreler kullanacaksak, isimli parametrelerden sonra sıralı parametre kullanmamaya dikkat ediyoruz.</p>
+<h3 id="varsaylan-degerli-parametreler">Varsayılan Değerli Parametreler</h3>
+<p>Bu durumu print fonksiyonu üzerinden açıklamaya çalışalım:</p>
+<pre><code class="python">print(&quot;Fırat&quot;, &quot;Özgül&quot;, sep=&quot; &quot;, end=&quot;\n&quot;, file=sys.stdout, flush=False)
+</code></pre>
+
+<p>Yani biz görmesek de aslında her print() çağrısı sep, end, file ve flush parametrelerini de içeriyor. Biz bu özel parametreleri kullanmasak da, yazdığımız kod düzgün bir şekilde çalışır. Bunun nedeni, sep, end, file ve flush parametrelerinin öntanımlı olarak birtakım değerlere sahip olmasıdır. Yani biz bu parametrelere kendimiz bir değer atamazsak Python bu parametrelere kendi belirlediği bazı öntanımlı değerleri atayacaktır. Dolayısıyla, eğer biz başka bir değer yazmazsak, sep parametresi ” “ değerine, end parametresi “n” değerine, file parametresi sys.stdout değerine, flush parametresi ise False değerine sahip olacaktır. İşte bu tür parametrelere Python’da ‘varsayılan değerli parametreler’ adı verilir. Peki biz kendimiz varsayılan değerli parametreler içeren fonksiyonları nasıl tanımlayabiliriz?</p>
+<p>Şu örneğe dikkatlice bakın:</p>
+<pre><code class="python">def kur(kurulum_dizini=&quot;/usr/bin/&quot;):
+    print(&quot;Program {} dizinine kuruldu!&quot;.format(kurulum_dizini))
+</code></pre>
+
+<p>Burada kur() adlı bir fonksiyon tanımladık. Bu fonksiyonun görevi, yazdığımız bir programı, kullanıcının bilgisayarındaki bir dizine kurmak ve programın hangi dizine kurulduğu konusunda kullanıcıyı bilgilendirmek. Bu fonksiyonu şu şekilde çağırabiliriz:</p>
+<pre><code class="python">kur()
+</code></pre>
+
+<p>Eğer kur() fonksiyonunu böyle çağırırsak bize şu çıktıyı verecektir:</p>
+<pre><code class="python">Program /usr/bin/ dizinine kuruldu!
+</code></pre>
+
+<p>Gördüğünüz gibi, kur() fonksiyonunun kurulum_dizini adlı bir parametresi var. Biz fonksiyonu tanımlarken, bu parametreye bir varsayılan değer atadık (/usr/bin/). Böylece kur() fonksiyonu parametresiz olarak çağrıldığında bu varsayılan değer devreye girdi.</p>
+<h3 id="rastgele-sayda-isimsiz-parametre-belirleme">Rastgele Sayıda İsimsiz Parametre Belirleme</h3>
+<p>Bir örnek üzerinden fonksiyonların rastgele sayıda isimsiz parametre alma durumuna bakalım.</p>
+<pre><code class="python">def fonksiyon(*parametreler):
+    print(parametreler)
+fonksiyon(1, 2, 3, 4, 5)
+</code></pre>
+
+<p>Bu kodları çalıştırdığımızda şu çıktıyı alacağız:</p>
+<pre><code class="python">(1, 2, 3, 4, 5)
+</code></pre>
+
+<p>Gördüğünüz gibi, fonksiyon tanımı içinde kullandığımız * işareti sayesinde fonksiyonumuzun pratik olarak sınırsız sayıda parametre kabul etmesini sağlayabiliyoruz. Bu arada, bu tür fonksiyonların alabileceği parametre sayısı, dediğimiz gibi, pratikte sınırsızdır, ama teknik olarak bu sayı 256 adedi geçemez.</p>
+<p>Peki böyle bir fonksiyon tanımlamak ne işimize yarar?</p>
+<p>Mesela bu yapıyı kullanarak şöyle bir fonksiyon yazabilirsiniz:</p>
+<pre><code class="python">
+def carp(*sayilar): 
+    sonuc = 1
+    for i in sayilar: 
+        sonuc *= i
+    print(sonuc)
+
+</code></pre>
+
+<p>Bu fonksiyon kendisine verilen bütün parametreleri birbiriyle çarpar. Örneğin:</p>
+<pre><code class="python">carp(1, 2, 3, 4)
+</code></pre>
+
+<p>Bu kodun çıktısı 24 olacaktır. Gördüğünüz gibi, fonksiyonumuza istediğimiz sayıda parametre
+vererek bu sayıların birbiriyle çarpılmasını sağlayabiliyoruz.</p>
+<p>Elbette * işaretiyle birlikte kullanacağınız parametrenin adı olarak, Python’ın değişken adlandırma kurallarına uygun bütün kelimeleri belirleyebilirsiniz. Mesela biz yukarıda <strong>parametreler</strong> adını tercih ettik. Ama Python dünyasında * işaretiyle birlikte kullanılacak parametrenin adı geleneksel olarak, <strong>argümanlar</strong> anlamında <strong>args</strong>'tır. </p>
+<p>Yani Python programcıları genellikle yukarıdaki gibi bir fonksiyonu şöyle tanımlar:</p>
+<pre><code class="python"> def fonksiyon(*args): 
+        ...
+</code></pre>
+
+<p><strong><em>*</em> işareti ile birlikte kullanılacak parametrenin adını </strong>args** yapmak bir zorunluluk olmamakla birlikte, başka Python programcılarının kodlarınızı daha kolay anlayabilmesi açısından bu geleneği devam ettirmenizi tavsiye ederim. Yazdığımız kodlarda Python programlama dilinin geleneklerine bağlı kalmak çoğunlukla iyi bir alışkanlıktır.</p>
+<h3 id="rastgele-sayda-isimli-parametre-belirleme">Rastgele Sayıda İsimli Parametre Belirleme</h3>
+<p>Bir önceki bölümde oluduğu gibi, rastgele sayıda <strong>isimli</strong> parametre belirlemek de mümkündür.</p>
+<p>Örneğin:</p>
+<pre><code class="python">def fonksiyon(**parametreler):
+    print(parametreler)
+
+fonksiyon(isim=&quot;Ahmet&quot;, soyisim=&quot;Öz&quot;, meslek=&quot;Mühendis&quot;, sehir=&quot;Ankara&quot;)
+</code></pre>
+
+<p>Bu kodları çalıştırdığımızda şöyle bir çıktı alıyoruz:</p>
+<pre><code class="python">{'sehir': 'Ankara', 'isim': 'Ahmet', 'soyisim': 'Öz', 'meslek': 'Mühendis'}
+</code></pre>
+
+<p>Gördüğünüz gibi, fonksiyonu tanımlarken parametremizin sol tarafına yerleştirdiğimiz ** işareti, bu fonksiyonu çağırırken yazdığımız isimli parametrelerin bize bir sözlük olarak verilmesini sağlıyor. Bu yapının bize bir sözlük verdiğini bildikten sonra, bunu sözlük veri tipinin kuralları çerçevesinde istediğimiz şekilde kullanabiliriz.</p>
+<p>Tıpkı <strong><em>*</em> işaretlerinin betimlediği parametrenin geleneksel olarak </strong>args<strong> şeklinde adlandırılması gibi, </strong> işaretlerinin betimlediği parametre de geleneksel olarak <strong>kwargs</strong> şeklinde adlandırılır. Dolayısıyla yukarıdaki gibi bir fonksiyonu Python programcıları şöyle tanımlar:</p>
+<pre><code class="python">def kayıt_olustur(**kwargs):
+    ...
+</code></pre>
+
+<p><strong> işaretli parametreler pek çok farklı durumda işinize yarayabilir veya işinizi kolaylaştırabilir. Mesela * ve </strong> işaretlerini kullanarak şöyle bir program yazabilirsiniz:</p>
+<pre><code class="python">def karşılık_bul(*args, **kwargs): 
+    for sözcük in args:
+        if sözcük in kwargs:
+            print(&quot;{} = {}&quot;.format(sözcük, kwargs[sözcük]))
+        else:
+            print(&quot;{} kelimesi sözlükte yok!&quot;.format(sözcük))
+
+
+sözlük = {&quot;kitap&quot; : &quot;book&quot;, 
+          &quot;bilgisayar&quot; : &quot;computer&quot;,
+          &quot;programlama&quot;: &quot;programming&quot;}
+
+karşılık_bul(&quot;kitap&quot;, &quot;bilgisayar&quot;, &quot;programlama&quot;, &quot;fonksiyon&quot;, **sözlük)
+</code></pre>
+
+<p>Burada tanımladığımız karşılık_bul() adlı fonksiyon, kendisine verilen parametreleri (<em>args), bir sözlük içinde arayarak (</em>**sözlük) karşılıklarını bize çıktı olarak veriyor. Eğer verilen parametre sözlükte yoksa, ilgili kelimenin sözlükte bulunmadığı konusunda da bizi bilgilendiriyor.</p>
+<p>karşılık_bul() adlı fonksiyonu nasıl tanımladığımıza çok dikkat edin. Parametre listesi içinde belirttiğimiz <em>args ifadesi sayesinde, fonksiyonu kullanacak kişiye, istediği sayıda isimsiz parametre girme imkanı tanıyoruz. </em>**kwargs parametresi ise kullanıcıya istediği sayıda isimli parametre girme olanağı veriyor.</p>
+<h3 id="return-deyimi">return Deyimi</h3>
+<p>Bu bölümde return adlı bir deyimden söz edeceğiz. Öncelikle basit bir örnek verelim:</p>
+<pre><code class="python">def ismin_ne():
+    isim = input(&quot;ismin ne? &quot;) 
+    print(isim)
+</code></pre>
+
+<p>ismin_ne() adlı fonksiyonun tek görevi kullanıcıdan aldığı isim bilgisini ekrana basmaktır. Peki bu fonksiyonu bir de şöyle tanımlayalım:</p>
+<pre><code class="python">def ismin_ne():
+    isim = input(&quot;ismin ne? &quot;)
+    return isim
+</code></pre>
+
+<p>Şimdi de bu fonksiyonu çağıralım:</p>
+<pre><code class="python">ismin_ne()
+</code></pre>
+
+<p>Gördüğünüz gibi, fonksiyonu çağırdığımızda yalnızca fonksiyon gövdesindeki input() fonksiyonu çalıştı, ama bu fonksiyondan gelen veri ekrana çıktı olarak verilmedi. Çünkü biz burada herhangi bir ekrana basma (‘print’) işlemi yapmadık. Yaptığımız tek şey isim adlı değişkeni ‘döndürmek’.</p>
+<p>Peki bu ne anlama geliyor?</p>
+<p>return kelimesi İngilizcede ‘iade etmek, geri vermek, döndürmek’ gibi anlamlar taşır. İşte yukarıdaki örnekte de return deyiminin yaptığı iş budur. Yani bu deyim bize fonksiyondan bir değer ‘döndürür’.</p>
+<p>Eğer tanımladığımız bir fonksiyonda return deyimini kullanarak herhangi bir değer döndürmezsek, Python fonksiyondan hususi bir değerin döndürülmediğini göstermek için ‘None’ adlı bir değer döndürür... İşte yukarıda tanımladığımız ilk ismin_ne() fonksiyonunu print(ismin_ne()) şeklinde çağırdığımızda ekranda None değerinin görünmesinin nedeni budur.</p>
+<p>Peki bir fonksiyon içinde herhangi bir veriyi ekrana basmayıp return deyimi yardımıyla döndürmemizin bize ne faydası var?</p>
+<p>Aslında bunun cevabı çok açık. Bir fonksiyon içinde bir değeri döndürmek yerine ekrana bastığınızda o fonksiyonun işlevini alabildiğine kısıtlamış oluyorsunuz. Fonksiyonunuzun tek işlevi bir değeri ekrana basmak oluyor.</p>
+<p>Yukarıda tanımladığımız ismin_ne() fonksiyonu şu şekilde çağıralım:</p>
+<pre><code class="python">print(&quot;Merhaba {}. Nasılsın?&quot;.format(ismin_ne()))
+</code></pre>
+
+<p>Çıktımız şu şekilde olacaktır:</p>
+<pre><code>ismin ne? Fırat
+Merhaba Fırat. Nasılsın?
+</code></pre>
+
+<p>Geriye değer döndüren fonksiyonlarda, fonksiyonun geriye döndürmüş olduğu değeri istediğimiz şekilde kullanabiliriz.</p>
+<p>return deyimiyle ilgili son bir şey daha söyleyelim...</p>
+<p>Bu deyim, içinde bulunduğu fonksiyonun çalışma sürecini kesintiye uğratır. Yani return deyimini kullandığınız satırdan sonra gelen hiçbir kod çalışmaz. Basit bir örnek verelim:</p>
+<pre><code class="python">def fonk():
+    print(3)
+    return
+    print(5)
+
+fonk()
+</code></pre>
+
+<p>Bu kodları çalıştırdığınızda yalnızca print(3) satırının çalıştığını, print(5) satırına ise hiç ulaşılmadığını göreceksiniz. İşte bu durumun sebebi, Python’ın kodları return satırından itibaren okumayı bırakmasıdır.</p>
+<h2 id="fonksiyonlarn-kapsam-ve-global-deyimi">Fonksiyonların Kapsamı ve global Deyimi</h2>
+<p>Elimizde şöyle bir kod olduğunu düşünelim:</p>
+<pre><code class="python">x = 0
+
+def fonk(): 
+    x = 1
+    return x
+</code></pre>
+
+<p>Bu kodlarda, fonksiyonun dışında x adlı bir değişken var. Fonksiyonun içinde de yine x adını taşıyan başka bir değişken var. Fonksiyonumuzun görevi bu x değişkenini döndürmek.</p>
+<p>Bu noktada size şöyle bir soru sormama izin verin: Acaba fonksiyon içinde tanımladığımız x değişkeni, fonksiyon dışındaki x değişkeninin değerini değiştiriyor mu? Bu sorunun cevabını şu kodlarla verelim:</p>
+<pre><code class="python">
+x = 0
+
+def fonk(): 
+    x=1
+    return x
+
+print('fonksiyon içindeki x: ', fonk())
+print('fonksiyon dışındaki x: ', x)
+
+</code></pre>
+
+<p>Bu kodları çalıştırdığımızda şu çıktıyı alacağız:</p>
+<pre><code>fonksiyon içindeki x:  1
+fonksiyon dışındaki x:  0
+</code></pre>
+
+<p>Gördüğünüz gibi fonksiyon içindeki ve fonksiyon dışındaki aynı adlı değişkenler birbirine karışmıyor. Bunun sebebi, Python’daki ‘isim alanı’ (namespace ) adlı bir kavramdır.</p>
+<p>Peki isim alanı ne demek?</p>
+<p>Python’da değişkenlerin, fonksiyonların ve daha sonra göreceğiniz gibi sınıfların bir kapsamı vardır. Bu kapsama Python’da ‘isim alanı’ adı verilir. Dolayısıyla Python’da her nesnenin, geçerli ve etkin olduğu bir isim alanı bulunur. Örneğin yukarıdaki kodlarda fonksiyon dışındaki x değişkeni ana isim alanında yer alan ‘global’ bir değişkendir. Fonksiyon içindeki x değişkeni ise fonk() değişkeninin isim alanı içinde yer alan ‘lokal’ bir değişkendir. Bu iki değişken, adları aynı da olsa, birbirlerinden farklı iki nesnedir.</p>
+<p>Bir de şu örneğe bakalım:</p>
+<pre><code class="python">x = []
+print('x\'in ilk hali:', x)
+
+def değiştir():
+    print('x\'i değiştiriyoruz...') x.append(1)
+    return x
+
+değiştir()
+print('x\'in son hali: ', x)
+</code></pre>
+
+<p>Burada ise daha farklı bir durum söz konusu. Fonksiyon içinde append() metodunu kullanarak yaptığımız ekleme işlemi fonksiyon dışındaki listeyi de etkiledi. Peki ama bu nasıl oluyor?</p>
+<p>Python herhangi bir nesneye göndermede bulunduğumuzda, yani o nesnenin değerini talep ettiğimizde aradığımız nesneyi ilk önce mevcut isim alanı içinde arar. Eğer aranan nesneyi mevcut isim alanı içinde bulamazsa yukarıya doğru bütün isim alanlarını tek tek kontrol eder.</p>
+<p>İşte Python programlama dili çözüm olacak bir araç sunar bize. Bu aracın adı <strong>global.</strong></p>
+<p>Gelin isterseniz bu <strong>global</strong> adlı deyimin nasıl kullanılacağına bakalım önce... </p>
+<p>Şu kodların hata vereceğini biliyorsunuz:</p>
+<pre><code class="python">isim = 'Fırat'
+
+def fonk():
+    isim += ' Özgül'
+    return isim
+
+print(fonk())
+</code></pre>
+
+<p>Ama bu kodlara şöyle bir ekleme yaparsanız işler değişir:</p>
+<pre><code class="python">isim = 'Fırat'
+
+def fonk():
+    global isim
+    isim += ' Özgül'
+    return isim
+
+print(fonk())
+</code></pre>
+
+<p>Burada fonk() adlı fonksiyonun ilk satırında şöyle bir kod görüyoruz:</p>
+<pre><code class="python">global isim
+</code></pre>
+
+<p>İşte bu satır, isim adlı değişkenin global alana taşınmasını sağlıyor. Böylece global alanda
+bulunan isim adlı değişkeni değişikliğe uğratabiliyoruz.</p>
+<p>global deyimi her ne kadar ilk bakışta çok faydalı bir araçmış gibi görünse de aslında programlarımızda genellikle bu deyimi kullanmaktan kaçınmamız iyi bir fikir olacaktır. Çünkü bu deyim aslında global alanı kirletmemize neden oluyor. Global değişkenlerin lokal isim alanlarında değişikliğe uğratılması, eğer dikkatsiz davranırsanız programlarınızın hatalı çalışmasına yol açabilir</p>
+<blockquote>
+<p>Son Güncelleme: 25 Aralık 2019 - Çarşamba</p>
+</blockquote>
+                
+                  
+                
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../python_kumeler_dondurulmus_kumeler/" title="Kümeler ve Dondurulmuş Kümeler" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Önceki
+                </span>
+                Kümeler ve Dondurulmuş Kümeler
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../../referanslar/" title="Referanslar" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Sonraki
+                </span>
+                Referanslar
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright &copy; 2019 Pratik Yapay Zeka
+          </div>
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+  <div class="md-footer-social">
+    <link rel="stylesheet" href="../../assets/fonts/font-awesome.css">
+    
+      <a href="https://github.com/mrabdullahsahin" class="md-footer-social__link fa fa-github"></a>
+    
+      <a href="https://twitter.com/mrabdullahsahin" class="md-footer-social__link fa fa-twitter"></a>
+    
+      <a href="https://linkedin.com/in/mrabdullahsahin" class="md-footer-social__link fa fa-linkedin"></a>
+    
+  </div>
+
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/application.808e90bb.js"></script>
+      
+        
+        
+          
+          <script src="../../assets/javascripts/lunr/lunr.stemmer.support.js"></script>
+          
+            
+              
+              
+                <script src="../../assets/javascripts/lunr/lunr.tr.js"></script>
+              
+            
+          
+          
+        
+      
+      <script>app.initialize({version:"1.0.4",url:{base:"../.."}})</script>
+      
+    
+  </body>
+</html>

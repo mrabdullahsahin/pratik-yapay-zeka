@@ -1,0 +1,2732 @@
+
+
+
+
+<!doctype html>
+<html lang="tr" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+        <meta name="description" content="Yapay Zeka'ya pratik bir yaklaşım.">
+      
+      
+        <link rel="canonical" href="https://mrabdullahsahin.github.io/pratik-yapay-zeka/python/python_gomulu_fonksiyonlar/">
+      
+      
+        <meta name="author" content="Abdullah Sahin">
+      
+      
+        <meta name="lang:clipboard.copy" content="Kopyala">
+      
+        <meta name="lang:clipboard.copied" content="Kopyalandı">
+      
+        <meta name="lang:search.language" content="tr">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="Eşleşen doküman bulunamadı">
+      
+        <meta name="lang:search.result.one" content="1 doküman bulundu">
+      
+        <meta name="lang:search.result.other" content="# doküman bulundu">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../../img/logo.png">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.6.0">
+    
+    
+      
+        <title>Gömülü Fonksiyonlar - Pratik Yapay Zeka</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/application.1b62728e.css">
+      
+        <link rel="stylesheet" href="../../assets/stylesheets/application-palette.a8b3c06d.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#3f51b5">
+      
+    
+    
+      <script src="../../assets/javascripts/modernizr.268332fc.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../../assets/fonts/material-icons.css">
+    
+      <link rel="manifest" href="../../manifest.webmanifest">
+    
+    
+    
+      
+    
+    
+  </head>
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448" viewBox="0 0 416 448" id="__github"><path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19T128 352t-18.125-8.5-10.75-19T96 304t3.125-20.5 10.75-19T128 256t18.125 8.5 10.75 19T160 304zm160 0q0 10-3.125 20.5t-10.75 19T288 352t-18.125-8.5-10.75-19T256 304t3.125-20.5 10.75-19T288 256t18.125 8.5 10.75 19T320 304zm40 0q0-30-17.25-51T296 232q-10.25 0-48.75 5.25Q229.5 240 208 240t-39.25-2.75Q130.75 232 120 232q-29.5 0-46.75 21T56 304q0 22 8 38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0 37.25-1.75t35-7.375 30.5-15 20.25-25.75T360 304zm56-44q0 51.75-15.25 82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5T212 416q-19.5 0-35.5-.75t-36.875-3.125-38.125-7.5-34.25-12.875T37 371.5t-21.5-28.75Q0 312 0 260q0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25 30.875Q171.5 96 212 96q37 0 70 8 26.25-20.5 46.75-30.25T376 64q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34 99.5z"/></svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#gomulu-fonksiyonlar" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="https://mrabdullahsahin.github.io/pratik-yapay-zeka/" title="Pratik Yapay Zeka" class="md-header-nav__button md-logo">
+          
+            <img src="../../img/logo.png" width="24" height="24">
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            <span class="md-header-nav__topic">
+              Pratik Yapay Zeka
+            </span>
+            <span class="md-header-nav__topic">
+              
+                Gömülü Fonksiyonlar
+              
+            </span>
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Ara" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Aramaya başlamak için yazın
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+
+
+  
+
+<a href="https://github.com/mrabdullahsahin/pratik-yapay-zeka/" title="Depoya git" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    mrabdullahsahin/pratik-yapay-zeka
+  </div>
+</a>
+          </div>
+        </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+      <main class="md-main" role="main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="https://mrabdullahsahin.github.io/pratik-yapay-zeka/" title="Pratik Yapay Zeka" class="md-nav__button md-logo">
+      
+        <img src="../../img/logo.png" width="48" height="48">
+      
+    </a>
+    Pratik Yapay Zeka
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+<a href="https://github.com/mrabdullahsahin/pratik-yapay-zeka/" title="Depoya git" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    mrabdullahsahin/pratik-yapay-zeka
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../.." title="Giriş" class="md-nav__link">
+      Giriş
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" checked>
+    
+    <label class="md-nav__link" for="nav-2">
+      Python
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        Python
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../degiskenler/" title="Değişkenler" class="md-nav__link">
+      Değişkenler
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../print/" title="print Fonksiyonu" class="md-nav__link">
+      print Fonksiyonu
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../kacis_dizileri/" title="Kaçış Dizileri" class="md-nav__link">
+      Kaçış Dizileri
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../yorum_isareti/" title="Yorum İşareti" class="md-nav__link">
+      Yorum İşareti
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../kullanicidan_bilgi_almak/" title="Kullanıcıdan Bilgi Almak" class="md-nav__link">
+      Kullanıcıdan Bilgi Almak
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../kosullu_durumlar/" title="Koşullu Durumlar" class="md-nav__link">
+      Koşullu Durumlar
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../islecler/" title="İşleçler" class="md-nav__link">
+      İşleçler
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../python_donguler/" title="Döngüler" class="md-nav__link">
+      Döngüler
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../python_hata_yakalama/" title="Hata Yakalama" class="md-nav__link">
+      Hata Yakalama
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../python_karakter_dizileri/" title="Karakter Dizileri(str)" class="md-nav__link">
+      Karakter Dizileri(str)
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../python_karakter_dizilerinin_metotlari/" title="Karakter Dizilerinin Metotları" class="md-nav__link">
+      Karakter Dizilerinin Metotları
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../python_format_metodu/" title="Format Metodu" class="md-nav__link">
+      Format Metodu
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../python_listeler_demetler/" title="Listeler ve Demetler" class="md-nav__link">
+      Listeler ve Demetler
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../python_listeler_demetler_metodlari/" title="Listeler ve Demetlerin Metodları" class="md-nav__link">
+      Listeler ve Demetlerin Metodları
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../python_sayilar/" title="Sayılar" class="md-nav__link">
+      Sayılar
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../python_sozlukler/" title="Sözlükler" class="md-nav__link">
+      Sözlükler
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../python_sozluklerin_metotlari/" title="Sözlüklerin Metotları" class="md-nav__link">
+      Sözlüklerin Metotları
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../python_kumeler_dondurulmus_kumeler/" title="Kümeler ve Dondurulmuş Kümeler" class="md-nav__link">
+      Kümeler ve Dondurulmuş Kümeler
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../python_fonksiyonlar/" title="Fonksiyonlar" class="md-nav__link">
+      Fonksiyonlar
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Gömülü Fonksiyonlar
+      </label>
+    
+    <a href="./" title="Gömülü Fonksiyonlar" class="md-nav__link md-nav__link--active">
+      Gömülü Fonksiyonlar
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">İçindekiler</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#gomulu-fonksiyonlar" class="md-nav__link">
+    Gömülü Fonksiyonlar
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#abs" class="md-nav__link">
+    abs()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#round" class="md-nav__link">
+    round()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#all" class="md-nav__link">
+    all()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#any" class="md-nav__link">
+    any()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ascii" class="md-nav__link">
+    ascii()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#repr" class="md-nav__link">
+    repr()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bool" class="md-nav__link">
+    bool()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bin" class="md-nav__link">
+    bin()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bytes" class="md-nav__link">
+    bytes()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bytearray" class="md-nav__link">
+    bytearray()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#chr" class="md-nav__link">
+    chr()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#list" class="md-nav__link">
+    list()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#set" class="md-nav__link">
+    set()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tuple" class="md-nav__link">
+    tuple()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#frozenset" class="md-nav__link">
+    frozenset()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#complex" class="md-nav__link">
+    complex()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#float" class="md-nav__link">
+    float()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#int" class="md-nav__link">
+    int()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#str" class="md-nav__link">
+    str()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dict" class="md-nav__link">
+    dict()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#callable" class="md-nav__link">
+    callable()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ord" class="md-nav__link">
+    ord()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#oct" class="md-nav__link">
+    oct()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hex" class="md-nav__link">
+    hex()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#eval-exec-globals-locals-compile" class="md-nav__link">
+    eval(), exec(), globals(), locals(), compile()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#copyright" class="md-nav__link">
+    copyright()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#credits" class="md-nav__link">
+    credits()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#license" class="md-nav__link">
+    license()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dir" class="md-nav__link">
+    dir()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#divmod" class="md-nav__link">
+    divmod()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#enumerate" class="md-nav__link">
+    enumerate()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exit" class="md-nav__link">
+    exit()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#help" class="md-nav__link">
+    help()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#id" class="md-nav__link">
+    id()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#input" class="md-nav__link">
+    input()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#format" class="md-nav__link">
+    format()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#filter" class="md-nav__link">
+    filter()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hash" class="md-nav__link">
+    hash()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#isinstance" class="md-nav__link">
+    isinstance()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#len" class="md-nav__link">
+    len()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#map" class="md-nav__link">
+    map()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#max" class="md-nav__link">
+    max()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#min" class="md-nav__link">
+    min()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#open" class="md-nav__link">
+    open()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pow" class="md-nav__link">
+    pow()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#print" class="md-nav__link">
+    print()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#quit" class="md-nav__link">
+    quit()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#range" class="md-nav__link">
+    range()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reversed" class="md-nav__link">
+    reversed()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sorted" class="md-nav__link">
+    sorted()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#slice" class="md-nav__link">
+    slice()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sum" class="md-nav__link">
+    sum()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#type" class="md-nav__link">
+    type()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#zip" class="md-nav__link">
+    zip()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vars" class="md-nav__link">
+    vars()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../referanslar/" title="Referanslar" class="md-nav__link">
+      Referanslar
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../changelog/" title="Değişiklik Kaydı" class="md-nav__link">
+      Değişiklik Kaydı
+    </a>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">İçindekiler</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#gomulu-fonksiyonlar" class="md-nav__link">
+    Gömülü Fonksiyonlar
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#abs" class="md-nav__link">
+    abs()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#round" class="md-nav__link">
+    round()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#all" class="md-nav__link">
+    all()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#any" class="md-nav__link">
+    any()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ascii" class="md-nav__link">
+    ascii()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#repr" class="md-nav__link">
+    repr()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bool" class="md-nav__link">
+    bool()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bin" class="md-nav__link">
+    bin()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bytes" class="md-nav__link">
+    bytes()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bytearray" class="md-nav__link">
+    bytearray()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#chr" class="md-nav__link">
+    chr()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#list" class="md-nav__link">
+    list()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#set" class="md-nav__link">
+    set()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tuple" class="md-nav__link">
+    tuple()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#frozenset" class="md-nav__link">
+    frozenset()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#complex" class="md-nav__link">
+    complex()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#float" class="md-nav__link">
+    float()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#int" class="md-nav__link">
+    int()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#str" class="md-nav__link">
+    str()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dict" class="md-nav__link">
+    dict()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#callable" class="md-nav__link">
+    callable()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ord" class="md-nav__link">
+    ord()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#oct" class="md-nav__link">
+    oct()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hex" class="md-nav__link">
+    hex()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#eval-exec-globals-locals-compile" class="md-nav__link">
+    eval(), exec(), globals(), locals(), compile()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#copyright" class="md-nav__link">
+    copyright()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#credits" class="md-nav__link">
+    credits()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#license" class="md-nav__link">
+    license()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dir" class="md-nav__link">
+    dir()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#divmod" class="md-nav__link">
+    divmod()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#enumerate" class="md-nav__link">
+    enumerate()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exit" class="md-nav__link">
+    exit()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#help" class="md-nav__link">
+    help()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#id" class="md-nav__link">
+    id()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#input" class="md-nav__link">
+    input()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#format" class="md-nav__link">
+    format()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#filter" class="md-nav__link">
+    filter()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hash" class="md-nav__link">
+    hash()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#isinstance" class="md-nav__link">
+    isinstance()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#len" class="md-nav__link">
+    len()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#map" class="md-nav__link">
+    map()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#max" class="md-nav__link">
+    max()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#min" class="md-nav__link">
+    min()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#open" class="md-nav__link">
+    open()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pow" class="md-nav__link">
+    pow()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#print" class="md-nav__link">
+    print()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#quit" class="md-nav__link">
+    quit()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#range" class="md-nav__link">
+    range()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reversed" class="md-nav__link">
+    reversed()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sorted" class="md-nav__link">
+    sorted()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#slice" class="md-nav__link">
+    slice()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sum" class="md-nav__link">
+    sum()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#type" class="md-nav__link">
+    type()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#zip" class="md-nav__link">
+    zip()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vars" class="md-nav__link">
+    vars()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/mrabdullahsahin/pratik-yapay-zeka/edit/master/docs/python/python_gomulu_fonksiyonlar.md" title="Düzenle" class="md-icon md-content__icon">&#xE3C9;</a>
+                
+                
+                  <h1>Gömülü Fonksiyonlar</h1>
+                
+                <h2 id="gomulu-fonksiyonlar">Gömülü Fonksiyonlar</h2>
+<h3 id="abs">abs()</h3>
+<p>abs() fonksiyonunu bir sayının mutlak değerini elde etmek için kullanıyoruz. Örneğin:</p>
+<pre><code class="python">abs(-20)
+</code></pre>
+
+<pre><code>20
+</code></pre>
+<p>bir başka örnek:</p>
+<pre><code class="python">abs(20)
+</code></pre>
+
+<pre><code>20
+</code></pre>
+<p>bir diğer örnek:</p>
+<pre><code class="python">abs(20.0)
+</code></pre>
+
+<pre><code>20.0
+</code></pre>
+<p>Mutlak değer kavramı yalnızca tamsayılar ve kayan noktalı sayılar için değil, aynı zamanda karmaşık sayılar için de geçerlidir. Dolayısıyla abs() fonksiyonunu kullanarak karmaşık sayıların da mutlak değerini hesaplayabiliriz:</p>
+<pre><code class="python">abs(20+3j)
+</code></pre>
+
+<pre><code>20.223748416156685
+</code></pre>
+<h3 id="round">round()</h3>
+<p>round() fonksiyonu bir sayıyı belli ölçütlere göre yukarı veya aşağı doğru yuvarlamamızı sağlar. Basit birkaç örnek verelim:</p>
+<pre><code class="python">round(12.4)
+</code></pre>
+
+<pre><code>12
+</code></pre>
+<p>burada dikkat etmemiz gereken bir nokta var.</p>
+<p>Şu örnekleri bir inceleyelim:</p>
+<pre><code class="python">round(1.5)
+</code></pre>
+
+<pre><code>2
+</code></pre>
+<pre><code class="python">round(12.5)
+</code></pre>
+
+<pre><code>12
+</code></pre>
+<p>Gördüğünüz gibi, fonksiyonumuz 1.5 sayısını yukarı doğru, 12.5 sayısını ise aşağı doğru yuvarladı. Bunun sebebi, kayan noktalı bir sayının üst ve alt tam sayılara olan uzaklığının birbirine eşit olduğu durumlarda Python’ın çift sayıya doğru yuvarlama yapmayı tercih etmesidir. Mesela yukarıdaki örneklerde 1.5 sayısı hem 1 sayısına, hem de 2 sayısına eşit uzaklıkta bulunuyor. İşte Python bu durumda, bir çift sayı olan 2 sayısına doğru yuvarlamayı tercih edecektir.</p>
+<p>round() fonksiyonu toplam iki parametre alır. İlk parametre, yuvarlanacak sayının kendisidir. Yuvarlama hassasiyetini belirlemek için ise ikinci bir parametreden yararlanabiliriz.</p>
+<p>Örneğin 22 sayısını 7 ‘ye böldüğümüzde normalde şöyle bir çıktı elde ederiz:</p>
+<pre><code class="python">22/7
+</code></pre>
+
+<pre><code>3.142857142857143
+</code></pre>
+<p>round() fonksiyonunu tek parametre ile kullandığımızda bu fonksiyon yukarıdaki sayıyı şu şekilde yuvarlayacaktır:</p>
+<pre><code class="python">round(22/7)
+</code></pre>
+
+<pre><code>3
+</code></pre>
+<p>İşte biz round() fonksiyonuna ikinci bir parametre daha vererek, yuvarlama hassasiyetini kontrol edebiliriz.</p>
+<p>Aşağıdaki örnekleri dikkatlice inceleyin:</p>
+<pre><code class="python">print(&quot;round(22/7): &quot;,round(22/7))
+
+print(&quot;round(22/7, 0): &quot;,round(22/7, 0))
+
+print(&quot;round(22/7, 1): &quot;,round(22/7, 1))
+
+print(&quot;round(22/7, 2): &quot;,round(22/7, 2))
+
+print(&quot;round(22/7, 3): &quot;,round(22/7, 3))
+
+print(&quot;round(22/7, 4): &quot;,round(22/7, 4))
+</code></pre>
+
+<pre><code>round(22/7):  3
+round(22/7, 0):  3.0
+round(22/7, 1):  3.1
+round(22/7, 2):  3.14
+round(22/7, 3):  3.143
+round(22/7, 4):  3.1429
+</code></pre>
+<p>Gördüğünüz gibi, round() fonksiyonuna verdiğimiz ikinci parametre, yuvarlama işleminin ne kadar hassas olacağını belirliyor.</p>
+<h3 id="all">all()</h3>
+<p>all() fonksiyonunun görevi, bir dizi içinde bulunan bütün değerler True ise True değeri, eğer bu değerlerden herhangi biri False ise de False değeri döndürmektir.</p>
+<p>Örneğin elimizde şöyle bir liste olduğunu varsayalım:</p>
+<pre><code class="python">liste = [1, 2, 3, 4]
+
+all(liste)
+</code></pre>
+
+<pre><code>True
+</code></pre>
+<p>Bildiğiniz gibi, 0 hariç bütün sayıların bool değeri True‘dur. Yukarıdaki listede False değeri verebilecek herhangi bir değer bulunmadığından, all() fonksiyonu bu liste için True değerini veriyor. Bir de şuna bakalım:</p>
+<pre><code class="python">liste = [0, 1, 2, 3, 4]
+
+all(liste)
+</code></pre>
+
+<pre><code>False
+</code></pre>
+<p>Son bir örnek daha verelim:</p>
+<pre><code class="python">liste = ['ahmet', 'mehmet', '']
+
+all(liste)
+</code></pre>
+
+<pre><code>False
+</code></pre>
+<p>Listede False değerine sahip bir boş karakter dizisi bulunduğu için all() fonksiyonu False çıktısı veriyor.</p>
+<h3 id="any">any()</h3>
+<p>any() fonksiyonunun görevi de, bir dizi içindeki bütün değerlerden en az biri True ise True çıktısı vermektir.</p>
+<pre><code class="python">liste = ['ahmet', 'mehmet', '']
+
+any(liste)
+</code></pre>
+
+<pre><code>True
+</code></pre>
+<p>any() fonksiyonunun True çıktısı verebilmesi için listede yalnızca bir adet True değerli öğe olması yeterlidir. Bu fonksiyonun False çıktısı verebilmesi için dizi içindeki bütün öğelerin bool değerinin False olması gerekir:</p>
+<pre><code class="python">l = ['', 0, [], (), set(), dict()]
+
+any(l)
+</code></pre>
+
+<pre><code>False
+</code></pre>
+<h3 id="ascii">ascii()</h3>
+<p>Bu fonksiyon, bir nesnenin ekrana basılabilir halini verir bize.</p>
+<pre><code class="python">a = 'python'
+
+print(ascii(a))
+</code></pre>
+
+<pre><code>'python'
+</code></pre>
+<p>Bu fonksiyonun, print() fonksiyonundan farklı olarak, çıktıya tırnak işaretlerini de eklediğine dikkat edin.</p>
+<p>ascii() fonksiyonunun tam olarak ne yaptığını daha iyi anlamak için herhalde şu örnek daha faydalı olacaktır.</p>
+<p>Dikkatlice bakın:</p>
+<pre><code class="python">print('\n')
+</code></pre>
+
+<p>Bu komutu verdiğimizde, n kaçış dizisinin etkisiyle yeni satıra geçileceğini biliyorsunuz.</p>
+<p>Bir de şuna bakın:</p>
+<pre><code class="python">print(ascii('\n!'))
+</code></pre>
+
+<pre><code>'\n!'
+</code></pre>
+<p>Gördüğünüz gibi, ascii() fonksiyonu, satır başı kaçış dizisinin görevini yapmasını sağlamak yerine bu kaçış dizisinin ekrana basılabilir halini veriyor bize.</p>
+<p>Ayrıca bu fonksiyon, karakter dizileri içindeki Türkçe karakterlerin de UNICODE temsillerini döndürür. Örneğin:</p>
+<pre><code class="python">a = 'ışık'
+
+print(ascii(a))
+</code></pre>
+
+<pre><code>'\u0131\u015f\u0131k'
+</code></pre>
+<h3 id="repr">repr()</h3>
+<p>repr() fonksiyonunun yaptığı iş, biraz önce gördüğümüz ascii() fonksiyonunun yaptığı işe çok benzer. Bu iki fonksiyon, ASCII olmayan karakterlere muameleleri açısından birbirinden ayrılır.</p>
+<p>Hatırlarsanız ascii() fonksiyonu ASCII olmayan karakterlerle karşılaştığında bunların UNICODE (veya onaltılık) temsillerini gösteriyordu:</p>
+<pre><code class="python">ascii('şeker')
+</code></pre>
+
+<pre><code>"'\\u015feker'"
+</code></pre>
+<p>repr() fonksiyonu ise ASCII olmayan karakterlerle karşılaşsa bile, bize çıktı olarak bunların da karakter karşılıklarını gösterir:</p>
+<pre><code class="python">repr('şeker')
+</code></pre>
+
+<pre><code>"'şeker'"
+</code></pre>
+<h3 id="bool">bool()</h3>
+<p>Bu fonksiyon bir nesnenin bool değerini verir:</p>
+<pre><code class="python">print(&quot;bool(0): &quot;,bool(0))
+
+print(&quot;bool(1): &quot;,bool(1))
+
+print(&quot;bool([]): &quot;,bool([]))
+</code></pre>
+
+<pre><code>bool(0):  False
+bool(1):  True
+bool([]):  False
+</code></pre>
+<h3 id="bin">bin()</h3>
+<p>Bu fonksiyon, bir sayının ikili düzendeki karşılığını verir:</p>
+<pre><code class="python">bin(12)
+</code></pre>
+
+<pre><code>'0b1100'
+</code></pre>
+<p>Bu fonksiyonun verdiği çıktının bir sayı değil, karakter dizisi olduğuna dikkat etmelisiniz.</p>
+<h3 id="bytes">bytes()</h3>
+<p>Bu fonksiyon bytes türünde nesneler oluşturmak için kullanılır.</p>
+<p>Bu fonksiyon, kendisine verilen parametrelerin türüne bağlı olarak birbirinden farklı sonuçlar ortaya çıkarır. Örneğin eğer bu fonksiyona parametre olarak bir tam sayı verecek olursanız, bu fonksiyon size o tam sayı miktarınca bir bayt nesnesi verecektir. Gelin isterseniz bu durumu örnekler üzerinde göstermeye çalışalım:</p>
+<pre><code class="python">bytes(10)
+</code></pre>
+
+<pre><code>b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00'
+</code></pre>
+<p>Yukarıdaki komut bize, her bir öğesinin değeri 0 olan 10 baytlık bir veri döndürdü:</p>
+<pre><code class="python">a = bytes(10)
+
+a
+</code></pre>
+
+<pre><code>b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00'
+</code></pre>
+<pre><code class="python">print(a[0])
+print(a[1])
+print(a[2])
+</code></pre>
+
+<pre><code>0
+0
+0
+</code></pre>
+<p>Gördüğünüz gibi, bytes(10) komutuyla oluşturduğumuz a değişkeni içinde toplam 10 adet bayt var ve bu baytların her birinin değeri 0.</p>
+<p>Yukarıda, bytes() fonksiyonuna bir tam sayı değerli parametre verdiğimizde nasıl bir sonuç alacağımızı öğrendik. Peki biz bu fonksiyona parametre olarak bir karakter dizisi verirsek ne olur?</p>
+<p>Hemen görelim:</p>
+<pre><code class="python">bytes(&quot;python&quot;)
+</code></pre>
+
+<pre><code>---------------------------------------------------------------------------
+
+TypeError                                 Traceback (most recent call last)
+
+&lt;ipython-input-29-0f3b72b3b524&gt; in &lt;module&gt;
+----&gt; 1 bytes("python")
+
+
+TypeError: string argument without an encoding
+</code></pre>
+<p>Bu fonksiyona karakter dizilerini doğrudan parametre olarak veremeyiz.</p>
+<p>bayta dönüştürme işlemi her kod çözücü tarafından farklı biçimde yapılır. Örneğin:</p>
+<pre><code class="python">'ışık'.encode('utf-8')
+</code></pre>
+
+<pre><code>b'\xc4\xb1\xc5\x9f\xc4\xb1k'
+</code></pre>
+<pre><code class="python">'ışık'.encode('cp857')
+</code></pre>
+
+<pre><code>b'\x8d\x9f\x8dk'
+</code></pre>
+<pre><code class="python">'ışık'.encode('cp1254')
+</code></pre>
+
+<pre><code>b'\xfd\xfe\xfdk'
+</code></pre>
+<p>Dolayısıyla, bytes() fonksiyonunun bir karakter dizisini bayta çevirirken nasıl davranması gerektiğini anlayabilmesi için, bayta dönüştürme işlemini hangi kod çözücü ile yapmak istediğimizi açıkça belirtmemiz gerekir:</p>
+<pre><code class="python">bytes('ışık', 'utf-8')
+</code></pre>
+
+<pre><code>b'\xc4\xb1\xc5\x9f\xc4\xb1k'
+</code></pre>
+<pre><code class="python">bytes('ışık', 'cp1254')
+</code></pre>
+
+<pre><code>b'\xfd\xfe\xfdk'
+</code></pre>
+<p>Bu arada, çıktıda görünen ‘b’ harflerinin, elimizdeki verinin bir bayt olduğunu gösteren bir işaret olduğunu biliyorsunuz.</p>
+<p>Ayrıca, bytes() fonksiyonuna verdiğimiz ikinci parametrenin isminin encoding olduğunu ve bu parametreyi isimli bir parametre olarak da kullanabileceğimizi belirtelim:</p>
+<pre><code class="python">bytes('python', encoding='ascii')
+</code></pre>
+
+<pre><code>b'python'
+</code></pre>
+<pre><code class="python">bytes('şeker', 'ascii')
+</code></pre>
+
+<pre><code>---------------------------------------------------------------------------
+
+UnicodeEncodeError                        Traceback (most recent call last)
+
+&lt;ipython-input-37-71877b66453f&gt; in &lt;module&gt;
+----&gt; 1 bytes('şeker', 'ascii')
+
+
+UnicodeEncodeError: 'ascii' codec can't encode character '\u015f' in position 0: ordinal not in range(128)
+</code></pre>
+<p>‘ş’ harfi ‘ASCII’ karakter kümesinde; ‘€’ işareti ise ‘CP857’ adlı karakter kümesinde tanımlanmamış birer karakter olduğu için, ilgili kod çözücüler bu karakterleri çözüp bayta dönüştüremiyor. Yazdığımız kodların bu tür durumlarda tamamen çökmesini engellemek için, önceki derslerimizde de çeşitli vesilelerle öğrenmiş olduğumuz errors adlı bir parametreden yararlanabiliriz:</p>
+<pre><code class="python">bytes('şeker', encoding='ascii', errors='replace')
+</code></pre>
+
+<pre><code>b'?eker'
+</code></pre>
+<p>Son olarak, bytes() fonksiyonuna parametre olarak 0-256 arası sayılardan oluşan diziler de verebiliriz:</p>
+<pre><code class="python">bytes([65, 10, 12, 11, 15, 66])
+</code></pre>
+
+<pre><code>b'A\n\x0c\x0b\x0fB'
+</code></pre>
+<h3 id="bytearray">bytearray()</h3>
+<p>bytearray() ve bytes() fonksiyonları birbirlerine çok benzer. Bu ikisi arasındaki tek fark, bytearray() ile oluşturulan veri tipinin, bytes() ile oluşturulan veri tipinin aksine, değiştirilebilir nitelikte olmasıdır:</p>
+<pre><code class="python">a = bytearray('konya', 'ascii')
+
+a
+</code></pre>
+
+<pre><code>bytearray(b'konya')
+</code></pre>
+<pre><code class="python">bytearray(b'konya')
+</code></pre>
+
+<pre><code>bytearray(b'konya')
+</code></pre>
+<pre><code class="python">a[0] = 65
+
+a
+</code></pre>
+
+<pre><code>bytearray(b'Aonya')
+</code></pre>
+<h3 id="chr">chr()</h3>
+<p>Bu fonksiyon, kendisine parametre olarak verilen bir tam sayının karakter karşılığını döndürür. Örneğin:</p>
+<pre><code class="python">chr(10)
+</code></pre>
+
+<pre><code>'\n'
+</code></pre>
+<p>Bildiğiniz gibi 10 sayısının karakter karşılığı satır başı karakteridir. Bir de şuna bakalım:</p>
+<pre><code class="python">chr(65)
+</code></pre>
+
+<pre><code>'A'
+</code></pre>
+<p>65 sayısının karakter karşılığı ise ‘A’ harfidir.</p>
+<p>Bu fonksiyon sayıları karakterlere dönüştürürken ASCII sistemini değil, UNICODE sistemini temel alır. Dolayısıyla bu fonksiyon ile 128 (veya 255) üstü sayıları da dönüştürebiliriz. Örneğin:</p>
+<pre><code class="python">chr(305)
+</code></pre>
+
+<pre><code>'ı'
+</code></pre>
+<h3 id="list">list()</h3>
+<p>Bu fonksiyon iki farklı amaç için kullanılabilir:</p>
+<ol>
+<li>Liste tipinde bir veri oluşturmak</li>
+<li>Farklı veri tiplerini liste adlı veri tipine dönüştürmek</li>
+</ol>
+<p>Birinci amaç için bu fonksiyonu şu şekilde kullanıyoruz:</p>
+<pre><code class="python">l = list()
+</code></pre>
+
+<p>ikinc amaç için bu fonksiyonu şu şekilde kullanıyoruz:</p>
+<pre><code class="python">liste = list('python')
+
+liste
+</code></pre>
+
+<pre><code>['p', 'y', 't', 'h', 'o', 'n']
+</code></pre>
+<p>Elbette bu fonksiyonu kullanarak başka veri tiplerini de listeye dönüştürebiliriz. Örneğin bir
+sözlüğü, bu fonksiyon yardımıyla kolayca listeye dönüştürebiliriz:</p>
+<pre><code class="python">s = {'elma': 44, 'armut': 10, 'erik': 100}
+
+list(s)
+</code></pre>
+
+<pre><code>['elma', 'armut', 'erik']
+</code></pre>
+<p>Bir sözlük listeye dönüştürülürken, elbette sözlüğün anahtarları dikkate alınacaktır. Eğer siz sözlüğün anahtarlarından değil de değerlerinde bir liste oluşturmak isterseniz şöyle bir kod yazabilirsiniz:</p>
+<pre><code class="python">list(s.values())
+</code></pre>
+
+<pre><code>[44, 10, 100]
+</code></pre>
+<h3 id="set">set()</h3>
+<p>set() fonksiyonu list() fonksiyonuna çok benzer. Bu fonksiyon da tıpkı list() fonksiyonu gibi, veri tipleri arasında dönüştürme işlemleri gerçekleştirmek için kullanılabilir. set() fonksiyonunun görevi farklı veri tiplerini kümeye dönüştürmektir:</p>
+<pre><code class="python">k = set()
+</code></pre>
+
+<p>Burada boş bir küme oluşturduk. Şimdi de mesela bir karakter dizisini kümeye dönüştürelim:</p>
+<pre><code class="python">i = 'python'
+
+set(i)
+</code></pre>
+
+<pre><code>{'h', 'n', 'o', 'p', 't', 'y'}
+</code></pre>
+<h3 id="tuple">tuple()</h3>
+<p>tuple() fonksiyonu da, tıpkı list(), set() ve benzerleri gibi bir dönüştürücü fonksiyondur. Bu fonksiyon farklı veri tiplerini demete dönüştürür:</p>
+<pre><code class="python">tuple('a')
+</code></pre>
+
+<pre><code>('a',)
+</code></pre>
+<h3 id="frozenset">frozenset()</h3>
+<p>Bu fonksiyonu kullanarak farklı veri tiplerini dondurulmuş kümeye dönüştürebilirsiniz:</p>
+<pre><code class="python">s = set('istihza')
+
+df = frozenset(s)
+
+df
+</code></pre>
+
+<pre><code>frozenset({'a', 'h', 'i', 's', 't', 'z'})
+</code></pre>
+<h3 id="complex">complex()</h3>
+<p>Karmaşık sayılar Python’da ‘complex’ ifadesiyle gösteriliyor. Mesela şu bir karmaşık sayıdır:</p>
+<pre><code class="python">12+0j
+</code></pre>
+
+<pre><code>(12+0j)
+</code></pre>
+<p>İşte eğer herhangi bir sayıyı karmaşık sayıya dönüştürmeniz gerekirse complex() adlı bir fonksiyondan yararlanabilirsiniz. Örneğin:</p>
+<pre><code class="python">complex(15)
+</code></pre>
+
+<pre><code>(15+0j)
+</code></pre>
+<p>Böyle bir kod yazdığımızda, verdiğimiz parametre karmaşık sayının gerçek kısmını oluşturacak, sanal kısım ise 0 olarak kabul edilecektir. Elbette isterseniz sanal kısmı kendiniz de belirleyebilirsiniz:</p>
+<pre><code class="python">complex(15, 2)
+</code></pre>
+
+<pre><code>(15+2j)
+</code></pre>
+<h3 id="float">float()</h3>
+<p>Bu fonksiyonu, sayıları veya karakter dizilerini kayan noktalı sayıya dönüştürmek için kullanıyoruz:</p>
+<pre><code class="python">float('134')
+</code></pre>
+
+<pre><code>134.0
+</code></pre>
+<h3 id="int">int()</h3>
+<p>Bu fonksiyon birkaç farklı amaç için kullanılabilir. int() fonksiyonunun en temel görevi, bir karakter dizisi veya kayan noktalı sayıyı (eğer mümkünse) tam sayıya dönüştürmektir:</p>
+<pre><code class="python">int('10')
+</code></pre>
+
+<pre><code>10
+</code></pre>
+<pre><code class="python">int(12.4)
+</code></pre>
+
+<pre><code>12
+</code></pre>
+<p>Bunun dışında bu fonksiyonu, herhangi bir sayma sisteminde temsil edilen bir sayıyı onlu sayma sistemine dönüştürmek için de kullanabiliriz. Örneğin:</p>
+<pre><code class="python">int('12', 8)
+</code></pre>
+
+<pre><code>10
+</code></pre>
+<p>Burada, sekizli sayma sistemine ait sayı değerli bir karakter dizisi olan ‘12’‘yi onlu sayma sistemine dönüştürdük ve böylece ‘10 sayısını elde ettik.</p>
+<p>int() fonksiyonunu sayma sistemleri arasında dönüştürme işlemlerinde kullanabilmek için ilk parametrenin bir karakter dizisi olması gerektiğine dikkat ediyoruz.</p>
+<p>Bu arada, int(’12’, 8) komutununun 12 sayısını sekizli sayma sistemine dönüştürmediğine dikkat edin. Bu komutun yaptığı iş sekizli sayma sistemindeki 12 sayısını onlu sayma sistemine dönüştürmektir.</p>
+<p>int() fonksiyonunun bu kullanımıyla ilgili bir örnek daha verelim:</p>
+<pre><code class="python">int('4cf', 16)
+</code></pre>
+
+<pre><code>1231
+</code></pre>
+<p>Burada da, onaltılı sayma sistemine ait bir sayı olan 4cf‘yi onlu sayma sistemine çevirdik ve 1231 sayısını elde ettik. 4cf sayısını int() fonksiyonuna parametre olarak verirken bunu karakter dizisi şeklinde yazmayı unutmuyoruz. Aksi halde Python bize bir hata mesajı gösterecektir.</p>
+<h3 id="str">str()</h3>
+<p>Bu fonksiyonun, farklı veri tiplerini karakter dizisine dönüştürmek için kullanıldığını biliyorsunuz. Örneğin:</p>
+<pre><code class="python">str(12)
+</code></pre>
+
+<pre><code>'12'
+</code></pre>
+<p>Burada 12 sayısını bir karakter dizisine dönüştürdük. Şimdi de bir baytı karakter dizisine dönüştürelim:</p>
+<pre><code class="python">bayt = b'python'
+</code></pre>
+
+<p>Bayt nesnemizi tanımladık. Şimdi bunu bir karakter dizisine dönüştürelim:</p>
+<pre><code class="python">kardiz = str(bayt, encoding='utf-8')
+
+print(kardiz)
+</code></pre>
+
+<pre><code>python
+</code></pre>
+<h3 id="dict">dict()</h3>
+<p>Bu fonksiyon, farklı veri tiplerinden sözlükler üretmemizi sağlar. Örneğin bu fonksiyonu kullanarak boş bir sözlük oluşturabiliriz:</p>
+<pre><code class="python">s = dict()
+</code></pre>
+
+<p>Bu fonksiyon, değişkenlerden sözlükler oluşturmamızı da sağlar:</p>
+<pre><code class="python">s = dict(a=1, b=2, c=3)
+
+s
+</code></pre>
+
+<pre><code>{'a': 1, 'b': 2, 'c': 3}
+</code></pre>
+<p>dict() fonksiyonuna parametre olarak iç içe geçmiş listeler veya demetler vererek de sözlük üretebiliriz:</p>
+<pre><code class="python">ogeler = (['a', 1], ['b', 2], ['c', 3])
+
+dict(ogeler)
+</code></pre>
+
+<pre><code>{'a': 1, 'b': 2, 'c': 3}
+</code></pre>
+<h3 id="callable">callable()</h3>
+<p>Bu fonksiyon, bir nesnenin ‘çağrılabilir’ olup olmadığını denetler. Peki hangi nesneler çağrılabilir özelliktedir. Mesela fonksiyonlar çağrılabilir nesnelerdir. Değişkenler ise çağrılabilir nesneler değildir.</p>
+<p>Birkaç örnek verelim bununla ilgili:</p>
+<pre><code class="python">callable(open)
+</code></pre>
+
+<pre><code>True
+</code></pre>
+<p>Python’ın open() adlı bir fonksiyonu olduğu için, doğal olarak callable() fonksiyonu True çıktısı veriyor.</p>
+<p>Bir de şuna bakalım:</p>
+<pre><code class="python">import sys
+
+callable(sys.version)
+</code></pre>
+
+<pre><code>False
+</code></pre>
+<p>Burada da sys modülü içindeki version adlı nesnenin çağrılabilir özellikte olup olmadığını sorguladık. Daha önceki derslerimizde de gördüğünüz gibi, sys modülü içindeki version adlı araç bir fonksiyon değil, değişkendir. Dolayısıyla bu değişken callable(sys.version) sorgusuna False yanıtı verir.</p>
+<h3 id="ord">ord()</h3>
+<p>u fonksiyon, bir karakterin karşılık geldiği ondalık sayıyı verir. Örneğin:</p>
+<pre><code class="python">ord('a')
+</code></pre>
+
+<pre><code>97
+</code></pre>
+<pre><code class="python">ord('ı')
+</code></pre>
+
+<pre><code>305
+</code></pre>
+<h3 id="oct">oct()</h3>
+<p>Bu fonksiyon, bir sayıyı sekizli düzendeki karşılığına çevirmemizi sağlar:</p>
+<pre><code class="python">oct(10)
+</code></pre>
+
+<pre><code>'0o12'
+</code></pre>
+<h3 id="hex">hex()</h3>
+<p>Bu fonksiyon, bir sayıyı onaltılı düzendeki karşılığına çevirmemizi sağlar:</p>
+<pre><code class="python">hex(305)
+</code></pre>
+
+<pre><code>'0x131'
+</code></pre>
+<p>Yalnız hem oct() hem de hex() fonksiyonlarında dikkat etmemiz gereken şey, bu fonksiyonların parametre olarak bir sayı alıp, çıktı olarak bir karakter dizisi veriyor olmasıdır.</p>
+<h3 id="eval-exec-globals-locals-compile">eval(), exec(), globals(), locals(), compile()</h3>
+<p>Bu bölümde beş farklı fonksiyonu bir arada inceleyeceğiz. Bu fonksiyonları birlikte ele almamızın nedeni bunların birbiriyle yakından bağlantılı olması.
+Burada işleyeceğimiz bu beş fonksiyon şunlardan oluşuyor: </p>
+<ol>
+<li>eval()</li>
+<li>exec()</li>
+<li>globals() </li>
+<li>locals() </li>
+<li>compile()</li>
+</ol>
+<p>Ancak bu fonksiyonlardan söz etmeye başlamadan önce Python’daki iki önemli kavramı açıklığa kavuşturmamız gerekiyor: Bu kavramlar şunlar:</p>
+<ol>
+<li>ifade</li>
+<li>deyim</li>
+</ol>
+<p>Öncelikle ‘ifade’ kavramından başlayalım.</p>
+<p>İngilizcede expression denen ‘ifadeler’, bir değer üretmek için kullanılan kod parçalarıdır. Karakter dizileri, sayılar, işleçler, öteki veri tipleri, liste üreteçleri, sözlük üreteçleri, küme üreteçleri, fonksiyonlar hep birer ifadedir.</p>
+<p>Örneğin:</p>
+<pre><code class="python">5
+</code></pre>
+
+<pre><code>5
+</code></pre>
+<pre><code class="python">23 + 4
+</code></pre>
+
+<pre><code>27
+</code></pre>
+<pre><code class="python">len([1, 2, 3])
+</code></pre>
+
+<pre><code>3
+</code></pre>
+<p>İngilizcede statement olarak adlandırılan ‘deyimler’ ise ifadeleri de kapsayan daha geniş bir kavramdır. Buna göre bütün ifadeler aynı zamanda birer deyimdir. Daha doğrusu, ifadelerin bir araya gelmesi ile deyimler oluşturulabilir.</p>
+<p>Deyimlere birkaç örnek verelim:</p>
+<pre><code class="python">a = 5
+</code></pre>
+
+<pre><code class="python">if a:
+    print(a)
+</code></pre>
+
+<pre><code>5
+</code></pre>
+<p>Python programlama dilinde deyimlerle ifadeleri ayırt etmenin kolay bir yolu da eval() fonksiyonundan yararlanmaktır. Eğer deyim mi yoksa ifade mi olduğundan emin olamadığınız bir şeyi eval() fonksiyonuna parametre olarak verdiğinizde hata almıyorsanız o parametre bir ifadedir. Eğer hata alıyorsanız o parametre bir deyimdir. Çünkü eval() fonksiyonuna parametre olarak yalnızca ifadeler verilebilir.</p>
+<p>Birkaç örnek verelim:</p>
+<pre><code class="python">eval('a = 5')
+</code></pre>
+
+<pre><code>Traceback (most recent call last):
+
+
+  File "/opt/anaconda3/lib/python3.7/site-packages/IPython/core/interactiveshell.py", line 3326, in run_code
+    exec(code_obj, self.user_global_ns, self.user_ns)
+
+
+  File "&lt;ipython-input-85-2f07a5f3d91b&gt;", line 1, in &lt;module&gt;
+    eval('a = 5')
+
+
+  File "&lt;string&gt;", line 1
+    a = 5
+      ^
+SyntaxError: invalid syntax
+</code></pre>
+<p>Gördüğünüz gibi, eval() fonksiyonu bize bir hata mesajı verdi. Çünkü a = 5 kodu bir deyimdir. Unutmayın, Python’da bütün değer atama işlemleri birer deyimdir. Dolayısıyla eval() fonksiyonu bu deyimi parametre olarak alamaz.</p>
+<p>Bir de şuna bakalım:</p>
+<pre><code class="python">eval('5 + 25')
+</code></pre>
+
+<pre><code>30
+</code></pre>
+<p>Bu defa hata almadık. Çünkü eval() fonksiyonuna, olması gerektiği gibi, parametre olarak bir ifade verdik. Bildiğiniz gibi, 5 + 25 kodu bir ifadedir.</p>
+<p>Dediğimiz gibi, eval() fonksiyonu deyimleri parametre olarak alamaz. Ama exec() fonksiyonu alabilir:</p>
+<pre><code class="python">exec('a = 5')
+</code></pre>
+
+<p>Bu şekilde, değeri 5 olan a adlı bir değişken oluşturmuş olduk. İsterseniz kontrol edelim:</p>
+<pre><code class="python">print(a)
+</code></pre>
+
+<pre><code>5
+</code></pre>
+<p>Gördüğünüz gibi, exec() fonksiyonu, mevcut isim alanı içinde a adlı bir değişken oluşturdu. Yalnız elbette mevcut isim alanı içinde yeni değişkenler ve yeni değerler oluştururken dikkatli olmamız gerektiğini biliyorsunuz. Zira mesela yukarıdaki komutu vermeden önce mevcut isim alanında zaten a adlı bir değişken varsa, o değişkenin değeri değişecektir:</p>
+<pre><code class="python">a = 20
+</code></pre>
+
+<p>Elimizde, değeri 20 olan a adlı bir değişken var. Şimdi exec() fonksiyonu yardımıyla a değişkeninin de içinde yer aldığı mevcut isim alanına müdahale ediyoruz:</p>
+<pre><code class="python">exec('a = 10')
+</code></pre>
+
+<p>Böylece a değişkeninin eski değerini silmiş olduk. Kontrol edelim:</p>
+<pre><code class="python">print(a)
+</code></pre>
+
+<pre><code>10
+</code></pre>
+<p>Bu tür durumlarda, exec() ile oluşturduğunuz değişkenleri global isim alanına değil de, farklı bir isim alanına göndermeyi tercih edebilirsiniz. Peki ama bunu nasıl yapacağız?</p>
+<p>Python programlama dilinde isim alanları sözlük tipinde bir veridir. Örneğin global isim alanı basit bir sözlükten ibarettir.</p>
+<p>Global isim alanını gösteren sözlükte hangi anahtar ve değerlerin olduğunu görmek için globals() adlı bir fonksiyonu kullanabilirsiniz:</p>
+<pre><code class="python"># globals() #uzun çıktılar verdiği için çalıştırılmamıştır, sizler test etmek için çalıştırabilirsiniz.
+</code></pre>
+
+<pre><code class="python"> {'__doc__': None, '__loader__': &lt;class '_frozen_importlib.BuiltinImporter'&gt;, '__name__': '__main__', '__package__': None, '__builtins__': &lt;module 'builtins'&gt;}
+</code></pre>
+
+<p>Gördüğünüz gibi, elimizdeki şey gerçekten de bir sözlük. Dolayısıyla bir sözlük ile ne yapabilirsek bu sözlükle de aynı şeyi yapabiliriz...</p>
+<p>‘globals’ adlı bu sözlüğün içeriği, o anda global isim alanında bulunan nesnelere göre farklılık gösterecektir. Örneğin:</p>
+<pre><code class="python">x = 10
+</code></pre>
+
+<p>şeklinde 10 değerine sahip bir x nesnesi tanımladıktan sonra globals() fonksiyonunu tekrar
+çalıştırırsanız global isim alanına bu nesnenin de eklenmiş olduğunu görürsünüz.</p>
+<p>Dediğimiz gibi, globals() fonksiyonundan dönen nesne bir sözlüktür. Bu sözlüğe, herhangi bir sözlüğe veri ekler gibi değer de ekleyebilirsiniz:</p>
+<pre><code class="python">globals()['z'] = 23
+</code></pre>
+
+<p>Bu şekilde global isim alanına z adlı bir değişken eklemiş oldunuz:</p>
+<p>Yalnız, Python programlama dili bize bu şekilde global isim alanına nesne ekleme imkanı verse de, biz mecbur değilsek bu yöntemi kullanmaktan kaçınmalıyız. Çünkü bu şekilde sıradışı bir yöntemle değişken tanımladığımız için aslında global isim alanını, nerden geldiğini kestirmenin güç olduğu değerlerle ‘kirletmiş’ oluyoruz.</p>
+<p>Bildiğiniz gibi, Python’da global isim alanı dışında bir de lokal isim alanı bulunur. Lokal isim alanlarının, fonksiyonlara (ve ileride göreceğimiz gibi sınıflara) ait bir isim alanı olduğunu biliyorsunuz. İşte bu isim alanlarına ulaşmak için de locals() adlı bir fonksiyondan yararlanacağız:</p>
+<pre><code class="python">def fonksiyon(param1, param2): 
+    x = 10
+    print(locals())
+
+fonksiyon(10, 20)
+</code></pre>
+
+<pre><code>{'param1': 10, 'param2': 20, 'x': 10}
+</code></pre>
+<p>Bu fonksiyonu çalıştırdığınızda şu çıktıyı alacaksınız:</p>
+<p>Gördüğünüz gibi, locals() fonksiyonu gerçekten de bize fonksiyon() adlı fonksiyon içindeki
+lokal değerleri veriyor.</p>
+<p>globals() ve locals() fonksiyonlarının ne işe yaradığını incelediğimize göre exec() fonksiyonunu anlatırken kaldığımız yere dönebiliriz.</p>
+<p>Ne diyorduk?</p>
+<p>Elimizde, değeri 20 olan a adlı bir değişken vardı:</p>
+<pre><code class="python">a = 20
+</code></pre>
+
+<p>exec() fonksiyonu yardımıyla a değişkeninin de içinde yer aldığı mevcut isim alanına müdahale edelim:</p>
+<pre><code class="python">exec('a = 3')
+</code></pre>
+
+<p>Bu şekilde a değişkeninin varolan değerini silmiş olduk:</p>
+<pre><code class="python">print(a)
+</code></pre>
+
+<pre><code>3
+</code></pre>
+<p>Dediğimiz gibi, bu tür durumlarda, exec() ile oluşturduğunuz değişkenleri global isim alanı yerine farklı bir isim alanına göndermeyi tercih etmemiz daha uygun olacaktır. Python’da isim alanlarının basit bir sözlük olduğunu öğrendiğimize göre, exec() ile oluşturduğumuz değişkenleri global isim alanı yerine nasıl farklı bir isim alanına göndereceğimizi görebiliriz.</p>
+<p>Önce yeni bir isim alanı oluşturalım:</p>
+<pre><code class="python">ia = {}
+</code></pre>
+
+<p>Şimdi exec() ile oluşturacağımız değerleri bu isim alanına gönderebiliriz:</p>
+<pre><code class="python">exec('a = 3', ia)
+</code></pre>
+
+<p>Böylece global isim alanındaki a değişkeninin değerine dokunmamış olduk:</p>
+<pre><code class="python">a
+</code></pre>
+
+<pre><code>3
+</code></pre>
+<p>Yeni oluşturduğumuz değer ise ia adlı yeni isim alanına gitti:</p>
+<pre><code class="python">ia['a']
+</code></pre>
+
+<pre><code>3
+</code></pre>
+<h3 id="copyright">copyright()</h3>
+<p>Bu fonksiyon yardımıyla Python’ın telif haklarına ilişkin bilgilere erişebilirsiniz:</p>
+<pre><code class="python">copyright()
+</code></pre>
+
+<pre><code>Copyright (c) 2001-2019 Python Software Foundation.
+All Rights Reserved.
+
+Copyright (c) 2000 BeOpen.com.
+All Rights Reserved.
+
+Copyright (c) 1995-2001 Corporation for National Research Initiatives.
+All Rights Reserved.
+
+Copyright (c) 1991-1995 Stichting Mathematisch Centrum, Amsterdam.
+All Rights Reserved.
+</code></pre>
+<h3 id="credits">credits()</h3>
+<p>Bu fonksiyon, Python programlama diline katkıda bulunanlara teşekkür içeren küçük bir metni ekrana çıktı olarak verir:</p>
+<pre><code class="python">credits()
+</code></pre>
+
+<pre><code>    Thanks to CWI, CNRI, BeOpen.com, Zope Corporation and a cast of thousands
+    for supporting Python development.  See www.python.org for more information.
+</code></pre>
+<h3 id="license">license()</h3>
+<p>Bu fonksiyon yardımıyla Python’ın lisansına ilişkin epey ayrıntılı metinlere ulaşabilirsiniz.</p>
+<pre><code class="python">license()
+</code></pre>
+
+<pre><code>A. HISTORY OF THE SOFTWARE
+==========================
+
+Python was created in the early 1990s by Guido van Rossum at Stichting
+Mathematisch Centrum (CWI, see http://www.cwi.nl) in the Netherlands
+as a successor of a language called ABC.  Guido remains Python's
+principal author, although it includes many contributions from others.
+
+In 1995, Guido continued his work on Python at the Corporation for
+National Research Initiatives (CNRI, see http://www.cnri.reston.va.us)
+in Reston, Virginia where he released several versions of the
+software.
+
+In May 2000, Guido and the Python core development team moved to
+BeOpen.com to form the BeOpen PythonLabs team.  In October of the same
+year, the PythonLabs team moved to Digital Creations, which became
+Zope Corporation.  In 2001, the Python Software Foundation (PSF, see
+https://www.python.org/psf/) was formed, a non-profit organization
+created specifically to own Python-related Intellectual Property.
+Zope Corporation was a sponsoring member of the PSF.
+
+All Python releases are Open Source (see http://www.opensource.org for
+the Open Source Definition).  Historically, most, but not all, Python
+Hit Return for more, or q (and Return) to quit: q
+</code></pre>
+<h3 id="dir">dir()</h3>
+<p>Eğer dir() fonksiyonunu parametresiz olarak kullanırsak, mevcut isim alanındaki öğeleri bir liste halinde elde ederiz:</p>
+<pre><code class="python"># dir() #uzun çıktılar verdiği için çalıştırılmamıştır, sizler test etmek için çalıştırabilirsiniz.
+</code></pre>
+
+<p>Bu bakımdan dir() fonksiyonu globals() ve locals() fonksiyonlarına benzer. Ancak onlardan farkı, dir() fonksiyonunun çıktı olarak bir liste, globals() ve locals() fonksiyonlarının ise birer sözlük vermesidir.</p>
+<p>Ayrıca dir() fonksiyonunu kullanarak nesnelerin metot ve niteliklerini içeren bir listeye ulaşabileceğimizi de biliyorsunuz. Örneğin bu fonksiyonu kullanarak farklı veri tiplerinin metot ve niteliklerini listeleyebiliriz:</p>
+<pre><code class="python"># dir('')  #uzun çıktılar verdiği için çalıştırılmamıştır, sizler test etmek için çalıştırabilirsiniz.
+# dir([])  #uzun çıktılar verdiği için çalıştırılmamıştır, sizler test etmek için çalıştırabilirsiniz.
+# dir({})  #uzun çıktılar verdiği için çalıştırılmamıştır, sizler test etmek için çalıştırabilirsiniz.
+</code></pre>
+
+<h3 id="divmod">divmod()</h3>
+<p>Bu fonksiyonun işlevini bir örnek üzerinden göstermeye çalışalım:</p>
+<pre><code class="python">divmod(10, 2)
+</code></pre>
+
+<pre><code>(5, 0)
+</code></pre>
+<p>Gördüğünüz gibi divmod(10, 2) komutu bize iki öğeli bir demet veriyor. Bu demetin ilk öğesi, divmod() fonksiyonuna verilen ilk parametrenin ikinci parametreye bölünmesi işleminin sonucudur. Demetimizin ikinci öğesi ise, ilk parametrenin ikinci parametreye bölünmesi işleminden kalan sayıdır. Yani demetin ilk parametresi bölme işleminin ‘bölüm’ kısmını, ikinci öğesi ise ‘kalan’ kısmını verir.</p>
+<p>Bu fonksiyonun bölme işlemininin sonucunu tamsayı cinsinden verdiğine dikkat ediyoruz:</p>
+<pre><code class="python">divmod(10, 3)
+</code></pre>
+
+<pre><code>(3, 1)
+</code></pre>
+<p>10 sayısı 3 sayısına bölündüğünde tamsayı cinsinden sonuç 3 ‘tür. Bu bölme işleminin kalanı ise 1 ‘dir.</p>
+<h3 id="enumerate">enumerate()</h3>
+<p>İngilizcede enumerate kelimesi ‘numaralandırmak’ anlamına gelir. enumerate() fonksiyonunun görevi de kelimenin bu anlamıyla aynıdır. Yani bu fonksiyonu kullanarak nesneleri numaralandırabiliriz.</p>
+<p>Bu fonksiyon bize bir ‘enumerate’ nesnesi verir:</p>
+<pre><code class="python">enumerate('python')
+</code></pre>
+
+<pre><code>&lt;enumerate at 0x10e47baa0&gt;
+</code></pre>
+<p>Bu nesnenin içeriğine nasıl erişebileceğimizi biliyorsunuz: </p>
+<p>Nesneyi bir listeye çevirebiliriz:</p>
+<pre><code class="python">list(enumerate('python'))
+</code></pre>
+
+<pre><code>[(0, 'p'), (1, 'y'), (2, 't'), (3, 'h'), (4, 'o'), (5, 'n')]
+</code></pre>
+<p>veya:</p>
+<pre><code class="python">[i for i in enumerate('python')]
+</code></pre>
+
+<pre><code>[(0, 'p'), (1, 'y'), (2, 't'), (3, 'h'), (4, 'o'), (5, 'n')]
+</code></pre>
+<p>print() fonksiyonuna yıldızlı parametre olarak verebiliriz:</p>
+<pre><code class="python">print(*enumerate('python'))
+</code></pre>
+
+<pre><code>(0, 'p') (1, 'y') (2, 't') (3, 'h') (4, 'o') (5, 'n')
+</code></pre>
+<p>veya nesne üzerinde bir döngü kurabiliriz:</p>
+<pre><code class="python">for i in enumerate('python'):
+    print(i)
+</code></pre>
+
+<pre><code>(0, 'p')
+(1, 'y')
+(2, 't')
+(3, 'h')
+(4, 'o')
+(5, 'n')
+</code></pre>
+<h3 id="exit">exit()</h3>
+<p>Bu fonksiyon, o anda çalışan programdan çıkmanızı sağlar. Eğer bu komutu etkileşimli kabukta verirseniz o anda açık olan oturum kapanacaktır.</p>
+<h3 id="help">help()</h3>
+<p>help() fonksiyonu gömülü fonksiyonlar içinde en faydalı fonksiyonların başında gelir. Bu fonksiyonu kullanarak Python programlama diline ait öğelere ilişkin yardım belgelerine ulaşabiliriz. Örneğin:</p>
+<pre><code class="python">help(dir)
+</code></pre>
+
+<pre><code>Help on built-in function dir in module builtins:
+
+dir(...)
+    dir([object]) -&gt; list of strings
+
+    If called without an argument, return the names in the current scope.
+    Else, return an alphabetized list of names comprising (some of) the attributes
+    of the given object, and of attributes reachable from it.
+    If the object supplies a method named __dir__, it will be used; otherwise
+    the default dir() logic is used and returns:
+      for a module object: the module's attributes.
+      for a class object:  its attributes, and recursively the attributes
+        of its bases.
+      for any other object: its attributes, its class's attributes, and
+        recursively the attributes of its class's base classes.
+</code></pre>
+<p>Bu komutu verdiğimizde dir() fonksiyonunun ne işe yaradığını gösteren İngilizce bir belgeye ulaşırız. Gördüğünüz gibi, hakkında bilgi edinmek istediğimiz öğeyi help() fonksiyonuna parametre olarak vererek ilgili yardım dosyasına erişebiliyoruz.</p>
+<p>Eğer bu fonksiyonu parametresiz olarak kullanırsak ‘etkileşimli yardım’ denen ekrana ulaşırız:</p>
+<pre><code class="python">help()
+</code></pre>
+
+<pre><code>Welcome to Python 3.7's help utility!
+
+If this is your first time using Python, you should definitely check out
+the tutorial on the Internet at https://docs.python.org/3.7/tutorial/.
+
+Enter the name of any module, keyword, or topic to get help on writing
+Python programs and using Python modules.  To quit this help utility and
+return to the interpreter, just type "quit".
+
+To get a list of available modules, keywords, symbols, or topics, type
+"modules", "keywords", "symbols", or "topics".  Each module also comes
+with a one-line summary of what it does; to list the modules whose name
+or summary contain a given string such as "spam", type "modules spam".
+
+help&gt; dir
+Help on built-in function dir in module builtins:
+
+dir(...)
+    dir([object]) -&gt; list of strings
+
+    If called without an argument, return the names in the current scope.
+    Else, return an alphabetized list of names comprising (some of) the attributes
+    of the given object, and of attributes reachable from it.
+    If the object supplies a method named __dir__, it will be used; otherwise
+    the default dir() logic is used and returns:
+      for a module object: the module's attributes.
+      for a class object:  its attributes, and recursively the attributes
+        of its bases.
+      for any other object: its attributes, its class's attributes, and
+        recursively the attributes of its class's base classes.
+
+help&gt; q
+
+You are now leaving help and returning to the Python interpreter.
+If you want to ask for help on a particular object directly from the
+interpreter, you can type "help(object)".  Executing "help('string')"
+has the same effect as typing a particular string at the help&gt; prompt.
+</code></pre>
+<p>Bu ekranda, hakkında bilgi edinmek istediğiniz öğeyi help&gt; ibaresinden hemen sonra, boşluk bırakmadan yazarak öğeye ilişkin bilgilere ulaşabilirsiniz:</p>
+<p>Etkileşimli yardım ekranından çıkmak için ‘q’ harfine basabilirsiniz.</p>
+<h3 id="id">id()</h3>
+<p>Python’da her nesnenin bir kimliğinin olduğunu biliyorsunuz. Python’daki her nesnenin kimliği eşşiz, tek ve benzersizdir.</p>
+<pre><code class="python">a = 50
+
+id(a)
+</code></pre>
+
+<pre><code>4491754160
+</code></pre>
+<pre><code class="python">kardiz = &quot;Merhaba Dünya&quot;
+
+id(kardiz)
+</code></pre>
+
+<pre><code>4534630896
+</code></pre>
+<h3 id="input">input()</h3>
+<p>Bu fonksiyonun ne işe yaradığını gayet iyi biliyorsunuz. input() adlı bu gömülü fonksiyonu kullanarak kullanıcı ile veri alışverişinde bulunabiliyoruz.</p>
+<h3 id="format">format()</h3>
+<p>Bu gömülü fonksiyonun görevi, daha önce karakter dizilerini işlerken, karakter dizilerinin bir metodu olarak öğrendiğimiz format() metodununa benzer bir şekilde, karakter dizilerini biçimlendirmektir. Ancak format() fonksiyonu, daha önce öğrendiğimiz format() metoduna göre daha dar kapsamlıdır. format() metodunu kullanarak oldukça karmaşık karakter dizisi biçimlendirme işlemlerini gerçekleştirebiliriz, ama birazdan inceleyeceğimiz format() gömülü fonksiyonu yalnızca tek bir değeri biçimlendirmek için kullanılır.</p>
+<p>Basit bir örnek verelim:</p>
+<pre><code class="python">format(12, '.2f')
+</code></pre>
+
+<pre><code>'12.00'
+</code></pre>
+<p>Yukarıdaki ifadeyi daha önce gördüğümüz format() metodu ile şu şekilde yazabiliriz:</p>
+<pre><code class="python">'{:.2f}'.format(12)
+</code></pre>
+
+<pre><code>'12.00'
+</code></pre>
+<h3 id="filter">filter()</h3>
+<p>Bu gömülü fonksiyon yardımıyla dizi niteliği taşıyan nesneler içindeki öğeler üzerinde belirli bir ölçüte göre bir süzme işlemi uygulayabiliriz.</p>
+<p>filter() fonksiyonu toplam iki parametre alır. Bu parametrelerden ilki ölçütü belirleyen fonksiyon, ikincisi ise bu ölçütün uygulanacağı öğedir. Yukarıdaki örneğe baktığımızda, tek() adlı fonksiyonun, l adlı öğe üzerine uygulandığını görüyoruz.</p>
+<p>Yukarıdaki örnekte ilk olarak tek() adlı bir fonksiyon tanımladık:</p>
+<pre><code class="python">def tek(sayı):
+        return sayı % 2 == 1
+</code></pre>
+
+<p>Bu fonksiyonun görevi, kendisine parametre olarak verilen bir sayının tek sayı olup olmadığını sorgulamak. Eğer verilen parametre bir tek sayı ise fonksiyonumuz True değerini, tek sayı değilse False değerini döndürecektir. İsterseniz fonksiyonumuzu test edelim:</p>
+<pre><code class="python">print(tek(12))
+</code></pre>
+
+<pre><code>False
+</code></pre>
+<p>12 sayısı bir tek sayı olmadığı için fonksiyonumuz bize False çıktısı verir. </p>
+<p>Bir de şuna bakalım:</p>
+<pre><code class="python">print(tek(117))
+</code></pre>
+
+<pre><code>True
+</code></pre>
+<p>117 sayısı ise bir tek sayıdır. Bu nedenle fonksiyonumuz bize True değerini verecektir. </p>
+<p>İşte biz bu fonksiyonu, filter() fonksiyonu yardımıyla şu liste üzerine uygulayacağız:</p>
+<pre><code class="python">l = [400, 176, 64, 175, 355, 13, 207, 298, 397, 386, 31, 120, 120, 236, 241, 123, 249, 364, 292, 153]
+</code></pre>
+
+<p>Dediğimiz gibi, filter() fonksiyonu, dizi özelliği taşıyan nesneler üzerinde belli bir ölçüte göre filtreleme işlemi yapmamızı sağlar. Biz de biraz önce tanımladığımız tek() adlı fonksiyonu l adlı bu listeye uygulayarak liste içindeki tek sayıları filtreleyeceğiz.</p>
+<p>filter() fonksiyonunu çalıştıralım:</p>
+<pre><code class="python">filter(tek, l)
+</code></pre>
+
+<pre><code>&lt;filter at 0x10e48d6d0&gt;
+</code></pre>
+<p>Burada filter() fonksiyonuna ilk parametre olarak tek() fonksiyonunu verdik. İkinci parametremiz ise bu fonksiyonu uygulayacağımız l adlı liste. Amacımız, l adlı liste üzerine tek() fonksiyonunu uygulayarak, bu liste içindeki öğelerden True çıktısı verenleri (yani tek sayıları) ayıklamak.</p>
+<p>Gördüğünüz gibi, bu fonksiyonu bu şekilde kullandığımızda elde ettiğimiz şey bir ‘filtre nesnesi’. Bu nesne içindeki öğeleri görebilmek için ne yapabileceğimizi biliyorsunuz:</p>
+<pre><code class="python">list(filter(tek, l))
+</code></pre>
+
+<pre><code>[175, 355, 13, 207, 397, 31, 241, 123, 249, 153]
+</code></pre>
+<p>veya:</p>
+<pre><code class="python">print(*filter(tek, l))
+</code></pre>
+
+<pre><code>175 355 13 207 397 31 241 123 249 153
+</code></pre>
+<p>ya da:</p>
+<pre><code class="python">[i for i in filter(tek, l)]
+</code></pre>
+
+<pre><code>[175, 355, 13, 207, 397, 31, 241, 123, 249, 153]
+</code></pre>
+<p>Gördüğünüz gibi, gerçekten de l adlı liste içindeki bütün tek sayılar süzüldü.</p>
+<h3 id="hash">hash()</h3>
+<p>Bu fonksiyon, belirli türdeki nesnelere bir karma değeri vermemizi sağlar. Örneğin:</p>
+<pre><code class="python">hash('python')
+</code></pre>
+
+<pre><code>-2102507435354808480
+</code></pre>
+<p>Ancak bu fonksiyonun ürettiği çıktı aynı nesne için bütün sistemlerde aynı olmayabilir. Yani örneğin yukarıdaki hash(’istihza’) komutu 32 bitlik ve 64 bitlik işletim sistemlerinde birbirinden farklı sonuçlar verebilir. Ayrıca bu fonksiyonun ürettiği karma değerlerinin birbiriyle çakışma ihtimali de yüksektir. Dolayısıyla bu fonksiyonu kullanarak, mesela parola girişleri için karma değeri üretmek doğru olmaz.</p>
+<h3 id="isinstance">isinstance()</h3>
+<p>Bu fonksiyonu şöyle kullanıyoruz:</p>
+<pre><code class="python">isinstance('python', str)
+</code></pre>
+
+<pre><code>True
+</code></pre>
+<p>Gördüğünüz gibi ’python’ gerçekten bir karakter dizisi (str) olduğu için komutumuz True çıktısı veriyor.</p>
+<p>Bir de şuna bakalım:</p>
+<pre><code class="python">isinstance('python', list)
+</code></pre>
+
+<pre><code>False
+</code></pre>
+<p>’python’ bir liste (list) olmadığı için komutumuz bu kez False çıktısı verdi.</p>
+<h3 id="len">len()</h3>
+<p>Bu fonksiyon yardımıyla nesnelerin uzunluklarını hesaplayabileceğimizi biliyorsunuz</p>
+<pre><code class="python">len('python')
+</code></pre>
+
+<pre><code>6
+</code></pre>
+<pre><code class="python">len([1, 4, 5, 3, 2, 9, 10])
+</code></pre>
+
+<pre><code>7
+</code></pre>
+<h3 id="map">map()</h3>
+<p>Diyelim ki elimizde şöyle bir liste var:</p>
+<pre><code class="python">l = [1, 4, 5, 4, 2, 9, 10]
+</code></pre>
+
+<p>Amacımız bu liste içindeki her öğenin karesini hesaplamak.</p>
+<pre><code class="python">def karesi(n):
+    return n ** 2
+</code></pre>
+
+<p>Burada bir n sayısının karesini hesaplayan bir fonksiyon tanımladık. Şimdi bu fonksiyonu l listesinin bütün öğeleri üzerine uygulayacağız:</p>
+<pre><code class="python">list(map(karesi, l))
+</code></pre>
+
+<pre><code>[1, 16, 25, 16, 4, 81, 100]
+</code></pre>
+<h3 id="max">max()</h3>
+<p>max() gömülü fonksiyonunun görevi, bir dizi içindeki en büyük öğeyi vermektir. Bu fonksiyon birkaç farklı parametre alır ve verdiği çıktı, aldığı parametrelerin türüne ve sayısına bağlı olarak değişiklik gösterebilir.</p>
+<p>Bu fonksiyonu en basit şu şekilde kullanabilirsiniz:</p>
+<pre><code class="python">max(1, 2, 3)
+</code></pre>
+
+<pre><code>3
+</code></pre>
+<p>max() fonksiyonu yukarıda gösterildiği gibi birtakım isimsiz parametrelerle birlikte key adlı isimli bir parametre de alır. Bu parametre yardımıyla max() fonksiyonunun ‘en büyük’ kavramını hangi ölçüte göre seçeceğini belirleyebiliriz. Örneğin:</p>
+<pre><code class="python">isimler = ['ahmet', 'can', 'mehmet', 'selin', 'abdullah', 'kezban']
+
+max(isimler, key=len)
+</code></pre>
+
+<pre><code>'abdullah'
+</code></pre>
+<p>max() fonksiyonu öntanımlı olarak, ‘en büyük’ kavramını sayısal büyüklük üzerinden değerlendirir. Yani herhangi bir key parametresi kullanılmadığında, bu fonksiyon otomatik olarak bir dizi içindeki en büyük sayıyı bulur. Ancak eğer biz istersek, yukarıdaki örnekte olduğu gibi, ‘en büyük’ kavramının uzunluk cinsinden değerlendirilmesini de sağlayabiliriz.</p>
+<h3 id="min">min()</h3>
+<p>min() fonksiyonu max() fonksiyonunun tam tersini yapar. Bildiğiniz gibi max() fonksiyonu bir dizi içindeki en büyük öğeyi buluyordu. İşte min() fonksiyonu da bir dizi içindeki en küçük öğeyi bulur. Bu fonksiyonun kullanımı max() ile aynıdır.</p>
+<pre><code class="python">min(-5,1,2,3,4,10)
+</code></pre>
+
+<pre><code>-5
+</code></pre>
+<h3 id="open">open()</h3>
+<p>Bu fonksiyon herhangi bir dosyayı açmak veya oluşturmak için kullanılır. Eğer dosyanın açılması veya oluşturulması esnasında bir hata ortaya çıkarsa IOError türünde bir hata mesajı verilir.</p>
+<h3 id="pow">pow()</h3>
+<p>Bu fonksiyon İngilizcedeki power (kuvvet) kelimesinin kısaltmasından oluşur. Adının anlamına uygun olarak, bu fonksiyonu bir sayının kuvvetlerini hesaplamak için kullanıyoruz.</p>
+<p>Bu fonksiyon en temel şekilde şöyle kullanılır:</p>
+<pre><code class="python">pow(2, 3)
+</code></pre>
+
+<pre><code>8
+</code></pre>
+<p>Bu komutla 2 sayısının 3. kuvvetini hesaplamış oluyoruz.</p>
+<p>pow() fonksiyonu toplamda üç farklı parametre alır. İlk iki parametrenin ne olduğunu yukarıda örnekledik. Üçüncü parametre ise kuvvet hesaplaması sonucu elde edilen sayının modülüsünü hesaplayabilmemizi sağlar. Yani:</p>
+<pre><code class="python">pow(2, 3, 2)
+</code></pre>
+
+<pre><code>0
+</code></pre>
+<p>Burada yaptığımız şey şu: Öncelikle 2 sayısının 3. kuvvetini hesapladık. Elde ettiğimiz sayı 8. Ardından da bu sayının 2 ‘ye bölünmesi işleminden kalan sayıyı elde ettik. Yani 0.</p>
+<h3 id="print">print()</h3>
+<p>Bu fonksiyonu, bildiğiniz gibi, kullanıcılarımıza birtakım mesajlar göstermek için kullanıyoruz.</p>
+<p>Kullanımını daha önce ayrıntılı bir şekilde anlatmış olduğumuz bu fonksiyonu şu şekilde formüle edebiliriz:</p>
+<pre><code class="python">print(deg1, deg2, deg3, ..., sep=' ', end='\n', file=sys.stdout, flush=False)
+</code></pre>
+
+<p>Burada;</p>
+<p><strong>degx</strong> Çıktı verilecek değerlerin ne olduğunu belirtir. Buraya 256 adete kadar değer yazabilirsiniz.
+sep Çıktı verilirken değerlerin arasına hangi karakterin yerleştirileceğini belirtir. Bu değer öntanımlı olarak boşluk karakteridir.</p>
+<p><strong>end</strong> Çıktı verilecek son değerin ardından hangi karakterin iliştirileceğini belirtir. Bu değer öntanımlı olarak satır başı (\n ) karakteridir.</p>
+<p><strong>file</strong> Çıktıların hangi dosyaya yazılacağını belirtir. Öntanımlı olarak bu parametrenin değeri sys.stdout‘tur. Yani print() fonksiyonu çıktılarını öntanımlı olarak standart çıktı konumuna gönderir.</p>
+<p><strong>flush</strong> Bildiğiniz gibi, herhangi bir dosyaya yazma işlemi sırasında dosyaya yazılacak değerler öncelikle tampona alınır. İşlem tamamlandıktan sonra tampondaki bu değerler topluca dosyaya aktarılır. İşte bu parametre, değerleri tampona almadan doğrudan dosyaya gönderebilmemizi sağlar. Bu parametrenin öntanımlı değeri False‘tur. Yani değerler dosyaya yazılmadan önce öntanımlı olarak öncelikle tampona gider. Ama eğer biz bu parametrenin değerini True olarak değiştirirsek, değerler doğrudan dosyaya yazılır.</p>
+<h3 id="quit">quit()</h3>
+<p>Bu fonksiyonu programdan çıkmak için kullanıyoruz. Eğer bu fonksiyonu etkileşimli kabukta verecek olursanız etkileşimli kabuk kapanacaktır.</p>
+<h3 id="range">range()</h3>
+<p>Bu fonksiyonu belli bir aralıktaki sayıları listelemek için kullanıyoruz. Yani mesela 0 ile 10 arası sayıların listesini almak istersek şöyle bir komut yazabiliriz:</p>
+<pre><code class="python">l = range(0, 10)
+</code></pre>
+
+<p>Ancak burada dikkat etmemiz gereken bir özellik var: Bu fonksiyon aslında doğrudan herhangi bir sayı listesi oluşturmaz. Yukarıda l değişkenine atadığımız komutu ekrana yazdırırsak bunu daha net görebilirsiniz:</p>
+<pre><code class="python">print(l)
+</code></pre>
+
+<pre><code>range(0, 10)
+</code></pre>
+<p>Bir de bu verinin tipine bakalım:</p>
+<pre><code class="python">type(l)
+</code></pre>
+
+<pre><code>range
+</code></pre>
+<p>Gördüğünüz gibi, elimizdeki şey aslında bir sayı listesi değil, bir ‘range’ (aralık) nesnesidir. Biz bu nesneyi istersek başka veri tiplerine dönüştürebiliriz. Mesela bunu bir listeye dönüştürelim:</p>
+<pre><code class="python">list(l)
+</code></pre>
+
+<pre><code>[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+</code></pre>
+<h3 id="reversed">reversed()</h3>
+<p>Bir listedeki isimleri ters çevirmek için kullanılır.</p>
+<pre><code class="python">isimler = ['ahmet', 'mehmet', 'veli', 'ayşe', 'çiğdem', 'ışık']
+</code></pre>
+
+<pre><code class="python">reversed(isimler)
+</code></pre>
+
+<pre><code>&lt;list_reverseiterator at 0x10e4819d0&gt;
+</code></pre>
+<p>Gördüğünüz gibi, tıpkı range() fonksiyonunda olduğu gibi, reversed() fonksiyonu da bize ürettiği öğelerin kendisi yerine, bir ‘nesne’ veriyor. Ama tabii ki bu bizim için bir sorun değil. Biz bu nesnenin içeriğini nasıl elde edebileceğimizi gayet iyi biliyoruz:</p>
+<pre><code class="python">list(reversed(isimler))
+</code></pre>
+
+<pre><code>['ışık', 'çiğdem', 'ayşe', 'veli', 'mehmet', 'ahmet']
+</code></pre>
+<h3 id="sorted">sorted()</h3>
+<p>Bu metot, daha önceki derslerimizden de bildiğiniz gibi, bir dizi içindeki öğeleri belirli bir ölçüte göre sıraya dizmemizi sağlıyor. Bununla ilgili çok basit bir örnek verelim:</p>
+<pre><code class="python">sorted('ahmet')
+</code></pre>
+
+<pre><code>['a', 'e', 'h', 'm', 't']
+</code></pre>
+<p>Bu kodlar yardımıyla ahmet adlı karakter dizisi içindeki harfleri alfabe sırasına dizdik.</p>
+<p>sorted() fonksiyonuna hangi türde bir veri tipi verirseniz verin, aldığınız çıktı her zaman bir liste olacaktır. Bunu unutmayın.</p>
+<p>Bu fonksiyon, Türkçe karakter içeren öğeleri düzgün sıralayamaz.</p>
+<h3 id="slice">slice()</h3>
+<p>Bildiğiniz gibi, birtakım öğelerden oluşan bir nesnenin yalnızca belli kısımlarını ayırıp alma işlemine ‘dilimleme’ adı veriliyor. Bu fonksiyon dilimleme yapabilmemiz sağlar.</p>
+<pre><code class="python">l = ['ahmet', 'mehmet', 'ayşe', 'senem', 'salih']
+</code></pre>
+
+<pre><code class="python">dl = slice(0, 3)
+</code></pre>
+
+<pre><code class="python">l[dl]
+</code></pre>
+
+<pre><code>['ahmet', 'mehmet', 'ayşe']
+</code></pre>
+<p>Gördüğünüz gibi, slice() fonksiyonunu yukarıda iki parametre ile kullandık. Tahmin edebileceğiniz gibi, bu fonksiyonunu formülü şu şekildedir:</p>
+<pre><code class="python">slice(başlangıç, bitiş, atlama)
+</code></pre>
+
+<h3 id="sum">sum()</h3>
+<p>Bu fonksiyonun temel görevi, bir dizi içindeki değerlerin toplamını bulmaktır. Örneğin:</p>
+<pre><code class="python">l = [1, 2, 3]
+
+sum(l)
+</code></pre>
+
+<pre><code>6
+</code></pre>
+<p>Bu fonksiyon genellikle yukarıdaki gibi tek parametreyle kullanılır. Ama aslında bu fonksiyon ikinci bir parametre daha alır. Dikkatlice bakın:</p>
+<pre><code class="python">l = [1, 2, 3]
+
+sum(l, 10)
+</code></pre>
+
+<pre><code>16
+</code></pre>
+<p>Gördüğünüz gibi, Python sum() fonksiyonuna verilen ikinci parametreyi, birinci parametredeki toplam değerin üzerine ekliyor.</p>
+<h3 id="type">type()</h3>
+<p>type() fonksiyonunun görevi bir nesnenin hangi veri tipine ait olduğunu söylemektir. Bu fonksiyonu artık yakından tanıyorsunuz:</p>
+<pre><code class="python">type('kiraz')
+</code></pre>
+
+<pre><code>str
+</code></pre>
+<h3 id="zip">zip()</h3>
+<p>Gelin isterseniz bu fonksiyonu bir örnek üzerinden açıklamaya çalışalım. </p>
+<p>Diyelim ki elimizde şöyle iki farklı liste var:</p>
+<pre><code class="python">a1 = ['a', 'b', 'c']
+
+a2 = ['d', 'e', 'f']
+</code></pre>
+
+<p>Eğer bu listelerin öğelerini birbirleriyle eşleştirmek istersek zip() fonksiyonundan yararlanabiliriz.</p>
+<p>Dikkatlice bakın:</p>
+<pre><code class="python">zip(a1, a2)
+</code></pre>
+
+<pre><code>&lt;zip at 0x10e492500&gt;
+</code></pre>
+<p>Gördüğünüz gibi, yukarıdaki kod bize bir ‘zip’ nesnesi veriyor. Bu nesnenin öğelerine nasıl ulaşabileceğinizi biliyorsunuz:</p>
+<pre><code class="python">print(*zip(a1, a2))
+</code></pre>
+
+<pre><code>('a', 'd') ('b', 'e') ('c', 'f')
+</code></pre>
+<pre><code class="python">list(zip(a1, a2))
+</code></pre>
+
+<pre><code>[('a', 'd'), ('b', 'e'), ('c', 'f')]
+</code></pre>
+<p>Bu özellikten pek çok farklı şekilde yararlanabilirsiniz. Örneğin:</p>
+<pre><code class="python">isimler = ['ahmet', 'mehmet', 'zeynep', 'ilker']
+
+yaslar = [25, 40, 35, 20]
+
+
+for i, y in zip(isimler, yaslar):
+    print('isim: {} / yaş: {}'.format(i, y))
+</code></pre>
+
+<pre><code>isim: ahmet / yaş: 25
+isim: mehmet / yaş: 40
+isim: zeynep / yaş: 35
+isim: ilker / yaş: 20
+</code></pre>
+<h3 id="vars">vars()</h3>
+<p>Bu fonksiyon, mevcut isim alanı içindeki metot, fonksiyon ve nitelikleri listeler. Eğer bu fonksiyonu parametresiz olarak kullanırsak, daha önce gördüğümüz locals() fonksiyonuyla aynı çıktıyı elde ederiz:</p>
+<pre><code class="python"># vars() #uzun çıktılar verdiği için çalıştırılmamıştır, sizler test etmek için çalıştırabilirsiniz.
+</code></pre>
+
+<pre><code class="python">{'__builtins__': &lt;module 'builtins' (built-in)&gt;, '__name__': '__main__', '__package__': None, '__loader__': &lt;class '_frozen_importlib.BuiltinImporter'&gt;, '__doc__': None}
+</code></pre>
+
+<p>Bu fonksiyonu, nesnelerin metotlarını ve niteliklerini öğrenmek için de kullanabilirsiniz:</p>
+<pre><code class="python"># vars(str)
+</code></pre>
+
+<p>Yukarıda sırasıyla karakter dizilerinin, listelerin ve sözlüklerin metotlarını listeledik. Bu yönüyle vars() fonksiyonu dir() fonksiyonuna benzer.</p>
+<blockquote>
+<p>Son Güncelleme: 26 Aralık 2019 - Perşembe</p>
+</blockquote>
+                
+                  
+                
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../python_fonksiyonlar/" title="Fonksiyonlar" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Önceki
+                </span>
+                Fonksiyonlar
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../../referanslar/" title="Referanslar" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Sonraki
+                </span>
+                Referanslar
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright &copy; 2019 Pratik Yapay Zeka
+          </div>
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+  <div class="md-footer-social">
+    <link rel="stylesheet" href="../../assets/fonts/font-awesome.css">
+    
+      <a href="https://github.com/mrabdullahsahin" class="md-footer-social__link fa fa-github"></a>
+    
+      <a href="https://twitter.com/mrabdullahsahin" class="md-footer-social__link fa fa-twitter"></a>
+    
+      <a href="https://linkedin.com/in/mrabdullahsahin" class="md-footer-social__link fa fa-linkedin"></a>
+    
+  </div>
+
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/application.808e90bb.js"></script>
+      
+        
+        
+          
+          <script src="../../assets/javascripts/lunr/lunr.stemmer.support.js"></script>
+          
+            
+              
+              
+                <script src="../../assets/javascripts/lunr/lunr.tr.js"></script>
+              
+            
+          
+          
+        
+      
+      <script>app.initialize({version:"1.0.4",url:{base:"../.."}})</script>
+      
+    
+  </body>
+</html>

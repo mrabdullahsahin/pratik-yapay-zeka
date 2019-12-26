@@ -22,7 +22,7 @@ Projeye katkıda bulunabilmeniz için izlemeniz gereken adımlar şunlardır;
 
 ## Son Güncelleme
 
-> 25 Aralık 2019 - Çarşamba
+> 26 Aralık 2019 - Perşembe
 
 ## Lisans
 

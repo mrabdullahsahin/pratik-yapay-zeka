@@ -48,6 +48,7 @@ nav:
     - Kümeler ve Dondurulmuş Kümeler: python/python_kumeler_dondurulmus_kumeler.md
     - Fonksiyonlar: python/python_fonksiyonlar.md
     - Gömülü Fonksiyonlar: python/python_gomulu_fonksiyonlar.md
+    - İleri Düzey Fonksiyonlar: python/python_ileri_duzey_fonksiyonlar.md
   - Referanslar: referanslar.md
   - Değişiklik Kaydı: changelog.md
 

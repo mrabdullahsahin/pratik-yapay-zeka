@@ -2,6 +2,17 @@
 
 Bu projede yapılan tüm değişiklikler bu dosyada belgelenmektedir.
 
+## 0.2.7 - 2019-12-27
+
+### Eklendi
+
+- Jupyter Notebooks içerisine python_iler_duzey_fonksiyonlar.ipynb eklendi.
+- python_ileri_duzey_fonksiyonlar.md eklendi.
+
+### Değişti
+
+- mkdocs.yml dosyasında menü kısmı güncellendi.
+
 ## 0.2.6 - 2019-12-26
 
 ### Eklendi

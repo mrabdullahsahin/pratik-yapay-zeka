@@ -71,9 +71,6 @@ Köşeli parantezlerin burada gerekli olduğunu unutmayın. Ve aşağıdaki yaz�
 ```
 
 NumPy'nin dizi sınıfının takma adı **numpy.array** olan **ndarray**, Python standart kitaplığındaki **array.array** öğesinden farklıdır. **ndarray** 'ın özellikleri aşağıdaki gibidir:
-<a id="1"></a>
-<mark>[Başa Dön](#0)
-<hr>
 
 * **ndarray.ndim:** dizinin kaç boyutlu olduğunu gösterir.
 * **ndarray.shape:** Uzunluğu, dizinin （ndim） boyutuna göre belirlenen bir sayı dizisidir. Örneğin, uzunluğu n olan tek boyutlu bir dizinin şekli n'dir ve n satırlı ve m sütunlu bir dizinin şekli n, m'dir.

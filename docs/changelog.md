@@ -2,11 +2,27 @@
 
 Bu projede yapılan tüm değişiklikler bu dosyada belgelenmektedir.
 
+## 0.2.8 - 2019-12-28
+
+### Eklendi
+
+- Jupyter Notebooks içerisine numpy.ipynb eklendi.
+- numpy.md eklendi.
+- Jupyter Notebooks içerisine pandas.ipynb eklendi.
+- pandas.md eklendi.
+- Jupyter Notebooks içerisine matplotlib.ipynb eklendi.
+- matplotlib.md eklendi.
+
+### Değişti
+
+- mkdocs.yml dosyasında menü kısmı güncellendi.
+- index.md güncellendi.
+
 ## 0.2.7 - 2019-12-27
 
 ### Eklendi
 
-- Jupyter Notebooks içerisine python_iler_duzey_fonksiyonlar.ipynb eklendi.
+- Jupyter Notebooks içerisine python_ileri_duzey_fonksiyonlar.ipynb eklendi.
 - python_ileri_duzey_fonksiyonlar.md eklendi.
 
 ### Değişti

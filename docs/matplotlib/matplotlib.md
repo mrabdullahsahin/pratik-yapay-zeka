@@ -8,7 +8,9 @@
 ```python
 import numpy as np
 import pandas as pd
+
 import warnings
+warnings.filterwarnings('ignore')
 
 df = pd.read_csv('../datas/Pokemon.csv')
 ```
@@ -585,8 +587,6 @@ plt.ylim(-1.2, 1.2);
 
 
 ### **scatter**
-
-The primary difference of plt.scatter from plt.plot is that it can be used to create scatter plots where the properties of each individual point (size, face color, edge color, etc.) can be individually controlled or mapped to data.
 
 Plt.scatter öğesinin plt.plot öğesinden temel farkı, her bir noktanın özelliklerinin (boyut, yüz rengi, kenar rengi vb.) Ayrı ayrı kontrol edilebileceği veya verilere eşlenebileceği scatter plot oluşturmak için kullanılabilmesidir.
 

@@ -9,8 +9,9 @@ Aşağıda yer alan konular zamanla bu projeye eklenecektir.
 | Konu Başlığı 	|     Durum    	|
 |:------------:	|:------------:	|
 |    Python    	| Hazırlanıyor 	|
-|     NumPy    	|   Eklenecek  	|
-|    Pandas    	|   Eklenecek  	|
+|     NumPy    	|   Eklendi  	|
+|    Pandas    	|   Eklendi  	|
+|    Matplotlib    	|   Eklendi  	|
 
 ## Destek
 
@@ -22,7 +23,7 @@ Projeye katkıda bulunabilmeniz için izlemeniz gereken adımlar şunlardır;
 
 ## Son Güncelleme
 
-> 27 Aralık 2019 - Cuma
+> 28 Aralık 2019 - Cumartesi
 
 ## Lisans
 

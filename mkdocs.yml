@@ -51,6 +51,7 @@ nav:
     - İleri Düzey Fonksiyonlar: python/python_ileri_duzey_fonksiyonlar.md
   - NumPy: numpy/numpy.md
   - Pandas: pandas/pandas.md
+  - Matplotlib: matplotlib/matplotlib.md
   - Referanslar: referanslar.md
   - Değişiklik Kaydı: changelog.md
 

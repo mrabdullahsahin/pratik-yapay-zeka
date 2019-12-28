@@ -1,0 +1,1419 @@
+
+
+
+
+<!doctype html>
+<html lang="tr" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+        <meta name="description" content="Yapay Zeka'ya pratik bir yaklaşım.">
+      
+      
+        <link rel="canonical" href="https://mrabdullahsahin.github.io/pratik-yapay-zeka/numpy/numpy/">
+      
+      
+        <meta name="author" content="Abdullah Sahin">
+      
+      
+        <meta name="lang:clipboard.copy" content="Kopyala">
+      
+        <meta name="lang:clipboard.copied" content="Kopyalandı">
+      
+        <meta name="lang:search.language" content="tr">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="Eşleşen doküman bulunamadı">
+      
+        <meta name="lang:search.result.one" content="1 doküman bulundu">
+      
+        <meta name="lang:search.result.other" content="# doküman bulundu">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../../img/logo.png">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.6.0">
+    
+    
+      
+        <title>NumPy - Pratik Yapay Zeka</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/application.1b62728e.css">
+      
+        <link rel="stylesheet" href="../../assets/stylesheets/application-palette.a8b3c06d.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#3f51b5">
+      
+    
+    
+      <script src="../../assets/javascripts/modernizr.268332fc.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../../assets/fonts/material-icons.css">
+    
+      <link rel="manifest" href="../../manifest.webmanifest">
+    
+    
+    
+      
+    
+    
+  </head>
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448" viewBox="0 0 416 448" id="__github"><path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19T128 352t-18.125-8.5-10.75-19T96 304t3.125-20.5 10.75-19T128 256t18.125 8.5 10.75 19T160 304zm160 0q0 10-3.125 20.5t-10.75 19T288 352t-18.125-8.5-10.75-19T256 304t3.125-20.5 10.75-19T288 256t18.125 8.5 10.75 19T320 304zm40 0q0-30-17.25-51T296 232q-10.25 0-48.75 5.25Q229.5 240 208 240t-39.25-2.75Q130.75 232 120 232q-29.5 0-46.75 21T56 304q0 22 8 38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0 37.25-1.75t35-7.375 30.5-15 20.25-25.75T360 304zm56-44q0 51.75-15.25 82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5T212 416q-19.5 0-35.5-.75t-36.875-3.125-38.125-7.5-34.25-12.875T37 371.5t-21.5-28.75Q0 312 0 260q0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25 30.875Q171.5 96 212 96q37 0 70 8 26.25-20.5 46.75-30.25T376 64q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34 99.5z"/></svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#numpy" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="https://mrabdullahsahin.github.io/pratik-yapay-zeka/" title="Pratik Yapay Zeka" class="md-header-nav__button md-logo">
+          
+            <img src="../../img/logo.png" width="24" height="24">
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            <span class="md-header-nav__topic">
+              Pratik Yapay Zeka
+            </span>
+            <span class="md-header-nav__topic">
+              
+                NumPy
+              
+            </span>
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Ara" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Aramaya başlamak için yazın
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+
+
+  
+
+<a href="https://github.com/mrabdullahsahin/pratik-yapay-zeka/" title="Depoya git" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    mrabdullahsahin/pratik-yapay-zeka
+  </div>
+</a>
+          </div>
+        </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+      <main class="md-main" role="main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="https://mrabdullahsahin.github.io/pratik-yapay-zeka/" title="Pratik Yapay Zeka" class="md-nav__button md-logo">
+      
+        <img src="../../img/logo.png" width="48" height="48">
+      
+    </a>
+    Pratik Yapay Zeka
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+<a href="https://github.com/mrabdullahsahin/pratik-yapay-zeka/" title="Depoya git" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    mrabdullahsahin/pratik-yapay-zeka
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../.." title="Giriş" class="md-nav__link">
+      Giriş
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      Python
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        Python
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../python/degiskenler/" title="Değişkenler" class="md-nav__link">
+      Değişkenler
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../python/print/" title="print Fonksiyonu" class="md-nav__link">
+      print Fonksiyonu
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../python/kacis_dizileri/" title="Kaçış Dizileri" class="md-nav__link">
+      Kaçış Dizileri
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../python/yorum_isareti/" title="Yorum İşareti" class="md-nav__link">
+      Yorum İşareti
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../python/kullanicidan_bilgi_almak/" title="Kullanıcıdan Bilgi Almak" class="md-nav__link">
+      Kullanıcıdan Bilgi Almak
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../python/kosullu_durumlar/" title="Koşullu Durumlar" class="md-nav__link">
+      Koşullu Durumlar
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../python/islecler/" title="İşleçler" class="md-nav__link">
+      İşleçler
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../python/python_donguler/" title="Döngüler" class="md-nav__link">
+      Döngüler
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../python/python_hata_yakalama/" title="Hata Yakalama" class="md-nav__link">
+      Hata Yakalama
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../python/python_karakter_dizileri/" title="Karakter Dizileri(str)" class="md-nav__link">
+      Karakter Dizileri(str)
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../python/python_karakter_dizilerinin_metotlari/" title="Karakter Dizilerinin Metotları" class="md-nav__link">
+      Karakter Dizilerinin Metotları
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../python/python_format_metodu/" title="Format Metodu" class="md-nav__link">
+      Format Metodu
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../python/python_listeler_demetler/" title="Listeler ve Demetler" class="md-nav__link">
+      Listeler ve Demetler
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../python/python_listeler_demetler_metodlari/" title="Listeler ve Demetlerin Metodları" class="md-nav__link">
+      Listeler ve Demetlerin Metodları
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../python/python_sayilar/" title="Sayılar" class="md-nav__link">
+      Sayılar
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../python/python_sozlukler/" title="Sözlükler" class="md-nav__link">
+      Sözlükler
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../python/python_sozluklerin_metotlari/" title="Sözlüklerin Metotları" class="md-nav__link">
+      Sözlüklerin Metotları
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../python/python_kumeler_dondurulmus_kumeler/" title="Kümeler ve Dondurulmuş Kümeler" class="md-nav__link">
+      Kümeler ve Dondurulmuş Kümeler
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../python/python_fonksiyonlar/" title="Fonksiyonlar" class="md-nav__link">
+      Fonksiyonlar
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../python/python_gomulu_fonksiyonlar/" title="Gömülü Fonksiyonlar" class="md-nav__link">
+      Gömülü Fonksiyonlar
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../python/python_ileri_duzey_fonksiyonlar/" title="İleri Düzey Fonksiyonlar" class="md-nav__link">
+      İleri Düzey Fonksiyonlar
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        NumPy
+      </label>
+    
+    <a href="./" title="NumPy" class="md-nav__link md-nav__link--active">
+      NumPy
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">İçindekiler</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#numpy" class="md-nav__link">
+    NumPy
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#kutuphaneyi-tanmlama" class="md-nav__link">
+    Kütüphaneyi Tanımlama
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#temel-ozellikler-ve-dizi-olusturma" class="md-nav__link">
+    Temel Özellikler ve Dizi Oluşturma
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#belirli-bir-dizi-olusturma" class="md-nav__link">
+    Belirli Bir Dizi Oluşturma
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#boyut-ve-fonksiyonlar" class="md-nav__link">
+    Boyut ve Fonksiyonlar
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#indeks" class="md-nav__link">
+    İndeks
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#matematiksel-islevler" class="md-nav__link">
+    Matematiksel İşlevler
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#matris" class="md-nav__link">
+    Matris
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rastgele-say-uretmek" class="md-nav__link">
+    Rastgele Sayı Üretmek
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../referanslar/" title="Referanslar" class="md-nav__link">
+      Referanslar
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../changelog/" title="Değişiklik Kaydı" class="md-nav__link">
+      Değişiklik Kaydı
+    </a>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">İçindekiler</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#numpy" class="md-nav__link">
+    NumPy
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#kutuphaneyi-tanmlama" class="md-nav__link">
+    Kütüphaneyi Tanımlama
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#temel-ozellikler-ve-dizi-olusturma" class="md-nav__link">
+    Temel Özellikler ve Dizi Oluşturma
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#belirli-bir-dizi-olusturma" class="md-nav__link">
+    Belirli Bir Dizi Oluşturma
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#boyut-ve-fonksiyonlar" class="md-nav__link">
+    Boyut ve Fonksiyonlar
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#indeks" class="md-nav__link">
+    İndeks
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#matematiksel-islevler" class="md-nav__link">
+    Matematiksel İşlevler
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#matris" class="md-nav__link">
+    Matris
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rastgele-say-uretmek" class="md-nav__link">
+    Rastgele Sayı Üretmek
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/mrabdullahsahin/pratik-yapay-zeka/edit/master/docs/numpy/numpy.md" title="Düzenle" class="md-icon md-content__icon">&#xE3C9;</a>
+                
+                
+                  <h1>NumPy</h1>
+                
+                <h2 id="numpy">NumPy</h2>
+<p><strong>NumPy</strong>, bilimsel hesaplama için temel bir pakettir. Aşağıdakileri içeren bir <strong>Python</strong> dil uygulamasıdır:</p>
+<ul>
+<li>Güçlü N boyutlu dizi yapısı</li>
+<li>Gelişmiş fonksiyonlar</li>
+<li>C/C++ ve Fortran koduna entegre edilebilen araçlar</li>
+<li>Lineer cebir, Fourier dönüşümü ve rastgele sayı özellikleri</li>
+</ul>
+<p>Bilimsel hesaplama için kullanılmaya ek olarak, NumPy'da genel veriler için verimli çok boyutlu bir araç olarak kullanılabilir. Her tür veriyle çalışabileceği için, NumPy sorunsuz ve verimli bir şekilde birden fazla veri tabanı türüne entegre edilebilir.</p>
+<h2 id="kutuphaneyi-tanmlama">Kütüphaneyi Tanımlama</h2>
+<pre><code class="python">import numpy as np # lineer cebir
+import pandas as pd # veri işleme
+</code></pre>
+
+<h2 id="temel-ozellikler-ve-dizi-olusturma">Temel Özellikler ve Dizi Oluşturma</h2>
+<p>Burada 1 boyutlu bir dizi ve uzunluğu ise 3 olan bir dizi mevcuttur.</p>
+<pre><code class="python">[1,2,3]
+</code></pre>
+
+<pre><code>[1, 2, 3]
+</code></pre>
+<p>Aşağıda ise 2 boyutlu bir dizi ve uzunluğu ise 3 olan bir dizi mevcuttur.</p>
+<pre><code class="python">[[ 1, 2, 3],[ 4, 5, 6]]
+</code></pre>
+
+<pre><code>[[1, 2, 3], [4, 5, 6]]
+</code></pre>
+<p>NumPy dizi fonksiyonu ile iki adet farklı boyutlarda diziler oluşturalım.</p>
+<pre><code class="python">a = np.array([1, 2, 3])
+b = np.array([(1,2,3), (4,5,6)])
+
+print(&quot;a: &quot;,a)
+print(&quot;b: &quot;,b)
+</code></pre>
+
+<pre><code>a:  [1 2 3]
+b:  [[1 2 3]
+ [4 5 6]]
+</code></pre>
+<p>Köşeli parantezlerin burada gerekli olduğunu unutmayın. Ve aşağıdaki yazı biçimi yanlıştır:</p>
+<pre><code class="python"># a = np.array(1,2,3,4) # YANLIŞ!!!
+</code></pre>
+
+<p>NumPy'nin dizi sınıfının takma adı <strong>numpy.array</strong> olan <strong>ndarray</strong>, Python standart kitaplığındaki <strong>array.array</strong> öğesinden farklıdır. <strong>ndarray</strong> 'ın özellikleri aşağıdaki gibidir:</p>
+<ul>
+<li><strong>ndarray.ndim:</strong> dizinin kaç boyutlu olduğunu gösterir.</li>
+<li><strong>ndarray.shape:</strong> Uzunluğu, dizinin （ndim） boyutuna göre belirlenen bir sayı dizisidir. Örneğin, uzunluğu n olan tek boyutlu bir dizinin şekli n'dir ve n satırlı ve m sütunlu bir dizinin şekli n, m'dir.</li>
+<li><strong>ndarray.size:</strong> dizideki tüm öğelerin sayısı.</li>
+<li><strong>ndarray.dtype:</strong> dizideki elemanın veri tipi, örneğin numpy.int32, numpy.int16 veya numpy.float64.</li>
+<li><strong>ndarray.itemsize:</strong> dizideki her öğenin bayt cinsinden boyutu.</li>
+</ul>
+<p>Aşağıda bulunan kod örneğiniz inceleyelim.</p>
+<pre><code class="python">a = np.array([1, 2, 3])
+b = np.array([(1,2,3), (4,5,6)])
+
+print('a=')
+print(a)
+print(&quot;a's ndim {}&quot;.format(a.ndim))
+print(&quot;a's shape {}&quot;.format(a.shape))
+print(&quot;a's size {}&quot;.format(a.size))
+print(&quot;a's dtype {}&quot;.format(a.dtype))
+print(&quot;a's itemsize {}&quot;.format(a.itemsize))
+
+print('')
+
+print('b=')
+print(b)
+print(&quot;b's ndim {}&quot;.format(b.ndim))
+print(&quot;b's shape {}&quot;.format(b.shape))
+print(&quot;b's size {}&quot;.format(b.size))
+print(&quot;b's dtype {}&quot;.format(b.dtype))
+print(&quot;b's itemsize {}&quot;.format(b.itemsize))
+</code></pre>
+
+<pre><code>a=
+[1 2 3]
+a's ndim 1
+a's shape (3,)
+a's size 3
+a's dtype int64
+a's itemsize 8
+
+b=
+[[1 2 3]
+ [4 5 6]]
+b's ndim 2
+b's shape (2, 3)
+b's size 6
+b's dtype int64
+b's itemsize 8
+</code></pre>
+<p>Diziyi oluştururken elemanın veri tipini de belirtebiliriz, örneğin:</p>
+<pre><code class="python">c = np.array( [ [1,2], [3,4] ], dtype=complex )
+c
+</code></pre>
+
+<pre><code>array([[1.+0.j, 2.+0.j],
+       [3.+0.j, 4.+0.j]])
+</code></pre>
+<h2 id="belirli-bir-dizi-olusturma">Belirli Bir Dizi Oluşturma</h2>
+<p>Mühendislikte, genellikle belirli veri türlerine ihtiyaç duyarız ve NumPy bize bunları sağlar:</p>
+<ul>
+<li><strong>zeros:</strong> elemanları 0 olan bir dizi oluşturmak için kullanılır</li>
+<li><strong>ones:</strong> elemanları 1 olan bir dizi oluşturmak için kullanılır</li>
+<li><strong>empty:</strong> boş bir dizi oluşturmak için kullanılır.</li>
+<li><strong>arange:</strong> kapsam ve rakam aralığı belirleyerek bir dizi oluşturmak için kullanılır.</li>
+<li><strong>linespace:</strong> aralığı ve öğe sayısını belirterek bir dizi oluşturmak için kullanılır.</li>
+<li><strong>random:</strong> rastgele sayılar üretmek için kullanılır</li>
+</ul>
+<pre><code class="python">a = np.zeros((2,3))
+print('np.zeros((2,3)= \n{}\n'.format(a))
+
+b = np.ones((2,3))
+print('np.ones((2,3))= \n{}\n'.format(b))
+
+c = np.empty((2,3))
+print('np.empty((2,3))= \n{}\n'.format(c))
+
+d = np.arange(1, 2, 0.3)
+print('np.arange(1, 2, 0.3)= \n{}\n'.format(d))
+
+e = np.linspace(1, 2, 7)
+print('np.linspace(1, 2, 7)= \n{}\n'.format(e))
+
+f = np.random.random((2,3))
+print('np.random.random((2,3))= \n{}\n'.format(f))
+</code></pre>
+
+<pre><code>np.zeros((2,3)= 
+[[0. 0. 0.]
+ [0. 0. 0.]]
+
+np.ones((2,3))= 
+[[1. 1. 1.]
+ [1. 1. 1.]]
+
+np.empty((2,3))= 
+[[1. 1. 1.]
+ [1. 1. 1.]]
+
+np.arange(1, 2, 0.3)= 
+[1.  1.3 1.6 1.9]
+
+np.linspace(1, 2, 7)= 
+[1.         1.16666667 1.33333333 1.5        1.66666667 1.83333333
+ 2.        ]
+
+np.random.random((2,3))= 
+[[0.13767128 0.90433798 0.39300773]
+ [0.89677942 0.56711353 0.52187677]]
+</code></pre>
+<h2 id="boyut-ve-fonksiyonlar">Boyut ve Fonksiyonlar</h2>
+<p>Bir dizi oluşturmaya ek olarak, bazı verileri tuttuktan sonra, mevcut diziyi temel alan bazı yeni veri yapıları oluşturmamız gerekebilir. Bu durumda, aşağıdaki işlevleri kullanabiliriz:</p>
+<ul>
+<li><strong>reshape:</strong> varolan diziye ve belirtilen şekle dayalı yeni bir dizi oluşturmak için kullanılır.</li>
+<li><strong>vstack:</strong> birden çok diziyi dikey yönde konumlandırmak için kullanılır (dizinin boyutları aynı olmalıdır).</li>
+<li><strong>hstack:</strong> Birden çok diziyi yatay yönde konumlandırmak için kullanılır (dizinin boyutları aynı olmalıdır).</li>
+<li><strong>hsplit:</strong> diziyi yatay olarak bölmek için kullanılır.</li>
+<li><strong>vsplit:</strong> diziyi dikey olarak bölmek için kullanılır.</li>
+</ul>
+<p>We'll use some examples to illustrate.</p>
+<p>Test amaçlı birkaç veri oluşturalım.</p>
+<ul>
+<li><strong>zero_line:</strong> üç tane sıfır içeren ve bir satırı bulunan bir dizi</li>
+<li><strong>one_column:</strong> üç tane bir içeren ve bir sütunu bulunan bir dizi</li>
+<li><strong>a:</strong> iki satır ve üç sütun içeren bir matris.</li>
+<li><strong>b:</strong> [11,20] aralığında bir tamsayı dizisi.</li>
+</ul>
+<pre><code class="python">zero_line = np.zeros((1,3))
+one_column = np.ones((3,1))
+print(&quot;zero_line = \n{}\n&quot;.format(zero_line))
+print(&quot;one_column = \n{}\n&quot;.format(one_column))
+
+a = np.array([(1,2,3), (4,5,6)])
+b = np.arange(11, 20)
+print(&quot;a = \n{}\n&quot;.format(a))
+print(&quot;b = \n{}\n&quot;.format(b))
+</code></pre>
+
+<pre><code>zero_line = 
+[[0. 0. 0.]]
+
+one_column = 
+[[1.]
+ [1.]
+ [1.]]
+
+a = 
+[[1 2 3]
+ [4 5 6]]
+
+b = 
+[11 12 13 14 15 16 17 18 19]
+</code></pre>
+<p>B dizisi başlangıçta tek boyutlu bir dizidir ve yeniden şekillendirme yöntemiyle 3 satırlık ve 3 sütunluk bir matris haline dönüştürdük.</p>
+<pre><code class="python">b = b.reshape(3, -1)
+print(&quot;b.reshape(3, -1) = \n{}\n&quot;.format(b))
+</code></pre>
+
+<pre><code>b.reshape(3, -1) = 
+[[11 12 13]
+ [14 15 16]
+ [17 18 19]]
+</code></pre>
+<p>Buradaki ikinci parametre -1 olarak ayarlanır, bu da gerçek koşullara göre otomatik olarak belirleneceği anlamına gelir. Dizi aslen 9 element içerdiğinden, yeniden boyutlandırıldıktan sonraki matris 3X3'tür. Kod çıkışı aşağıdaki gibidir:</p>
+<pre><code class="python">b.reshape(3, -1)
+</code></pre>
+
+<pre><code>array([[11, 12, 13],
+       [14, 15, 16],
+       [17, 18, 19]])
+</code></pre>
+<p>Ardından, üç diziyi vstack işlevi aracılığıyla dikey olarak tutacağız:</p>
+<pre><code class="python">c = np.vstack((a, b, zero_line))
+print(&quot;c = np.vstack((a,b, zero_line)) = \n{}\n&quot;.format(c))
+</code></pre>
+
+<pre><code>c = np.vstack((a,b, zero_line)) = 
+[[ 1.  2.  3.]
+ [ 4.  5.  6.]
+ [11. 12. 13.]
+ [14. 15. 16.]
+ [17. 18. 19.]
+ [ 0.  0.  0.]]
+</code></pre>
+<p>Benzer şekilde, hstack'ı yatay işlemi için de kullanabiliriz. Bu sefer ilk önce dizinin yapısını ayarlamamız gerekiyor:</p>
+<pre><code class="python">a = a.reshape(3, 2)
+print(&quot;a.reshape(3, 2) = \n{}\n&quot;.format(a))
+
+d = np.hstack((a, b, one_column))
+print(&quot;d = np.hstack((a,b, one_column)) = \n{}\n&quot;.format(d))
+</code></pre>
+
+<pre><code>a.reshape(3, 2) = 
+[[1 2]
+ [3 4]
+ [5 6]]
+
+d = np.hstack((a,b, one_column)) = 
+[[ 1.  2. 11. 12. 13.  1.]
+ [ 3.  4. 14. 15. 16.  1.]
+ [ 5.  6. 17. 18. 19.  1.]]
+</code></pre>
+<p>Sonra, ayırma işlemine bir göz atalım. İlk önce d dizisini yatay yönde üç diziye böldük.</p>
+<pre><code class="python">e = np.hsplit(d, 3)
+print(&quot;e = np.hsplit(d, 3) = \n{}\n&quot;.format(e))
+print(&quot;e[1] = \n{}\n&quot;.format(e[1]))
+</code></pre>
+
+<pre><code>e = np.hsplit(d, 3) = 
+[array([[1., 2.],
+       [3., 4.],
+       [5., 6.]]), array([[11., 12.],
+       [14., 15.],
+       [17., 18.]]), array([[13.,  1.],
+       [16.,  1.],
+       [19.,  1.]])]
+
+e[1] = 
+[[11. 12.]
+ [14. 15.]
+ [17. 18.]]
+</code></pre>
+<p>Diziyi eşit olarak bölmek için sayı belirlemeye ek olarak, bölünecek sütun sayısını da belirtebiliriz. Aşağıdaki, d dizisini ilk sütundan ve üçüncü sütundan bölme işlemini gerçekleştiriyoruz.</p>
+<pre><code class="python">f = np.hsplit(d, (1, 3))
+print(&quot;f = np.hsplit(d, (1, 3)) = \n{}\n&quot;.format(f))
+</code></pre>
+
+<pre><code>f = np.hsplit(d, (1, 3)) = 
+[array([[1.],
+       [3.],
+       [5.]]), array([[ 2., 11.],
+       [ 4., 14.],
+       [ 6., 17.]]), array([[12., 13.,  1.],
+       [15., 16.,  1.],
+       [18., 19.,  1.]])]
+</code></pre>
+<p>Son olarak, d dizisini dikey yönde böldük. Benzer şekilde, belirtilen sayı dizisinin eşit şekilde bölünmesini sağlayamayız çünkü boyutları eşit değil.</p>
+<pre><code class="python">g = np.vsplit(d, 3)
+print(&quot;np.hsplit(d, 2) = \n{}\n&quot;.format(g))
+
+# np.vsplit(d, 2) # ValueError: array split does not result in an equal division
+</code></pre>
+
+<pre><code>np.hsplit(d, 2) = 
+[array([[ 1.,  2., 11., 12., 13.,  1.]]), array([[ 3.,  4., 14., 15., 16.,  1.]]), array([[ 5.,  6., 17., 18., 19.,  1.]])]
+</code></pre>
+<h2 id="indeks">İndeks</h2>
+<p>NumPy dizisindeki verilere nasıl erişildiğine bakalım.</p>
+<p>Yine, test için bir boyutlu bir dizi oluşturalım. İçeriği [100,200) aralığında bir tamsayıdır.</p>
+<p>Basit bir şekilde verilere erişebilmemiz için array_adi[indis numarası] yapısını kullanacağız.</p>
+<pre><code class="python">base_data = np.arange(100, 200)
+print(&quot;base_data\n={}\n&quot;.format(base_data))
+
+print(&quot;base_data[10] = {}\n&quot;.format(base_data[10]))
+</code></pre>
+
+<pre><code>base_data
+=[100 101 102 103 104 105 106 107 108 109 110 111 112 113 114 115 116 117
+ 118 119 120 121 122 123 124 125 126 127 128 129 130 131 132 133 134 135
+ 136 137 138 139 140 141 142 143 144 145 146 147 148 149 150 151 152 153
+ 154 155 156 157 158 159 160 161 162 163 164 165 166 167 168 169 170 171
+ 172 173 174 175 176 177 178 179 180 181 182 183 184 185 186 187 188 189
+ 190 191 192 193 194 195 196 197 198 199]
+
+base_data[10] = 110
+</code></pre>
+<p>NumPy'da daha önceden oluşturduğumuz bir dizi için filtreleme işlemini gerçekleştirebiliriz. Burada beş ve beşin katı olan sayılar getirildi.</p>
+<pre><code class="python">every_five = np.arange(0, 100, 5)
+print(&quot;base_data[every_five] = \n{}\n&quot;.format(
+    base_data[every_five]))
+</code></pre>
+
+<pre><code>base_data[every_five] = 
+[100 105 110 115 120 125 130 135 140 145 150 155 160 165 170 175 180 185
+ 190 195]
+</code></pre>
+<pre><code class="python">a = np.array([(1,2), (10,20)])
+print(&quot;a = \n{}\n&quot;.format(a))
+print(&quot;base_data[a] = \n{}\n&quot;.format(base_data[a]))
+</code></pre>
+
+<pre><code>a = 
+[[ 1  2]
+ [10 20]]
+
+base_data[a] = 
+[[101 102]
+ [110 120]]
+</code></pre>
+<p>Yukarıda 2X2 boyutunda olan çıktıyı 10X10 boyutunda aşağıdaki gibi elde ediyoruz.</p>
+<pre><code class="python">base_data2 = base_data.reshape(10, -1)
+print(&quot;base_data2 = np.reshape(base_data, (10, -1)) = \n{}\n&quot;.format(base_data2))
+</code></pre>
+
+<pre><code>base_data2 = np.reshape(base_data, (10, -1)) = 
+[[100 101 102 103 104 105 106 107 108 109]
+ [110 111 112 113 114 115 116 117 118 119]
+ [120 121 122 123 124 125 126 127 128 129]
+ [130 131 132 133 134 135 136 137 138 139]
+ [140 141 142 143 144 145 146 147 148 149]
+ [150 151 152 153 154 155 156 157 158 159]
+ [160 161 162 163 164 165 166 167 168 169]
+ [170 171 172 173 174 175 176 177 178 179]
+ [180 181 182 183 184 185 186 187 188 189]
+ [190 191 192 193 194 195 196 197 198 199]]
+</code></pre>
+<p>İki boyutlu bir dizi için,</p>
+<ul>
+<li>Eğer sadece satır belirtirsek sadece o satırda bulunan elemanlar gelir.</li>
+<li>Eğer hem satır hem de sütun belirtirsek sadece belirtilen eleman gelir.</li>
+<li>Son öğeye "-1" ile erişebiliriz.</li>
+</ul>
+<pre><code class="python">print(&quot;base_data2[2] = \n{}\n&quot;.format(base_data2[2]))
+print(&quot;base_data2[2, 3] = \n{}\n&quot;.format(base_data2[2, 3]))
+print(&quot;base_data2[-1, -1] = \n{}\n&quot;.format(base_data2[-1, -1]))
+</code></pre>
+
+<pre><code>base_data2[2] = 
+[120 121 122 123 124 125 126 127 128 129]
+
+base_data2[2, 3] = 
+123
+
+base_data2[-1, -1] = 
+199
+</code></pre>
+<p>Ek olarak, kapsamı ":" ile belirtebiliriz, örneğin: 2:5. Yalnızca ":" yazmak tam kapsamı belirtir.</p>
+<p>Lütfen aşağıdaki kodu inceleyin:</p>
+<ul>
+<li>ikinci satırın tüm elemanlarını getir.</li>
+<li>üçüncü sütunun bütün elemanlarını getir.</li>
+<li>satır numarası iki olan ve sütun numarası beş olan ve aynı zamanda satır numarası iki olan ve sütun numarası beş olan elemanları getir.</li>
+</ul>
+<pre><code class="python">print(&quot;base_data2[2, :]] = \n{}\n&quot;.format(base_data2[2, :]))
+print(&quot;base_data2[:, 3]] = \n{}\n&quot;.format(base_data2[:, 3]))
+print(&quot;base_data2[2:5, 2:4]] = \n{}\n&quot;.format(base_data2[2:5, 2:4]))
+</code></pre>
+
+<pre><code>base_data2[2, :]] = 
+[120 121 122 123 124 125 126 127 128 129]
+
+base_data2[:, 3]] = 
+[103 113 123 133 143 153 163 173 183 193]
+
+base_data2[2:5, 2:4]] = 
+[[122 123]
+ [132 133]
+ [142 143]]
+</code></pre>
+<h2 id="matematiksel-islevler">Matematiksel İşlevler</h2>
+<p>NumPy'de ayrıca birçok matematiksel işlev mevcuttur. İşte bazı örnekler;</p>
+<pre><code class="python">base_data = (np.random.random((5, 5)) - 0.5) * 100
+print(&quot;base_data = \n{}\n&quot;.format(base_data))
+
+print(&quot;np.amin(base_data) = {}&quot;.format(np.amin(base_data)))
+print(&quot;np.amax(base_data) = {}&quot;.format(np.amax(base_data)))
+print(&quot;np.average(base_data) = {}&quot;.format(np.average(base_data)))
+print(&quot;np.sum(base_data) = {}&quot;.format(np.sum(base_data)))
+print(&quot;np.sin(base_data) = \n{}&quot;.format(np.sin(base_data)))
+</code></pre>
+
+<pre><code>base_data = 
+[[-24.02118448  38.70903889 -34.35956793  31.15984863 -16.3851276 ]
+ [ 18.00896965  40.12647579 -18.77313246 -19.6817189   49.0027422 ]
+ [ 36.18306188 -44.80584945 -37.19340083 -34.07989665  -4.8155779 ]
+ [  8.98118218   0.67046207  -2.53116377 -29.06968423   7.50321075]
+ [ -9.03445665 -19.03624479 -48.60902452 -14.77772175  -7.25167879]]
+
+np.amin(base_data) = -48.60902452032344
+np.amax(base_data) = 49.00274219960913
+np.average(base_data) = -5.363217545890414
+np.sum(base_data) = -134.08043864726037
+np.sin(base_data) = 
+[[ 0.89638983  0.84679304 -0.19666101 -0.25328831  0.62658556]
+ [-0.7450343   0.65503482  0.07634909 -0.73938939 -0.95292478]
+ [-0.99850179 -0.73356466  0.48442958 -0.45966907  0.99468075]
+ [ 0.42918999  0.6213481  -0.57321894  0.71410891  0.9391081 ]
+ [-0.38048558 -0.18560632  0.99633329 -0.80176431 -0.82403314]]
+</code></pre>
+<pre><code class="python">arr = np.arange(1,20)
+arr = arr * arr              #Her eleman kendisi ile çarpılacak
+print(&quot;Multpiles: &quot;,arr)
+arr = arr - arr              #Her eleman kendisinden çıkarılacak
+print(&quot;Substracts: &quot;,arr)
+arr = np.arange(1,20)
+arr = arr + arr              #Her eleman kendisi ile toplanacak
+print(&quot;Add: &quot;,arr)
+arr = arr / arr              #Her eleman kendisine bölünecek
+print(&quot;Divide: &quot;,arr)
+arr = np.arange(1,20)
+arr = arr + 50
+print(&quot;Add +50: &quot;,arr)
+</code></pre>
+
+<pre><code>Multpiles:  [  1   4   9  16  25  36  49  64  81 100 121 144 169 196 225 256 289 324
+ 361]
+Substracts:  [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+Add:  [ 2  4  6  8 10 12 14 16 18 20 22 24 26 28 30 32 34 36 38]
+Divide:  [1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1.]
+Add +50:  [51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69]
+</code></pre>
+<pre><code class="python">print(&quot;Sqrt: &quot;,np.sqrt(arr))   #Her elemanın karekökü alınacak
+print(&quot;Exp: &quot;,np.exp(arr))     #Her elemanın üsteli alınacak
+print(&quot;Sin: &quot;,np.sin(arr))     #Her elemanın sin değeri alınacak
+print(&quot;Cos: &quot;,np.cos(arr))     #Her elemanın kosinüs değeri alınacak
+print(&quot;Log: &quot;,np.log(arr))     #Her elemanın logaritması alınacak
+print(&quot;Sum: &quot;,np.sum(arr))     #Dizideki bütün elemanların toplamı
+print(&quot;Std: &quot;,np.std(arr))     #Dizinin standart sapma değeri
+</code></pre>
+
+<pre><code>Sqrt:  [7.14142843 7.21110255 7.28010989 7.34846923 7.41619849 7.48331477
+ 7.54983444 7.61577311 7.68114575 7.74596669 7.81024968 7.87400787
+ 7.93725393 8.         8.06225775 8.1240384  8.18535277 8.24621125
+ 8.30662386]
+Exp:  [1.40934908e+22 3.83100800e+22 1.04137594e+23 2.83075330e+23
+ 7.69478527e+23 2.09165950e+24 5.68572000e+24 1.54553894e+25
+ 4.20121040e+25 1.14200739e+26 3.10429794e+26 8.43835667e+26
+ 2.29378316e+27 6.23514908e+27 1.69488924e+28 4.60718663e+28
+ 1.25236317e+29 3.40427605e+29 9.25378173e+29]
+Sin:  [ 0.67022918  0.98662759  0.39592515 -0.55878905 -0.99975517 -0.521551
+  0.43616476  0.99287265  0.63673801 -0.30481062 -0.96611777 -0.7391807
+  0.1673557   0.92002604  0.82682868 -0.02655115 -0.85551998 -0.89792768
+ -0.11478481]
+Cos:  [ 0.7421542  -0.16299078 -0.91828279 -0.82930983  0.02212676  0.85322011
+  0.89986683  0.11918014 -0.77108022 -0.95241298 -0.25810164  0.67350716
+  0.98589658  0.39185723 -0.56245385 -0.99964746 -0.5177698   0.44014302
+  0.99339038]
+Log:  [3.93182563 3.95124372 3.97029191 3.98898405 4.00733319 4.02535169
+ 4.04305127 4.06044301 4.07753744 4.09434456 4.11087386 4.12713439
+ 4.14313473 4.15888308 4.17438727 4.18965474 4.20469262 4.21950771
+ 4.2341065 ]
+Sum:  1140
+Std:  5.477225575051661
+</code></pre>
+<h2 id="matris">Matris</h2>
+<p>Şimdi, NumPy'nin matris şeklinde nasıl kullanılacağına bakalım.</p>
+<p>İlk önce 5X5 boyutunda rastgele bir tamsayı matrisi oluşturalım. Bir matrisin transpoze elde edilmesinin iki yolu vardır: <strong>.T</strong> veya <strong>transpose</strong> fonksiyonu. Ek olarak, matris <strong>nokta</strong> işlevi ile çarpılabilir. Örnek kod aşağıdaki gibidir:</p>
+<pre><code class="python">base_data = np.floor((np.random.random((5, 5)) - 0.5) * 100)
+print(&quot;base_data = \n{}\n&quot;.format(base_data))
+
+print(&quot;base_data.T = \n{}\n&quot;.format(base_data.T))
+print(&quot;base_data.transpose() = \n{}\n&quot;.format(base_data.transpose()))
+
+matrix_one = np.ones((5, 5))
+print(&quot;matrix_one = \n{}\n&quot;.format(matrix_one))
+
+minus_one = np.dot(matrix_one, -1)
+print(&quot;minus_one = \n{}\n&quot;.format(minus_one))
+
+print(&quot;np.dot(base_data, minus_one) = \n{}\n&quot;.format(
+    np.dot(base_data, minus_one)))
+</code></pre>
+
+<pre><code>base_data = 
+[[ -6.  33. -15.  22.  36.]
+ [-35. -22. -45.  -5. -48.]
+ [-35.   9.  42.  43. -26.]
+ [ 46.  30.  41. -22. -18.]
+ [ 20.  17. -15.  18. -34.]]
+
+base_data.T = 
+[[ -6. -35. -35.  46.  20.]
+ [ 33. -22.   9.  30.  17.]
+ [-15. -45.  42.  41. -15.]
+ [ 22.  -5.  43. -22.  18.]
+ [ 36. -48. -26. -18. -34.]]
+
+base_data.transpose() = 
+[[ -6. -35. -35.  46.  20.]
+ [ 33. -22.   9.  30.  17.]
+ [-15. -45.  42.  41. -15.]
+ [ 22.  -5.  43. -22.  18.]
+ [ 36. -48. -26. -18. -34.]]
+
+matrix_one = 
+[[1. 1. 1. 1. 1.]
+ [1. 1. 1. 1. 1.]
+ [1. 1. 1. 1. 1.]
+ [1. 1. 1. 1. 1.]
+ [1. 1. 1. 1. 1.]]
+
+minus_one = 
+[[-1. -1. -1. -1. -1.]
+ [-1. -1. -1. -1. -1.]
+ [-1. -1. -1. -1. -1.]
+ [-1. -1. -1. -1. -1.]
+ [-1. -1. -1. -1. -1.]]
+
+np.dot(base_data, minus_one) = 
+[[-70. -70. -70. -70. -70.]
+ [155. 155. 155. 155. 155.]
+ [-33. -33. -33. -33. -33.]
+ [-77. -77. -77. -77. -77.]
+ [ -6.  -6.  -6.  -6.  -6.]]
+</code></pre>
+<h2 id="rastgele-say-uretmek">Rastgele Sayı Üretmek</h2>
+<p>Numpy.random paketi rastgele sayılar için bir takım algoritmalar içerir. Burada en yaygın dört kullanım listelenmiştir:</p>
+<p>Bu dört kullanım şu şekildedir;</p>
+<ul>
+<li>Her biri <strong>[0.0, 1.0)</strong> arasında olan 20 rasgele sayı üretmek için.</li>
+<li>Belirtilen <strong>şekle</strong> bağlı olarak rasgele bir sayı oluşturmak için.</li>
+<li>Belirtilen aralıktaki belirli bir sayıyı adedi kadar sayı üretebilmek için.</li>
+<li>Var olan verilerin sırasını bozmak için.</li>
+</ul>
+<pre><code class="python">print(&quot;random: {}\n&quot;.format(np.random.random(20)));
+
+print(&quot;rand: {}\n&quot;.format(np.random.rand(3, 4)));
+
+print(&quot;randint: {}\n&quot;.format(np.random.randint(0, 100, 20)));
+
+print(&quot;permutation: {}\n&quot;.format(np.random.permutation(np.arange(20))));
+</code></pre>
+
+<pre><code>random: [0.97591459 0.70963244 0.71274272 0.9052036  0.8276741  0.90969397
+ 0.81121699 0.41986093 0.94351019 0.98516341 0.50522794 0.30265514
+ 0.87921027 0.41402905 0.27851685 0.07824987 0.20212265 0.71857348
+ 0.85119351 0.51447833]
+
+rand: [[0.56123578 0.45788863 0.51853179 0.91962668]
+ [0.60568674 0.8469316  0.94220325 0.80376898]
+ [0.80604184 0.40306272 0.72154831 0.53511804]]
+
+randint: [39 68 74 55 48  9 46 71 48 56  7  6 78 63 41 15 67 85 16 51]
+
+permutation: [ 8  0  3 14 15 17  1  9 12 13 11 16 10  7 19  2  4 18  6  5]
+</code></pre>
+<blockquote>
+<p>Son Güncelleme: 28 Aralık 2019 - Cumartesi</p>
+</blockquote>
+                
+                  
+                
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../../python/python_ileri_duzey_fonksiyonlar/" title="İleri Düzey Fonksiyonlar" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Önceki
+                </span>
+                İleri Düzey Fonksiyonlar
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../../referanslar/" title="Referanslar" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Sonraki
+                </span>
+                Referanslar
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright &copy; 2019 Pratik Yapay Zeka
+          </div>
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+  <div class="md-footer-social">
+    <link rel="stylesheet" href="../../assets/fonts/font-awesome.css">
+    
+      <a href="https://github.com/mrabdullahsahin" class="md-footer-social__link fa fa-github"></a>
+    
+      <a href="https://twitter.com/mrabdullahsahin" class="md-footer-social__link fa fa-twitter"></a>
+    
+      <a href="https://linkedin.com/in/mrabdullahsahin" class="md-footer-social__link fa fa-linkedin"></a>
+    
+  </div>
+
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/application.808e90bb.js"></script>
+      
+        
+        
+          
+          <script src="../../assets/javascripts/lunr/lunr.stemmer.support.js"></script>
+          
+            
+              
+              
+                <script src="../../assets/javascripts/lunr/lunr.tr.js"></script>
+              
+            
+          
+          
+        
+      
+      <script>app.initialize({version:"1.0.4",url:{base:"../.."}})</script>
+      
+    
+  </body>
+</html>

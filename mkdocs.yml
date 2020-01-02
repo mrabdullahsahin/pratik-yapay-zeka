@@ -52,6 +52,9 @@ nav:
   - NumPy: numpy/numpy.md
   - Pandas: pandas/pandas.md
   - Matplotlib: matplotlib/matplotlib.md
+  - Scikit-Learn:
+    - Classification:
+      - Linear Regression: scikit-learn/linear_regression/linear_regression.md
   - Referanslar: referanslar.md
   - Değişiklik Kaydı: changelog.md
 

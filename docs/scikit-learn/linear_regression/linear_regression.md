@@ -12,7 +12,7 @@ Lineer regresyon ile amacımız verilmiş olan x’leri ve y’leri kullanarak w
 
 Lineer regresyonda w değer­lerini öyle bir şek­ilde bulun­malı ki tah­min edilen y değeri ile gerçek y değeri arasın­daki hata min­i­mum olsun. Bu durumda asıl amacımız gerçek y değer­leri ile tah­min edilen y değer­leri arasın­daki farkı göstere­cek olan maliyet fonksiy­onunu (cost func­tion) min­i­mize etmek. Maliyet fonksiy­onu şu şek­ilde gösterilmektedir:
 
-![title](maliyet_fonksiyonu.png)
+![](maliyet_fonksiyonu.png)
 
 Buradaki nota­sy­on­lar şun­ları ifade etmektedir:
 
@@ -34,7 +34,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 ```
 
-## Adım 2
+### Adım 2
 
 
 ```python
